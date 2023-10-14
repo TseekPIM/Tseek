@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Estilos CSS para o dropdown */
+        .user-dropdown {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .user-image {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+        }
+
+        .dropdown-container {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: none;
+            z-index: 1;
+        }
+
+        .dropdown-item {
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="col-md-4 col-lg-5 d-none d-xl-block">
+        <div class="header-right d-flex align-items-center justify-content-end">
+            <div class="user-dropdown">
+                <img src="assets/img/flag/flag-1.png" alt="Country Flag" class="user-image">
+                <div class="dropdown-container">
+                    <div class="dropdown-item"><a href="login2.html">Login</a></div>
+                    <div class="dropdown-item"><button class="searchBoxToggler"><i class="far fa-search"></i></button></div>
+                    <div class="dropdown-item"><button class="sideMenuToggler"><i class="fal fa-grip-horizontal fs-2"></i></button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript para mostrar/ocultar o dropdown ao clicar na imagem do usuário
+        const userDropdown = document.querySelector('.user-dropdown');
+        const dropdownContainer = userDropdown.querySelector('.dropdown-container');
+
+        userDropdown.addEventListener('click', () => {
+            dropdownContainer.style.display = dropdownContainer.style.display === 'block' ? 'none' : 'block';
+        });
+
+        // Fechar o dropdown ao clicar fora dele
+        document.addEventListener('click', (event) => {
+            if (!userDropdown.contains(event.target)) {
+                dropdownContainer.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
