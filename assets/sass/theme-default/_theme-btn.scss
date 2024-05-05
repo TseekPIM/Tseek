@@ -359,10 +359,16 @@
       background-color: #cd201f;
     }
   }
-
+  
   .fa-twitter {
     &:after {
-      background-color: #55acee;
+      background-color: #5284f0;
+    }
+ 
+  }
+  .fa-x-twitter {
+    &:after {
+      background-color: #000;
     }
   }
 
@@ -438,7 +444,11 @@
   }
   .fa-twitter {
     background-image: none;
-    background-color: #00acee;
+    background-color: #5284f0;
+  }
+  .fa-x-twitter {
+    background-image: none;
+    background-color: #000;
   }
   .fa-linkedin-in {
     background-image: none;

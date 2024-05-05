@@ -4,7 +4,7 @@
   var form = '.contact-form';
   var invalidCls = 'is-invalid';
   var $email = '[name="email"]';
-  var $validation = '[name="name"],[name="email"],[name="message"]';// Must be use (,) without any space
+  var $validation = '[name="name"],[name="email"],[name="message"]';// não dar espaços nas virgulas (,)
   var formMessages = $('.form-messages');
   
   function sendContact() {
@@ -18,23 +18,23 @@
         type: "POST"
       })
       .done(function (response){
-        // Make sure that the formMessages div has the 'success' class.
+        // formMessages tem que ter a classe "success"
         formMessages.removeClass('error');
         formMessages.addClass('success');
-        // Set the message text.
+        // mensagem/texto
         formMessages.text(response);
-        // Clear the form.
+        // limpar o formulário
         $(form + ' input:not([type="submit"]),'+ form+' textarea').val('');
       })
       .fail(function(data){
-        // Make sure that the formMessages div has the 'error' class.
+        // formMessages tem que ter a classe "error"
         formMessages.removeClass('success');
         formMessages.addClass('error');
-        // Set the message text.
+        // mensagem/texto
         if (data.responseText !== '') {
           formMessages.text(data.responseText);
         } else {
-          formMessages.text('Oops! An error occured and your message could not be sent.');
+          formMessages.text('Oops! Ocorreu um erro e não foi possível enviar sua mensagem.');
         }
       });
     };

@@ -121,7 +121,7 @@
 
     &.fab {
       &::before {
-        font-family: 'Font Awesome\ 5 Brands';
+        font-family: 'Font Awesome\ 6 Brands';
       }
     }
 
@@ -134,8 +134,13 @@
     }
 
     &.fa-twitter {
-      background-color: #55acee;
+      background-color: #5284f0;
     }
+
+    &.fa-x-twitter {
+      background-color: #000;
+    }
+
     &.fa-youtube {
       background-color: #cd201f;
     }

@@ -1362,7 +1362,11 @@ textarea.form-control.is-invalid {
 }
 
 .icon-btn1 .fa-twitter:after {
-  background-color: #55acee;
+  background-color: #5284f0;
+}
+
+.icon-btn1 .fa-x-twitter:after {
+  background-color: #000;
 }
 
 .icon-btn1 .fa-facebook-f:after {
@@ -1432,9 +1436,9 @@ textarea.form-control.is-invalid {
   background-color: #3b5998;
 }
 
-.icon-btn3 .fa-twitter {
+.icon-btn3 .fa-x-twitter {
   background-image: none;
-  background-color: #00acee;
+  background-color: #000;
 }
 
 .icon-btn3 .fa-linkedin-in {
@@ -1883,9 +1887,9 @@ textarea.form-control.is-invalid {
   background-color: #3b5999;
 }
 
-.blog-social-links .nav span.fa-twitter,
-.links-stretch span.fa-twitter {
-  background-color: #55acee;
+.blog-social-links .nav span.fa-x-twitter,
+.links-stretch span.fa-x-twitter {
+  background-color: #000;
 }
 
 .blog-social-links .nav span.fa-youtube,

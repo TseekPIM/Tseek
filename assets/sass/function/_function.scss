@@ -1,5 +1,5 @@
 
-// Function For Letter Spacing
+// Função para espaçamento entre letra
 @function letter-spacing($psValue, $return: 'em', $fSize: '16') {
   @if $return='em' {
     @return ($psValue) / 1000 + em;
@@ -15,7 +15,7 @@
 }
 
 
-// Convert a hex value to comma-delimited rgb values
+// Converter um valor hexadecimal em valores RGB delimitados por vírgula
 @function convert-rgb($hex) {
   @return red($hex),
   green($hex),

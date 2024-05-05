@@ -1,4 +1,4 @@
-/*-- margin Left And Right --*/
+/*-- Margem esquerda e direita --*/
 @for $i from 1 through $space-count {
   .mx-#{5 * $i} {
     margin-right: 5px *$i;
@@ -6,7 +6,7 @@
   }
 }
 
-/*-- margin Top And Bottom --*/
+/*-- Margem cima e embaixo --*/
 @for $i from 1 through $space-count {
   .my-#{5 * $i} {
     margin-top: 5px *$i;
@@ -14,28 +14,28 @@
   }
 }
 
-/*-- margin Top --*/
+/*-- Margem Top --*/
 @for $i from 1 through $space-count {
   .mt-#{5 * $i} {
     margin-top: 5px *$i;
   }
 }
 
-/*-- margin Bottom --*/
+/*-- Margem Bottom --*/
 @for $i from 1 through $space-count {
   .mb-#{5 * $i} {
     margin-bottom: 5px *$i;
   }
 }
 
-/*-- margin Left --*/
+/*-- Margem esquerda --*/
 @for $i from 1 through $space-count {
   .ml-#{5 * $i} {
     margin-left: 5px *$i;
   }
 }
 
-/*-- margin Right --*/
+/*-- Margem direita --*/
 @for $i from 1 through $space-count {
   .mr-#{5 * $i} {
     margin-right: 5px *$i;

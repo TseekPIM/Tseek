@@ -8594,6 +8594,14 @@
 
 .fa-twitter-square:before {
     content: "\f081"
+}  
+
+.fa-x-twitter:before {
+    content: "\F8DB"
+}
+
+.fa-square-x-twitter:before {
+    content: "\e61a"
 }
 
 .fa-typewriter:before {
@@ -9444,6 +9452,14 @@
     font-display: block;
     src: url(../fonts/fa-brands-400.eot);
     src: url(../fonts/fa-brands-400.eot?#iefix) format("embedded-opentype"), url(../fonts/fa-brands-400.woff2) format("woff2"), url(../fonts/fa-brands-400.woff) format("woff"), url(../fonts/fa-brands-400.ttf) format("truetype"), url(../fonts/fa-brands-400.svg#fontawesome) format("svg")
+}
+@font-face {
+    font-family: Font Awesome\ 5 Brands;
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: url(../fonts/fa-brands-400.eot);
+    src: url(../fonts/fa-brands-400.eot?#iefix) format("embedded-opentype"), url(../fonts/fa-brands-400.woff2) format("woff2"), url(../fonts/fa-brands-400.woff) format("woff"), url(../fonts/fa-brands-400.ttf) format("truetype"), url(../fonts/fa-brands.svg#fontawesome) format("svg")
 }
 
 .fab {
@@ -16913,7 +16929,7 @@
 }
 
 @font-face {
-    font-family: Font Awesome\ 5 Pro;
+    font-family: Font Awesome\ 6 Pro;
     font-style: normal;
     font-weight: 300;
     font-display: block;
@@ -16926,7 +16942,7 @@
 }
 
 @font-face {
-    font-family: Font Awesome\ 5 Pro;
+    font-family: Font Awesome\ 6 Pro;
     font-style: normal;
     font-weight: 400;
     font-display: block;
@@ -16936,7 +16952,7 @@
 
 .fal,
 .far {
-    font-family: Font Awesome\ 5 Pro
+    font-family: Font Awesome\ 6 Pro
 }
 
 .far {
@@ -16944,7 +16960,7 @@
 }
 
 @font-face {
-    font-family: Font Awesome\ 5 Pro;
+    font-family: Font Awesome\ 6 Pro;
     font-style: normal;
     font-weight: 900;
     font-display: block;
@@ -16954,6 +16970,6 @@
 
 .fa,
 .fas {
-    font-family: Font Awesome\ 5 Pro;
+    font-family: Font Awesome\ 6 Pro;
     font-weight: 900
 }

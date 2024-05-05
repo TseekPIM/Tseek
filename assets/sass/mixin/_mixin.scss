@@ -106,7 +106,7 @@
 
 
 
-// Mixin to place items on a circle
+// Mixin para colocar itens em um círculo
 @mixin on-circle($item-count, $circle-size, $item-size, $rotCount: 0, $angleCount: 360) {
 	
 
@@ -160,10 +160,10 @@
 
 
 
-// Responsive Query
+// Responsivo Query
 @mixin xl {
 	
-	/* Extra large devices */
+	/* Dispositivos muito grandes */
 	@media (max-width: #{$xl}) {
 		@content;
 	}
@@ -171,7 +171,7 @@
 
 @mixin ml {
 
-	/* Medium Large devices */
+	/* Dispositivos médios grandes */
 	@media (max-width: #{$ml}) {
 		@content;
 	}
@@ -179,7 +179,7 @@
 
 @mixin lg {
 
-	/* Large devices */
+	/* Dispositivos grandes */
 	@media (max-width: #{$lg}) {
 		@content;
 	}
@@ -187,7 +187,7 @@
 
 @mixin md {
 
-	/* Medium devices */
+	/* Dispositivos médios */
 	@media (max-width: #{$md}) {
 		@content;
 	}
@@ -195,7 +195,7 @@
 
 @mixin sm {
 
-	/* Small devices */
+	/* Dispositivos pequenos */
 	@media (max-width: #{$sm}) {
 		@content;
 	}
@@ -203,7 +203,7 @@
 
 @mixin xs {
 
-	/* Extra small devices */
+	/* Dispositivos muito pequenos */
 	@media (max-width: #{$xs}) {
 		@content;
 	}

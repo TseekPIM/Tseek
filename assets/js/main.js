@@ -2,28 +2,26 @@
   "use strict";
 
   /*===========================================
-        Table of contents
+        Índice
     01. On Load Function
-    02. Preloader
-    03. Mobile Menu Active
+    02. pré carregamento
+    03. ativar menu mobile
     04. Sticky fix
-    05. Scroll To Top
+    05. Scroll voltar para topo da pág
     06. Set Background Image
-    07. Popup Sidemenu
-    08. Search Box Popup
-    09. Magnific Popup
-    10. Filter Menu
-    11. Indicator
+    07. menu lateral
+    08. busca
+    09. play
+    10. filtro Menu
+    11. posião
     12. Title Rotate
-    13. Slider Tab
-    14. Range Slider
-    15. Procut Zoom Img
-    16. Quantity Adder
-    17. Rating Input Class Added
-    18. Tab Animation
+    13. passar slide
+    14. intervalo dos slides
+    15. Zoom na iamgem
+    16. quantidade
+    17. entrada de classificação
+    18. Animaão
     19. Button Hove Effect
-    00. Right Click Disable
-    00. Inspect Element Disable
   =============================================*/
 
 
@@ -32,7 +30,7 @@
     $('.preloader').hide();
   });
 
-  /*---------- 02. Preloader ----------*/
+  /*---------- 02. pré carregamento ----------*/
   if ($('.preloader').length > 0) {
     $('.preloaderCls').each(function () {
       $(this).on('click', function (e) {
@@ -44,7 +42,7 @@
 
 
 
-  /*---------- 03. Mobile Menu Active ----------*/
+  /*---------- 03. ativar menu mobile ----------*/
   $('.mobile-menu-active').vsmobilemenu({
     menuContainer: '.vs-mobile-menu',
     expandScreenWidth: $('.mobile-menu-active').data('expand'),
@@ -82,7 +80,7 @@
 
 
 
-  /*---------- 05. Scroll To Top ----------*/
+  /*---------- 05. Scroll voltar para topo da pág ----------*/
   $(scrollToTopBtn).on('click', function (e) {
     e.preventDefault();
     $('html, body').animate({
@@ -108,7 +106,7 @@
 
 
 
-  /*---------- 07. Popup Sidemenu ----------*/
+  /*---------- 07. menu lateral ----------*/
   function popupSideMenu($sideMenu, $sideMunuOpen, $sideMenuCls, $toggleCls) {
     // Sidebar Popup
     $($sideMunuOpen).on('click', function (e) {
@@ -136,7 +134,7 @@
 
 
 
-  /*---------- 08. Search Box Popup ----------*/
+  /*---------- 08. busca ----------*/
   function popupSarchBox($searchBox, $searchOpen, $searchCls, $toggleCls) {
     $($searchOpen).on('click', function (e) {
       e.preventDefault();
@@ -163,8 +161,8 @@
   
 
 
-  /*----------- 09. Magnific Popup ----------*/
-  /* magnificPopup img view */
+  /*----------- 09. play  ----------*/
+  /* play img view */
   $('.popup-image').magnificPopup({
     type: 'image',
     gallery: {
@@ -172,7 +170,7 @@
     }
   });
 
-  /* magnificPopup video view */
+  /* play video view */
   $('.popup-video').magnificPopup({
     type: 'iframe'
   });
@@ -180,7 +178,7 @@
 
 
 
-  /*----------- 10. Filter Menu ----------*/
+  /*----------- 10. filtro Menu ----------*/
   $('.filter-active').imagesLoaded(function () {
     var $filter = '.filter-active',
       $filterItem = '.grid-item',
@@ -191,12 +189,12 @@
         itemSelector: $filterItem,
         filter: '*',
         masonry: {
-          // use outer width of grid-sizer for columnWidth
+          
           columnWidth: $filterItem
         }
       });
   
-      // filter items on button click
+      // filtrar itens ao clicar
       $($filterMenu).on('click', 'button', function () {
         var filterValue = $(this).attr('data-filter');
         $grid.isotope({
@@ -204,7 +202,7 @@
         });
       });
   
-      // Menu Active Class 
+      // classe menu
       $($filterMenu).on('click', 'button', function (event) {
         event.preventDefault();
         $(this).addClass('active');
@@ -217,21 +215,21 @@
 
 
 
-  /*----------- 11. Indicator ----------*/
+  /*----------- 11. posição ----------*/
   $.fn.indicator = function () {
     var $menu = $(this),
       $linkBtn = $menu.find('a'),
       $btn = $menu.find('button');
-    // Append indicator
+
     $menu.append('<span class="indicator"></span>');
     var $line = $menu.find('.indicator');  
-    // Check which type button is Available
+    // verificar qual botão esta disponível
     if ($linkBtn.length) {
       var $currentBtn = $linkBtn;
     } else if ($btn.length) {
       var $currentBtn = $btn
     }
-    // On Click Button Class Remove
+    // botão remover
     $currentBtn.on('click', function (e) {
       e.preventDefault();
       $(this).addClass('active');
@@ -262,7 +260,7 @@
     linePos()
   }
 
-  // Call On Load
+  
   if ($('.filter-menu-style1').length) {
     $('.filter-menu-style1').indicator();
   }
@@ -290,14 +288,14 @@
 
 
 
-  /*----------- 13. Slider Tab   ----------*/
+  /*----------- 13. passar slide   ----------*/
   $.fn.vsslideTab = function(btn){
     $(this).each(function(){
       var $menu = $(this),
       slider = $menu.data('asnavfor'),
       $btn = $menu.find(btn);
       var i = 0;
-      // Change Slide on Btn Click
+      // alterar qnd clicar 
       $btn.each(function(){
         $(this).attr('data-slide-go-to', i)
         i++
@@ -307,7 +305,7 @@
           $(slider).slick('slickGoTo', slideno);
         })
       })
-      // Change Btn Active Class On Slide Change
+      // mudar a classe qnd mudar o slide
       $(slider).on('afterChange', function (event, slick, currentSlide, nextSlide) {
         $btn.removeClass('active');
         $('[data-slide-go-to=' + currentSlide + ']').addClass('active');
@@ -321,7 +319,7 @@
 
   
 
-  /*----------- 14. Range Slider ----------*/
+  /*----------- 14. intervalo dos slides----------*/
   $("#slider-range").slider({
     range: true,
     min: 40,
@@ -334,7 +332,7 @@
   $("#amount").val("$" + $("#slider-range").slider("values", 0) + " - $" + $("#slider-range").slider("values", 1));
   
   
-  /*----------- 15. Procut Zoom Img ----------*/
+  /*----------- 15. zoom na imagem ----------*/
   if ($('.zoom-thumb').length) {
     $('.zoom-thumb').each(function(){
       $(this).on('click', function(){
@@ -345,7 +343,7 @@
   }
 
 
-  /*----------- 16. Quantity Adder ----------*/
+  /*----------- 16. quantidade ----------*/
   $('.quantity-plus').each(function () {
     $(this).on('click', function () {
       var $qty = $(this).siblings(".qty-input");
@@ -366,7 +364,7 @@
     });
   })
 
-  /*----------- 17. Rating Input Class Added ----------*/
+  /*----------- 17. entrada de classificação ----------*/
   if ($('.vs-rating-input').length > 0) {
     $('.vs-rating-input').each(function () {
       $(this).find('span').on('click', function () {
@@ -379,7 +377,7 @@
 
 
 
-  /*----------- 18. Tab Animation ----------*/
+  /*----------- 18. Animação ----------*/
   $.fn.tabAnimation = function (){
     $(this).on('hide.bs.tab', function (e) {
       var $old_tab = $($(e.target).attr("href"));
@@ -448,10 +446,10 @@
     }
 
 
-    // Custom Style Set    
+    //  personalisar style   
     vsHslide.on('sliderWillLoad', function (event, slider) {
 
-      // Define Variable
+      // Definir a variável
       var respLayer = jQuery(this).find('.ls-responsive'),
         lsDesktop = 'ls-desktop',
         lsLaptop = 'ls-laptop',
@@ -462,14 +460,13 @@
         mdDevice = 993,
         smDevice = 768;
 
-      // Set Style on each Layer
+      // definir estilos em camadas
       respLayer.each(function () {
         var layer = jQuery(this);
 
         function lsd(data) {
           return (layer.data(data) === '') ? layer.data(null) : layer.data(data);
         }
-        // var respStyle = (windowWid < smDevice) ? ((lsd(lsMobile)) ? lsd(lsMobile) : lsd(lsTablet)) : ((windowWid < mdDevice) ? ((lsd(lsTablet)) ? lsd(lsTablet) : lsd(lsDesktop)) : lsd(lsDesktop)),
         var respStyle = (windowWid < smDevice) ? lsd(lsMobile) : ((windowWid < mdDevice ? lsd(lsTablet) : ((windowWid < lgDevice) ? lsd(lsLaptop) : lsd(lsDesktop)))),
           mainStyle = (layer.attr('style') !== undefined) ? layer.attr('style') : ' ';
         layer.attr('style', mainStyle + respStyle);
@@ -511,7 +508,7 @@
   });
 
   
-  /*----------- 21. Counter Split ----------*/
+  /*----------- 21. contador ----------*/
   $('.counter-number').each(function(){
     var counter = $(this);
     var text = counter.html().split('');
@@ -523,7 +520,7 @@
   })
   
   
-  /*----------- 22. Slick Slide Animation ----------*/
+  /*----------- 22. animaão de slide ----------*/
   $.fn.slickHero = function (){
     var slider = $(this);
 
@@ -561,34 +558,6 @@
     $(".container").addClass("active");
   });
   
-
-
-
-  /*----------- 00. Right Click Disable ----------*/
-  // window.addEventListener('contextmenu', function (e) {
-  //   // do something here... 
-  //   e.preventDefault();
-  // }, false);
-
-
-  /*----------- 00. Inspect Element Disable ----------*/
-  // document.onkeydown = function (e) {
-  //   if (event.keyCode == 123) {
-  //     return false;
-  //   }
-  //   if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
-  //     return false;
-  //   }
-  //   if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
-  //     return false;
-  //   }
-  //   if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
-  //     return false;
-  //   }
-  //   if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
-  //     return false;
-  //   }
-  // }
 
 
 })(jQuery);

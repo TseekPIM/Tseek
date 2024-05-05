@@ -3,12 +3,9 @@
 Font Awesome Pro 5.13.0 by @fontawesome - https://fontawesome.com
 License - https://fontawesome.com/license (Commercial License)
 -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20190801 at Mon Mar 23 10:45:11 2020
- By Robert Madole
-Copyright (c) Font Awesome
+
 </metadata>
 <defs>
 <font id="FontAwesome5Brands-Regular" horiz-adv-x="448" >
@@ -3566,5 +3563,8 @@ c4.7998 24.4502 16.4102 50.0303 31.6201 66.4502c6 6 12.4092 11.21 18.8096 14.410
 c20.4209 1.60059 37.6309 -6.39941 37.6309 -6.39941l15.21 57.5996s-13.2305 6.41016 -39.2305 4.80957c-67.25 -4.40918 -97.6699 -51.2393 -94.4697 -97.6797c3.59961 -55.2402 58.8398 -53.2402 60.8398 -86.8594
 c0.410156 -8.01074 -4.80957 -19.6201 -18.8096 -20.4209c-21.6201 -1.59961 -48.4404 18.8203 -48.4404 18.8203l-10.4004 -44s26.8203 -28.8203 75.6504 -25.6201c40.4297 2.41016 68.4502 34.8301 65.6504 82.4707c-4 60.4395 -71.6504 66.0498 -73.25 91.6592z
 M249.42 365.12c8.80664 2.7998 16.8135 5.2002 24.0205 7.2002c-4.01074 12.4297 -12.8105 32.8301 -31.2305 36.4297c5.61035 -14.4102 7.20996 -31.6299 7.20996 -43.6299z" />
+  <glyph glyph-name="x-twitter" unicode="&#xF8DB;"
+  d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+
   </font>
 </defs></svg>
