@@ -1,5 +1,5 @@
 <?php
-include('protect.php');
+// include('protect.php');
 //  echo $_SESSION['nome'];
 //  echo $_GET['id'];
 // print_r($_SESSION);
@@ -9,9 +9,9 @@ require_once('class/Classes.php');
  
 
  
- $objCandidato = new Candidato();
-//  $id_candidato = $_SESSION['id'];
-//  $candidato = $objCandidato->Mostrar($_SESSION['id']);
+ $objVaga = new Vaga();
+//  $id_vaga = $_SESSION['id'];
+//  $Vaga = $objVaga->Mostrar($_SESSION['id']);
 
  
 ?>
@@ -109,7 +109,7 @@ require_once('class/Classes.php');
                 <nav class="main-menu menu-sticky1 d-none d-lg-block link-inherit">
                     <ul>
                         <li class="menu-item-has-children">
-                            <a href="vagas.php">Vagas</a>
+                            <a href="vagas1.php">Vagas</a>
                             <!-- <ul class="sub-menu">
                                 <li><a href="#">Ação</a></li>
                                 <li><a href="#">Aventura</a></li>
@@ -124,7 +124,7 @@ require_once('class/Classes.php');
                             </ul> -->
                         </li>
                         <li class="mega-menu-wrap menu-item-has-children">
-                            <a href="player.php">Jogadores</a>
+                            <a href="player1.php">Jogadores</a>
                             <!-- <ul class="mega-menu">
                                 <li><a href="#">RANK</a>
                                     <ul>
@@ -148,7 +148,7 @@ require_once('class/Classes.php');
                             </ul> -->
                         </li>
                         <li class="mega-menu-wrap menu-item-has-children">
-                            <a href="team.php">Times</a>
+                            <a href="team1.php">Times</a>
                             <!-- <ul class="mega-menu">
                                 <li><a href="#">RANK</a>
                                     <ul>
@@ -273,7 +273,7 @@ Mobile Menu
                         <nav class="main-menu menu-style1 mobile-menu-active" data-expand="992">
                             <ul>
                                 <li class="menu-item-has-children">
-                                    <a href="vagas.php">Vagas</a>
+                                    <a href="vagas1.php">Vagas</a>
                                     <!-- <ul class="sub-menu">
                                         <li><a href="#">Ação</a></li>
                                         <li><a href="#">Aventura</a></li>
@@ -288,7 +288,7 @@ Mobile Menu
                                     </ul> -->
                                 </li>
                                 <li class="mega-menu-wrap menu-item-has-children">
-                                    <a href="player.php">Jogadores</a>
+                                    <a href="player1.php">Jogadores</a>
                                     <!-- <ul class="mega-menu">
                                         <li><a href="#">RANK</a>
                                             <ul>
@@ -312,7 +312,7 @@ Mobile Menu
                                     </ul> -->
                                 </li>
                                 <li class="mega-menu-wrap menu-item-has-children">
-                                    <a href="team.php">Times</a>
+                                    <a href="team1.php">Times</a>
                                     <!-- <ul class="mega-menu">
                                         <li><a href="#">RANK</a>
                                             <ul>
@@ -350,19 +350,19 @@ Mobile Menu
                             <a href="https://www.twitch.tv/directory" class="vs-btn outline1 d-none d-xl-inline-block"><i
                                     class="fab fa-twitch"></i><strong>Live Streaming</strong></a>
                             <ul class="header-list1 list-style-none ml-30">
-                                <!-- <li>
+                                <li>
                                     <button class="dropdown-toggle" type="button" title="Login">
                                         <a href="login2.php"><img src="assets/img/flag/flag-1.png"
                                                 alt="Country Flag" class="flag radius-circle"> </a>
                                     </button>
-                                </li> -->
+                                </li>
                                 <li>
                                         <button class="searchBoxTggler"><i class="far fa-search"></i></button>
                                 </li>
-                                <li>
+                                <!-- <li>
                                 <button class="sideMenuToggler"><i
                                                 class="fal fa-grip-horizontal fs-2"></i></button>
-                                </li>
+                                </li> -->
                             </ul>
                         </div>
                     </div>
@@ -377,29 +377,29 @@ Mobile Menu
     <div class="breadcumb-wrapper breadcumb-layout1 pt-200 pb-50" data-bg-src="assets/img/breadcumb/breadcumb-1.jpg" data-overlay>
         <div class="container z-index-common">
             <div class="breadcumb-content text-center">
-                <h1 class="breadcumb-title h1 text-white my-0">Jogadores</h1>
-                <h2 class="breadcumb-bg-title">Gamers</h2>
+                <h1 class="breadcumb-title h1 text-white my-0">Vagas</h1>
+                <h2 class="breadcumb-bg-title">Vagas</h2>
                 <ul class="breadcumb-menu-style1 text-white mx-auto fs-xs">
                     <li><a href="index.php"><i class="fal fa-home"></i>Home</a></li>
-                    <li class="active">Jogadores</li>
+                    <li class="active">Vagas</li>
                 </ul>
             </div>
         </div>
     </div>
     <!--==============================
-    Players Area
+    vagas Area
     ============================== -->
-    <section class="vs-member-area vs-member-layout2 space-top newsletter-pb">
+    <!-- <section class="vs-member-area vs-member-layout2 space-top newsletter-pb">
     <div class="container">
             <div class="row justify-content-center">
             <?php
-        $candidatos = $objCandidato->listar();
-        foreach ($candidatos as $candidato){
+        $vagas = $objVaga->listar();
+        foreach ($vagas as $vaga){
     ?>
                 <div class="col-xl-3 col-lg-4 col-sm-6">
                     <div class="vs-member image-scale-hover">
                         <div class="member-img">
-                            <a href="player-details.php?id=<?php echo $candidato->id_candidato; ?>"><img src="assets/img/member/member-2-2.jpg" class="w-100" alt="Member Image"></a>
+                            <a href="player-details.php?id=<?php echo $vaga->id_vaga; ?>"><img src="assets/img/member/member-2-2.jpg" class="w-100" alt="Member Image"></a>
                         </div>
                         <div class="member-content">
                             <div class="links-wrap text-start position-relative mb-30">
@@ -410,7 +410,7 @@ Mobile Menu
                                     <a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoicHQifQ%3D%3D%22%7D" class="icon-btn3"><i class="fab fa-twitter"></i></a>
                                 </div>
                             </div>
-                            <h3 class="member-name h5 mb-0 text-white"><a href="player-details.php?id=<?php echo $candidato->id_candidato; ?>"><?php echo $candidato->nome; ?></a></h3>
+                            <h3 class="member-name h5 mb-0 text-white"><a href="player-details.php?id=<?php echo $vaga->id_vaga; ?>"><?php echo $vaga->nome; ?></a></h3>
                             <span class="degi text-white">Mobile Legends</span>
                         </div>
                     </div>
@@ -428,8 +428,67 @@ Mobile Menu
                 </ul>
             </div>
         </div>
-    </section>
-
+    </section> -->
+    <section class="vs-match-wrapper vs-match-layout1 space-top space-bottom">
+            <div class="container">
+                <div class="row align-items-center ">
+                    <div class="col-md-5 col-xl-6">
+                        <!-- <div class="section-title">
+                            <span class="sub-title1">Lista</span>
+                            <h2 class="sec-title1 text-white">Vagas</h2>
+                        </div> -->
+                    </div>
+                    <div class="col-lg-7 col-xl-6 text-center text-lg-end">
+                        <div class="filter-menu-style1 filter-menu-active mb-70">
+                            <button data-filter="*" class="active">Todos</button>
+                            <button data-filter=".csgo"> csgo</button>
+                            <button data-filter=".dota">dota 2</button>
+                            <button data-filter=".fortnite">fortnite</button>
+                            <button data-filter=".pubg">pubg</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-15 filter-active row">
+                <?php
+        $vagas = $objVaga->listar();
+        foreach ($vagas as $vaga){
+    ?>
+                    <div class="col-md-6 col-lg-12 grid-item pubg fortnite csgo ">
+                        <div class="vs-match">
+                            <div class="row align-items-center justify-content-center justify-content-lg-start">
+                                <div class="col-lg-3">
+                                    <div class="match-logo">
+                                        <a href="vaga-details.php?id=<?php echo $vaga->id_vaga; ?>"><img src="assets/img/logos/logo-1-7.png"
+                                                alt="vaga Logo" style="width:80px;"></a>
+                                        </div>
+                                </div>
+                                <div class="col-lg">
+                                    <div class="match-about pl-35">
+                                        <h3 class="team-name h5 text-white mb-1 mb-lg-2"><a
+                                                href="vaga-details.php?id=<?php echo $vaga->id_vaga; ?>"><?php echo $vaga->jogo; ?></a>
+                                        </h3>
+                                        <p class="match-date mb-0">Cargo: <?php echo $vaga->titulo_vaga; ?></p>
+                                        <p class="match-date mb-0">Salário: R$ <?php echo $vaga->salario; ?></p>
+                                    </div>
+                                </div>
+                                <div class="col-auto col-xl-2">
+                                    <div class="team-name h5 text-white mb-1 mb-lg-2">Nº de vagas: <?php echo $vaga->num_vagas; ?></div>
+                                </div>
+                                <div class="col-auto col-xl-2 text-end ">
+                                    <a href="#"
+                                        class="icon-btn3"><i class="fad fa-paper-plane"></i></a>
+                                    <a href="#"
+                                        class="icon-btn3"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <?php 
+                        }
+                    ?>
+                </div>
+            </div>
+        </section>
     <!--==============================
 			Footer Area
 	==============================-->

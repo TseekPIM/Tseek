@@ -1,5 +1,12 @@
 <?php
-session_start();
+include('class/Classes.php');
+
+// session_start();
+if(isset($_POST['btnCadastrar'])){
+    $Candidato = new Candidato();
+    $id = $Candidato->cadastrar($_POST,$_FILES['foto']);  
+    header('location:player-details1.php?'.$id);
+  }
 ?>
 <!DOCTYPE html>
 <html lang="pt-br" >
@@ -46,20 +53,27 @@ session_start();
 
       <div class="inputBox"> 
 
-       <input name= "nome" type="text" required> <i>Nome Completo</i>
+       <input name= "nome" type="text" id="nome" required> <i>Nome Completo</i>
 
       </div> 
 
       <div class="inputBox"> 
 
-        <input name= "email" type="email" required> <i>E-mail</i>
- 
+        <input name= "email" type="email" id="email" required> <i>E-mail</i>
+        <div id="alertaEmail" class="alert alert-danger" style="display: none;"></div>
        </div> 
 
       <div class="inputBox"> 
 
-        <input name= "senha" type="password" required> <i>Senha</i> 
+        <input name= "senha" type="password" id="senha" required> <i>Senha</i> 
  
+       </div> 
+
+
+      <div class="inputBox"> 
+
+        <input name= "confirma_senha" type="password" id="confirma_senha" required> <i>Confirme a Senha</i> 
+        <div id="alertaEmail" class="alert alert-danger" style="display: none;"></div>
        </div> 
 
       <div class="links"> <p style="color: white;">Já tem cadastro? Clique em</p> <a href="login2.php">Login</a> 
@@ -68,7 +82,7 @@ session_start();
 
       <div class="inputBox"> 
 
-       <input name= "cadastrar" type="submit" value="Cadastra-se"> 
+       <input name= "btnCadastrar" type="submit" value="Cadastra-se"> 
 
       </div> 
 
@@ -88,40 +102,57 @@ session_start();
 <!-- partial -->
   
 </body>
+<?php include_once('assets/js/js.php');?>
+<script>
+  $('#confirma_senha').blur(function (e){
+    e.preventDefault();
+    var senha = $('#senha').val();
+    var confirma_senha = $('#confirma_senha').val();
+  
+    if (senha != confirma_senha){
+      $("#alerta").empty().hide();
+      $("#alerta").append("Senhas não são iguais");
+      $("#alerta").show();
+      $('#confirma_senha').val();
+      $('#senha').focus();
 
-<!-- <script language="javascript">
-// Aciona a validação do email ao sair do input
-$('#email').blur(function(){        
-var email = $(this).val();
-// Testa a validação
-    if(email != '') {
-        // alert('OK');
-        $("#alertaEmail").empty().hide();
-        // verificar se já possui cadastro
-        $.ajax({
-            url: 'checarEmail.php',
-            type:"POST",
-            data: {email: email}                  
-            }).done(function(resposta){                                           
-                // verificar se a resposta está vazia,
-                // o que indica que o e-mail não está sendo utilizado                      
-                if( !$.isEmptyObject(resposta) ){
-                    $("#alertaEmail").empty().hide();
-                    $("#alertaEmail" ).append("Este e-mail já está sendo utilizado, informe outro E-mail!");
-                    $("#alertaEmail").show();
-                    $('#email').val('');
-                    $('#email').focus();
-                }else{
-                    $("#alertaEmail").empty().hide();
-                }
-            }).fail(function(jqXHR, textStatus ) {
-                console.log("Mensagem de erro: " + textStatus);
-            });
+      
+    }else{
+      $("#alerta").empty().hide();
     }
+  });
+</script>
 
+<script language="javascript"> 
+//Aciona a validação do email ao sair do input
+$('#email').blur(function(){
+var email = $(this).val();
+//Teste de validação
+  if(email !=''){
+    //alerta ('OK');
+    $("#alertaemail").empty().hide();
+    //verificar se já possui cadastro
+    $.ajax({
+      url: 'checarEmail.php',
+      type: "POST",
+      data: {email: email}
+    }).done(function(resposta){
+        //verificar se a resposta esta vazia
+        //o que indica que o email não esta sendo utilizado
+        if (!$.isEmptyObject(resposta)) {
+          $("#alertaEmail").empty().hide();
+          $("#alertaEmail").append("Este e-mail já esta sendo utilizado, informe outro E-mail!");
+          $("#alertaEmail").show();
+          $('#email').val();
+          $('#email').focus();
+        }else{
+          $("#alertaEmail").empty().hide();
+        }
+    }).fail(function(jqXHR, textStatus) {
+      console.log("Mensagem de erro:" + textStatus);
+    })
+  }
 });
-   
-</script> -->
-
+</script>
 
 </html>

@@ -1,17 +1,17 @@
 <?php
 include('protect.php');
-//  echo $_SESSION['nome'];
+ echo $_SESSION['nome'];
 //  echo $_GET['id'];
-// print_r($_SESSION);
+print_r($_SESSION);
 require_once('class/Classes.php');
 //  $objHelper = new Helper();
 //  $objHelper->logado();
  
 
  
- $objCandidato = new Candidato();
-//  $id_candidato = $_SESSION['id'];
-//  $candidato = $objCandidato->Mostrar($_SESSION['id']);
+ $objEquipe = new Equipe();
+//  $id_equipe = $_SESSION['id'];
+//  $Equipe = $Equipe->Mostrar($_SESSION['id']);
 
  
 ?>
@@ -377,29 +377,29 @@ Mobile Menu
     <div class="breadcumb-wrapper breadcumb-layout1 pt-200 pb-50" data-bg-src="assets/img/breadcumb/breadcumb-1.jpg" data-overlay>
         <div class="container z-index-common">
             <div class="breadcumb-content text-center">
-                <h1 class="breadcumb-title h1 text-white my-0">Jogadores</h1>
-                <h2 class="breadcumb-bg-title">Gamers</h2>
+                <h1 class="breadcumb-title h1 text-white my-0">Times</h1>
+                <h2 class="breadcumb-bg-title">Teams</h2>
                 <ul class="breadcumb-menu-style1 text-white mx-auto fs-xs">
                     <li><a href="index.php"><i class="fal fa-home"></i>Home</a></li>
-                    <li class="active">Jogadores</li>
+                    <li class="active">Times</li>
                 </ul>
             </div>
         </div>
     </div>
     <!--==============================
-    Players Area
+    teams Area
     ============================== -->
     <section class="vs-member-area vs-member-layout2 space-top newsletter-pb">
     <div class="container">
             <div class="row justify-content-center">
             <?php
-        $candidatos = $objCandidato->listar();
-        foreach ($candidatos as $candidato){
+        $equipes = $objEquipe->listar();
+        foreach ($equipes as $equipe){
     ?>
                 <div class="col-xl-3 col-lg-4 col-sm-6">
                     <div class="vs-member image-scale-hover">
                         <div class="member-img">
-                            <a href="player-details.php?id=<?php echo $candidato->id_candidato; ?>"><img src="assets/img/member/member-2-2.jpg" class="w-100" alt="Member Image"></a>
+                            <a href="team-details.php?id=<?php echo $equipe->id_equipe; ?>"><img src="assets/img/logos/logo-1-3.png" class="w-100" alt="Member Image"></a>
                         </div>
                         <div class="member-content">
                             <div class="links-wrap text-start position-relative mb-30">
@@ -410,7 +410,7 @@ Mobile Menu
                                     <a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoicHQifQ%3D%3D%22%7D" class="icon-btn3"><i class="fab fa-twitter"></i></a>
                                 </div>
                             </div>
-                            <h3 class="member-name h5 mb-0 text-white"><a href="player-details.php?id=<?php echo $candidato->id_candidato; ?>"><?php echo $candidato->nome; ?></a></h3>
+                            <h3 class="member-name h5 mb-0 text-white"><a href="team-details.php?id=<?php echo $equipe->id_equipe; ?>"><?php echo $equipe->nome; ?></a></h3>
                             <span class="degi text-white">Mobile Legends</span>
                         </div>
                     </div>
@@ -525,7 +525,6 @@ Mobile Menu
             </div>
         </div>
     </footer>
-
 
 
 

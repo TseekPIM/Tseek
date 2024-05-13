@@ -1,5 +1,5 @@
 <?php
-include('protect.php');
+// include('protect.php');
 //  echo $_SESSION['nome'];
 //  echo $_GET['id'];
 // print_r($_SESSION);
@@ -109,7 +109,7 @@ require_once('class/Classes.php');
                 <nav class="main-menu menu-sticky1 d-none d-lg-block link-inherit">
                     <ul>
                         <li class="menu-item-has-children">
-                            <a href="vagas.php">Vagas</a>
+                            <a href="vagas1.php">Vagas</a>
                             <!-- <ul class="sub-menu">
                                 <li><a href="#">Ação</a></li>
                                 <li><a href="#">Aventura</a></li>
@@ -124,7 +124,7 @@ require_once('class/Classes.php');
                             </ul> -->
                         </li>
                         <li class="mega-menu-wrap menu-item-has-children">
-                            <a href="player.php">Jogadores</a>
+                            <a href="player1.php">Jogadores</a>
                             <!-- <ul class="mega-menu">
                                 <li><a href="#">RANK</a>
                                     <ul>
@@ -148,7 +148,7 @@ require_once('class/Classes.php');
                             </ul> -->
                         </li>
                         <li class="mega-menu-wrap menu-item-has-children">
-                            <a href="team.php">Times</a>
+                            <a href="team1.php">Times</a>
                             <!-- <ul class="mega-menu">
                                 <li><a href="#">RANK</a>
                                     <ul>
@@ -273,7 +273,7 @@ Mobile Menu
                         <nav class="main-menu menu-style1 mobile-menu-active" data-expand="992">
                             <ul>
                                 <li class="menu-item-has-children">
-                                    <a href="vagas.php">Vagas</a>
+                                    <a href="vagas1.php">Vagas</a>
                                     <!-- <ul class="sub-menu">
                                         <li><a href="#">Ação</a></li>
                                         <li><a href="#">Aventura</a></li>
@@ -288,7 +288,7 @@ Mobile Menu
                                     </ul> -->
                                 </li>
                                 <li class="mega-menu-wrap menu-item-has-children">
-                                    <a href="player.php">Jogadores</a>
+                                    <a href="player1.php">Jogadores</a>
                                     <!-- <ul class="mega-menu">
                                         <li><a href="#">RANK</a>
                                             <ul>
@@ -312,7 +312,7 @@ Mobile Menu
                                     </ul> -->
                                 </li>
                                 <li class="mega-menu-wrap menu-item-has-children">
-                                    <a href="team.php">Times</a>
+                                    <a href="team1.php">Times</a>
                                     <!-- <ul class="mega-menu">
                                         <li><a href="#">RANK</a>
                                             <ul>
@@ -350,19 +350,19 @@ Mobile Menu
                             <a href="https://www.twitch.tv/directory" class="vs-btn outline1 d-none d-xl-inline-block"><i
                                     class="fab fa-twitch"></i><strong>Live Streaming</strong></a>
                             <ul class="header-list1 list-style-none ml-30">
-                                <!-- <li>
+                                <li>
                                     <button class="dropdown-toggle" type="button" title="Login">
                                         <a href="login2.php"><img src="assets/img/flag/flag-1.png"
                                                 alt="Country Flag" class="flag radius-circle"> </a>
                                     </button>
-                                </li> -->
+                                </li>
                                 <li>
                                         <button class="searchBoxTggler"><i class="far fa-search"></i></button>
                                 </li>
-                                <li>
+                                <!-- <li>
                                 <button class="sideMenuToggler"><i
                                                 class="fal fa-grip-horizontal fs-2"></i></button>
-                                </li>
+                                </li> -->
                             </ul>
                         </div>
                     </div>
@@ -410,7 +410,7 @@ Mobile Menu
                                     <a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoicHQifQ%3D%3D%22%7D" class="icon-btn3"><i class="fab fa-twitter"></i></a>
                                 </div>
                             </div>
-                            <h3 class="member-name h5 mb-0 text-white"><a href="player-details.php?id=<?php echo $candidato->id_candidato; ?>"><?php echo $candidato->nome; ?></a></h3>
+                            <h3 class="member-name h5 mb-0 text-white"><a href="player-detaills.php?id=<?php echo $candidato->id_candidato; ?>"><?php echo $candidato->nome; ?></a></h3>
                             <span class="degi text-white">Mobile Legends</span>
                         </div>
                     </div>

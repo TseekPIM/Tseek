@@ -75,7 +75,7 @@ require_once('class/Classes.php');
 <body>
 
     <!--********************************
-   		Code Start From Here 
+   		Codigo começa aqui
 	******************************** -->
 
 
@@ -109,8 +109,8 @@ Icons ao lado superior direito (menu retrátil)
                 <nav class="main-menu menu-sticky1 d-none d-lg-block link-inherit">
                     <ul>
                         <li class="menu-item-has-children">
-                            <a href="#">Categorias</a>
-                            <ul class="sub-menu">
+                            <a href="vagas.php">Vagas</a>
+                            <!-- <ul class="sub-menu">
                                 <li><a href="#">Ação</a></li>
                                 <li><a href="#">Aventura</a></li>
                                 <li><a href="#">Battle Royale</a></li>
@@ -121,11 +121,11 @@ Icons ao lado superior direito (menu retrátil)
                                 <li><a href="#">MOBA</a></li>
                                 <li><a href="#">RPG</a></li>
                                 <li><a href="#">Tiro</a></li>
-                            </ul>
+                            </ul> -->
                         </li>
                         <li class="mega-menu-wrap menu-item-has-children">
-                            <a href="#">Jogadores</a>
-                            <ul class="mega-menu">
+                            <a href="player.php">Jogadores</a>
+                            <!-- <ul class="mega-menu">
                                 <li><a href="#">RANK</a>
                                     <ul>
                                         <li><a href="#"></a>
@@ -145,11 +145,11 @@ Icons ao lado superior direito (menu retrátil)
                                         <li><a href="#"></a>
                                         <li><a href="#"></a>
                                     </ul>
-                            </ul>
+                            </ul> -->
                         </li>
                         <li class="mega-menu-wrap menu-item-has-children">
-                            <a href="#">Times</a>
-                            <ul class="mega-menu">
+                            <a href="team.php">Times</a>
+                            <!-- <ul class="mega-menu">
                                 <li><a href="#">RANK</a>
                                     <ul>
                                         <li><a href="#"></a>
@@ -169,7 +169,7 @@ Icons ao lado superior direito (menu retrátil)
                                         <li><a href="#"></a>
                                         <li><a href="#"></a>
                                     </ul>
-                            </ul>
+                            </ul> -->
                         </li>
                         <li class="menu-item-has-children">
                             <a href="#">Planos</a>
@@ -273,8 +273,8 @@ Mobile Menu
                         <nav class="main-menu menu-style1 mobile-menu-active" data-expand="992">
                             <ul>
                                 <li class="menu-item-has-children">
-                                    <a href="#">Categorias</a>
-                                    <ul class="sub-menu">
+                                    <a href="vagas.php">Vagas</a>
+                                    <!-- <ul class="sub-menu">
                                         <li><a href="#">Ação</a></li>
                                         <li><a href="#">Aventura</a></li>
                                         <li><a href="#">Battle Royale</a></li>
@@ -285,11 +285,11 @@ Mobile Menu
                                         <li><a href="#">MOBA</a></li>
                                         <li><a href="#">RPG</a></li>
                                         <li><a href="#">Tiro</a></li>
-                                    </ul>
+                                    </ul> -->
                                 </li>
                                 <li class="mega-menu-wrap menu-item-has-children">
                                     <a href="player.php">Jogadores</a>
-                                    <ul class="mega-menu">
+                                    <!-- <ul class="mega-menu">
                                         <li><a href="#">RANK</a>
                                             <ul>
                                                 <li><a href="#"></a>
@@ -309,11 +309,11 @@ Mobile Menu
                                                 <li><a href="#"></a>
                                                 <li><a href="#"></a>
                                             </ul>
-                                    </ul>
+                                    </ul> -->
                                 </li>
                                 <li class="mega-menu-wrap menu-item-has-children">
-                                    <a href="#">Times</a>
-                                    <ul class="mega-menu">
+                                    <a href="team.php">Times</a>
+                                    <!-- <ul class="mega-menu">
                                         <li><a href="#">RANK</a>
                                             <ul>
                                                 <li><a href="#"></a>
@@ -333,7 +333,7 @@ Mobile Menu
                                                 <li><a href="#"></a>
                                                 <li><a href="#"></a>
                                             </ul>
-                                    </ul>
+                                    </ul> -->
                                 </li>
                                 <li class="menu-item-has-children">
                                     <a href="planos.html">Planos</a>
@@ -673,8 +673,6 @@ Mobile Menu
                             <div class="menu-all-pages-container">
                                 <ul class="menu">
                                     <li><a href="#">Companhia</a></li>
-                                    <li><a href="#">For the fans</a></li>
-                                    <li><a href="#">Press</a></li>
                                     <li><a href="#">Privacidade</a></li>
                                     <li><a href="#">Politica</a></li>
                                 </ul>
@@ -688,11 +686,11 @@ Mobile Menu
                                 <p class="contact-info"><i class="fal fa-map-marker-alt text-white"></i>R. Conceição,
                                     321 - Santo Antônio, São Caetano do Sul - SP, 09530-060</p>
                                 <p class="contact-info"><i class="fal fa-phone text-white"></i><a
-                                        href="tel:+65965252561">(11) 7070 - 7070</a></p>
+                                        href="#">(11) 7070 - 7070</a></p>
                                 <p class="contact-info"><i class="fal fa-fax text-white"></i><a
-                                        href="tel:+65965252561">(11) 1234 - 5678</a></p>
+                                        href="#">(11) 1234 - 5678</a></p>
                                 <p class="contact-info"><i class="fal fa-envelope text-white"></i><a
-                                        href="mailto:info@example.com">Tseek@gmail.com</a></p>
+                                        href="#">Tseek@gmail.com</a></p>
                             </div>
                         </div>
                     </div>
@@ -727,7 +725,7 @@ Mobile Menu
 
 
     <!--********************************
-			Code End  Here 
+			Codigo termina aqui
 	******************************** -->
 
     <!-- Scroll Top Top Button -->

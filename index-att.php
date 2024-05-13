@@ -109,7 +109,7 @@ print_r($_SESSION);
                     <nav class="main-menu menu-sticky1 d-none d-lg-block link-inherit">
                         <ul>
                             <li class="menu-item-has-children">
-                                <a href="#">Categorias</a>
+                                <a href="vagas.php">Vagas</a>
                                 <ul class="sub-menu">
                                     <li><a href="#">Ação</a></li>
                                     <li><a href="#">Aventura</a></li>
@@ -124,8 +124,8 @@ print_r($_SESSION);
                                 </ul>
                             </li>
                             <li class="mega-menu-wrap menu-item-has-children">
-                                <a href="#">Jogadores</a>
-                                <ul class="mega-menu">
+                                <a href="player.php">Jogadores</a>
+                                <!-- <ul class="mega-menu">
                                     <li><a href="#">RANK</a>
                                         <ul>
                                             <li><a href="#"></a>
@@ -162,11 +162,11 @@ print_r($_SESSION);
                                             <li><a href="#"></a>
                                         </ul>
                                     </li>
-                                </ul>
+                                </ul> -->
                             </li>
                             <li class="mega-menu-wrap menu-item-has-children">
                                 <a href="#">Times</a>
-                                <ul class="mega-menu">
+                                <!-- <ul class="mega-menu">
                                     <li><a href="#">RANK</a>
                                         <ul>
                                             <li><a href="#"></a>
@@ -203,7 +203,7 @@ print_r($_SESSION);
                                             <li><a href="#"></a>
                                         </ul>
                                     </li>
-                                </ul>
+                                </ul> -->
                             </li>
                             <li class="menu-item-has-children">
                                 <a href="#">Planos</a>
@@ -309,9 +309,9 @@ print_r($_SESSION);
                         <div class="col-6 col-lg-8 col-xl-5 text-end text-xl-start">
                             <nav class="main-menu menu-style1 mobile-menu-active" data-expand="992">
                                 <ul>
-                                    <li class="menu-item-has-children">
-                                        <a href="#">Categorias</a>
-                                        <ul class="sub-menu">
+                                    <li class="menu-item-has-children ">
+                                        <a href="vagas.php">Vagas</a>
+                                        <!-- <ul class="sub-menu">
                                             <li><a href="#">Ação</a></li>
                                             <li><a href="#">Aventura</a></li>
                                             <li><a href="#">Battle Royale</a></li>
@@ -322,11 +322,11 @@ print_r($_SESSION);
                                             <li><a href="#">MOBA</a></li>
                                             <li><a href="#">RPG</a></li>
                                             <li><a href="#">Tiro</a></li>
-                                        </ul>
+                                        </ul> -->
                                     </li>
                                     <li class="mega-menu-wrap menu-item-has-children">
-                                        <a href="player.html">Jogadores</a>
-                                        <ul class="mega-menu">
+                                        <a href="player.php">Jogadores</a>
+                                        <!-- <ul class="mega-menu">
                                             <li><a href="player.html">RANK</a>
                                                 <ul>
                                                     <li><a href="#"></a>
@@ -363,11 +363,11 @@ print_r($_SESSION);
                                                     <li><a href="#"></a>
                                                 </ul>
                                             </li>
-                                        </ul>
+                                        </ul> -->
                                     </li>
                                     <li class="mega-menu-wrap menu-item-has-children">
-                                        <a href="player.html">Times</a>
-                                        <ul class="mega-menu">
+                                        <a href="team.php">Times</a>
+                                        <!-- <ul class="mega-menu">
                                             <li><a href="player.html">RANK</a>
                                                 <ul>
                                                     <li><a href="#"></a>
@@ -404,7 +404,7 @@ print_r($_SESSION);
                                                     <li><a href="#"></a>
                                                 </ul>
                                             </li>
-                                        </ul>
+                                        </ul> -->
                                     </li>
                                     <li class="menu-item-has-children">
                                         <a href="planos.html">Planos</a>
@@ -915,7 +915,7 @@ print_r($_SESSION);
                                 <div class="d-flex gap-2 text-white mt-45">
                                     <a class="icon-btn1 skew-right" href="https://google.com"><i
                                             class="fab fa-facebook-f"></i></a>
-                                    <a class="icon-btn1 skew-right" href="https://google.com"><i
+                                            <a class="icon-btn1 skew-right" href="https://google.com"><i
                                             class="fab fa-twitter"></i></a>
                                     <a class="icon-btn1 skew-right" href="https://google.com"><i
                                             class="fab fa-linkedin-in"></i></a>
@@ -943,8 +943,6 @@ print_r($_SESSION);
                             <div class="menu-all-pages-container">
                                 <ul class="menu">
                                     <li><a href="#">Companhia</a></li>
-                                    <li><a href="#">For the fans</a></li>
-                                    <li><a href="#">Press</a></li>
                                     <li><a href="#">Privacidade</a></li>
                                     <li><a href="#">Politica</a></li>
                                 </ul>
@@ -988,12 +986,13 @@ print_r($_SESSION);
                     </div>
                     <div class="col-xl-4 align-self-center text-center py-3 py-xl-0 text-xl-end">
                         <p class="text-light fw-bold text-bold mb-0">&copy; 2024 <a class="text-white"
-                                href="index.html">TSeeK</a></p>
+                                href="index.php">TSeeK</a></p>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
+
 
 
 
