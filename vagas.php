@@ -484,7 +484,7 @@ Mobile Menu
                         </div>
                     </div>
                     <?php 
-                        }
+                        } //fecha foreach
                     ?>
                 </div>
             </div>
