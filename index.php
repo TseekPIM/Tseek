@@ -192,7 +192,7 @@ $objVaga = new Vaga();
                                 </ul> -->
                             </li>
                             <li class="menu-item-has-children">
-                                <a href="#">Planos</a>
+                                <a href="planos.php">Planos</a>
                             </li>
                         </ul>
                 </div>
@@ -392,7 +392,7 @@ $objVaga = new Vaga();
                                         </ul>
                                     </li> -->
                                     <li class="menu-item-has-children">
-                                        <a href="planos.html">Planos</a>
+                                        <a href="planos.php">Planos</a>
                                     </li>
                                 </ul>
                         </div>
