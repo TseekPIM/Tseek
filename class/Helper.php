@@ -58,23 +58,7 @@ class Helper{
         return $categoria->categoria;
     }
 
-    /**
-     * retorna o nome da categoria
-     *
-     * @param integer $id_categoria
-     * @return string
-     */
-
-    public static function nomeDoProduto(int $id_produto)
-    {
-        $pdo = Conexao::conexao();
-        $sql = $pdo->prepare('SELECT * FROM produtos 
-                                    WHERE id_produto = :id_produto');
-        $sql->bindParam(':id_produto', $id_produto);
-        $sql->execute();
-        $produto = $sql->fetch(PDO::FETCH_OBJ);
-        return $produto->nome;
-    }
+  
 
      /**
      * retorna o nome da categoria
@@ -94,83 +78,6 @@ class Helper{
         return $candidato->nome;
     }
 
-
-
-    public static function QuantidadeemEstoque($id_produto)
-    {
-        $pdo = Conexao::conexao();
-        $sql = $pdo->prepare('SELECT quantidade FROM produtos 
-                                    WHERE id_produto = :id_produto');
-        $sql->bindParam(':id_produto', $id_produto);
-        // $sql->bindParam(':quantidade', $quantidade);
-        $sql->execute();
-        $produto = $sql->fetch(PDO::FETCH_OBJ);
-        return $produto->quantidade;
-    }
-
-
-
-
-    /**
-     * retorna o nome do fabricante
-     *
-     * @param integer $id_fabricante
-     * @return string
-     */
-
-    public static function nomeDoFabricante(int $id_fabricante)
-    {
-        $pdo = Conexao::conexao();
-        $sql = $pdo->prepare('SELECT * FROM fabricante 
-                                    WHERE id_fabricante = :id_fabricante');
-        $sql->bindParam(':id_fabricante', $id_fabricante);
-        $sql->execute();
-        $fabricante = $sql->fetch(PDO::FETCH_OBJ);
-        return $fabricante->nome;
-       
-    }
-
-    /**
-     * retorna o nome do fornecedor
-     *
-     * @param integer $id_fornecedor
-     * @return string
-     */
-
-    public static function nomeDoFornecedor(int $id_fornecedor)
-    {
-        $pdo = Conexao::conexao();
-        $sql = $pdo->prepare('SELECT * FROM fornecedor 
-                                    WHERE id_fornecedor = :id_fornecedor');
-        $sql->bindParam(':id_fornecedor', $id_fornecedor);
-        $sql->execute();
-        $fornecedor = $sql->fetch(PDO::FETCH_OBJ);
-        return $fornecedor->razao_social;
-       
-    }
-
-    /**
-     * mostra a foto do candidato 
-     *
-     * @param integer $id_candidato
-     * @return string || 
-     */
-    public static function fotoDoAutor(int $id_candidato)
-    {
-        $pdo = Conexao::conexao();
-        $sql = $pdo->prepare('SELECT * FROM candidato 
-                                    WHERE id_candidato = :id_candidato');
-        $sql->bindParam(':id_candidato', $id_candidato);
-        $sql->execute();
-        $candidato = $sql->fetch(PDO::FETCH_OBJ);
-        //verificar se existe uma foto
-       if ($candidato->foto !='') {
-        return '<img class= "img-thumbnail" width="150" src="../imagens/candidatos/'.$candidato->foto.'">';
-      } else {
-        return '';
-      }
-        
-    }
     /**
      * mostra a foto do candidato 
      *
@@ -195,7 +102,7 @@ class Helper{
     }
 
     /**
-     * retorna o nome do autor
+     * retorna o nome do candidato
      *
      * @param integer $id_candidato
      * @return string
@@ -213,17 +120,17 @@ class Helper{
     }
 
     /**
-     * retonar total de noticias por autor
+     * retonar total de vagas por equipe
      *
      * @param integer $id_candidato
      * @return int
      */
-    public static function noticiasPorAutor(int $id_candidato)
+    public static function vagasporequipe(int $id_equipe)
     {
         $pdo = Conexao::conexao();
         $sql = $pdo->prepare('SELECT COUNT(*) as total FROM noticias
-                                    WHERE id_candidato = :id_candidato');
-        $sql->bindParam(':id_candidato', $id_candidato);
+                                    WHERE id_equipe = :id_equipe');
+        $sql->bindParam(':id_equipe', $id_equipe);
         $sql->execute();
         $total = $sql->fetch(PDO::FETCH_OBJ);
         // print_r($total); die();
@@ -231,15 +138,15 @@ class Helper{
     }
     
     /**
-     * retorna quantidade de noticias por categoria
+     * retorna quantidade de jogos por categoria
      *
      * @param integer $id_categoria
      * @return int
      */
-    public static function categoriasPorProduto(int $id_categoria)
+    public static function categoriasPorJogo(int $id_categoria)
     {
         $pdo = Conexao::conexao();
-        $sql = $pdo->prepare('SELECT COUNT(*) as total FROM produtos
+        $sql = $pdo->prepare('SELECT COUNT(*) as total FROM jogo
                                     WHERE id_categoria = :id_categoria');
         $sql->bindParam(':id_categoria', $id_categoria);
         $sql->execute();
@@ -248,41 +155,6 @@ class Helper{
         return $total->total;
     }
 
-
-    /**
-     * retonar total de comentarios
-     *
-     * @param integer $id_noticia
-     * @return int
-     */
-    public static function comentarioPorProduto(int $id_noticia)
-    {
-        $pdo = Conexao::conexao();
-        $sql = $pdo->prepare('SELECT COUNT(*) as total FROM comentarios
-                                    WHERE id_noticia = :id_noticia');
-        $sql->bindParam(':id_noticia', $id_noticia);
-        $sql->execute();
-        $total = $sql->fetch(PDO::FETCH_OBJ);
-        // print_r($total); die();
-        return $total->total;
-    }
-    /**
-     * retonar total de comentarios do leitor
-     *
-     * @param integer $id_candidato
-     * @return int
-     */
-    public static function comentarioPorLeitor(int $id_candidato)
-    {
-        $pdo = Conexao::conexao();
-        $sql = $pdo->prepare('SELECT COUNT(*) as total FROM comentarios
-                                    WHERE id_candidato = :id_candidato');
-        $sql->bindParam(':id_candidato', $id_candidato);
-        $sql->execute();
-        $total = $sql->fetch(PDO::FETCH_OBJ);
-        // print_r($total); die();
-        return $total->total;
-    }
     
     /**
      * Transforma a data no padrão do Brasil
@@ -290,11 +162,35 @@ class Helper{
      * @param Date $data
      * @return string
      */
-    public static function dataBrasil($data = null)
-    {
-      $date = new DateTime($data);
-      return $date->format('d/m/Y');
+    // public static function dataBrasil($data = null)
+    // {
+    //   $date = new DateTime($data);
+    //   return $date->format('d/m/Y');
+    // }
+
+    /**
+     * Transforma uma data em formato padrão brasileiro (dia/mês/ano)
+     *
+     * @param string|null $data A data a ser formatada (formato YYYY-MM-DD) (opcional, se não fornecida, usa a data atual)
+     * @param string $formato O formato de data desejado (opcional, padrão: 'd/m/Y')
+     * @return string A data formatada
+     */    public static function dataBrasil($data = null, $formato = 'd/m/Y')
+{
+    // Se não for fornecida uma data, assume a data atual
+    if ($data === null) {
+        $date = new DateTime();
+    } else {
+        // Tratamento de data nula ou vazia
+        if ($data === '' || $data === '0000-00-00' || $data === '0000-00-00 00:00:00') {
+            return '';
+        }
+
+        $date = new DateTime($data);
     }
+
+    // Retorna a data formatada conforme o formato especificado
+    return $date->format($formato);
+}
 
 
     /**

@@ -10,11 +10,13 @@ require_once('class/Classes.php');
 
  
  $objEquipe = new Equipe();
-//  $id_equipe = $_SESSION['id'];
-//  $Equipe = $objEquipe->Mostrar($_SESSION['id']);
+ $objVaga = new Vaga();
+//  $id_vaga = $_SESSION['id'];
+//  $Vaga = $objVaga->Mostrar($_SESSION['id']);
 
  
 ?>
+
 <!doctype html>
 <html class="no-js" lang="zxx">
 
@@ -69,12 +71,11 @@ require_once('class/Classes.php');
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Theme Color CSS -->
     <link rel="stylesheet" href="assets/css/theme-color1.css">
-
+    <style>p{color:#696969;}</style>
 
 </head>
 
 <body>
-
 <!--********************************
    		Codigo começa aqui
 	******************************** -->
@@ -123,7 +124,7 @@ require_once('class/Classes.php');
                                 <li><a href="#">Tiro</a></li>
                             </ul> -->
                         </li>
-                        <li class="mega-menu-wrap menu-item-has-children ">
+                        <li class="mega-menu-wrap menu-item-has-children">
                             <a href="player1.php">Jogadores</a>
                             <!-- <ul class="mega-menu">
                                 <li><a href="#">RANK</a>
@@ -148,7 +149,7 @@ require_once('class/Classes.php');
                             </ul> -->
                         </li>
                         <li class="mega-menu-wrap menu-item-has-children">
-                            <a href="team1.php">Times</a>
+                            <a href="team.php1">Times</a>
                             <!-- <ul class="mega-menu">
                                 <li><a href="#">RANK</a>
                                     <ul>
@@ -179,7 +180,7 @@ require_once('class/Classes.php');
         </div>
     </div>
 </div>
-    <!--==============================
+<!--==============================
     Sidemenu
 ============================== -->
 <div class="sidemenu-wrapper d-none d-lg-block  ">
@@ -211,12 +212,12 @@ require_once('class/Classes.php');
                         <a href="index.php"><span class="fa fa-sign-out mr-3"></span> Desconectar</a>
                     </li>
                 </ul>
-<!-- <?php //} ?> -->
+
             </nav>
         </div>
     </div>
     </div>
-    <!--==============================
+<!--==============================
 Busca
 ============================== -->
 <div class="popup-search-box d-none d-lg-block  ">
@@ -359,8 +360,8 @@ Mobile Menu
                                 <li>
                                         <button class="searchBoxTggler"><i class="far fa-search"></i></button>
                                 </li>
-                                <li>
-                                <!-- <button class="sideMenuToggler"><i
+                                <!-- <li>
+                                <button class="sideMenuToggler"><i
                                                 class="fal fa-grip-horizontal fs-2"></i></button>
                                 </li> -->
                             </ul>
@@ -371,141 +372,282 @@ Mobile Menu
         </div>
     </div>
 </header>
+<?php
+    if(isset($_GET['id'])&& $_GET['id'] != ''){
+        $vaga = $objVaga->mostrar($_GET['id']);
+        $equipe = $objEquipe->mostrar($_GET['id']);
+    // $id_vaga = $_SESSION['id_vaga'];
+?>
     <!--==============================
     Fundo titulo
 ============================== -->
-<div class="breadcumb-wrapper breadcumb-layout1 pt-200 pb-50" data-bg-src="assets/img/breadcumb/breadcumb-1.jpg" data-overlay>
+    <div class="breadcumb-wrapper breadcumb-layout1 pt-200 pb-50" data-bg-src="assets/img/breadcumb/breadcumb-1.jpg" data-overlay>
         <div class="container z-index-common">
             <div class="breadcumb-content text-center">
-                <h1 class="breadcumb-title h1 text-white my-0">Times</h1>
-                <h2 class="breadcumb-bg-title">Gamers</h2>
+                <h1 class="breadcumb-title h1 text-white my-0"><?php echo $vaga->titulo_vaga;?></h1>
+                <h2 class="breadcumb-bg-title">Vagas</h2>
                 <ul class="breadcumb-menu-style1 text-white mx-auto fs-xs">
                     <li><a href="index.php"><i class="fal fa-home"></i>Home</a></li>
-                    <li class="active">Times</li>
+                    <li class="active">Vagas</li>
                 </ul>
             </div>
         </div>
     </div>
+    
+
     <!--==============================
-  Team Area
+        Blog Area
     ==============================-->
-    <section class="vs-team-wrapper vs-team-layout1 space-top newsletter-pb">
+    <section class="vs-blog-wrapper blog-single-layout1 space-top  newsletter-pb">
         <div class="container">
-            <div class="row justify-content-center">         
-        <?php
-            $equipes = $objEquipe->listar();
-            foreach ($equipes as $equipe){
-        ?>
-                <div class="col-xl-3 col-lg-4 col-sm-6">
-                    <div class="vs-team bg-fluid" data-bg-src="assets/img/shape/member-bg-1.png">
-                        <div class="team-img mb-35">
-                        <a href="team-details1.php?id=<?php echo $equipe->id_equipe; ?>"><img src="assets/img/logos/logo-1-3.png" class="w-100" alt="Member Image"></a>
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="vs-blog">
+                        <div class="blog-meta bg-smoke has-border">
+                            <a href="#"><i class="fal fa-calendar-alt"></i><?php echo Helper::dataBrasil($vaga->criacao);?></a>
+                            <div class="cat-list">
+                                <i class="far fa-folder-open"></i>
+                                <a href="#">Mobile Legends</a>
+                                <a href="#">Rotação</a>
+                                <a href="#">Mobile</a>
+                            </div>
                         </div>
-                        <h3 class="member-name h5 mb-0 text-white"><a href="team-details1.php?id=<?php echo $equipe->id_equipe; ?>"><?php echo $equipe->nome; ?></a></h3>
-                        <!-- <span class="team-degi text-light-white fs-xs">14 Player</span> -->
+                        <div class="blog-content bg-smoke">
+                            <h2 class="blog-title h4 font-theme "><a href="#"><?php echo $vaga->jogo;?></a></h2>
+                            <p>Jogo</p>
+                            <div class="row my-25">
+                                <div class="col-md-6 mb-30 mb-md-0">
+                                    <img src="assets/img/team/mlbb.png" class="w-100" alt="Vaga Imagem">
+                                </div>
+                                <div class="col-md-6">
+                                    <img src="assets/img/logos/sup.jpg" class="w-100" alt="Vaga Imagem">
+                                </div>
+                            </div>
+                            <h3 class="h4">Descrição da vaga</h3>
+                            <p> <?php echo $vaga->descricao_vaga;?></p>
+                            <br>
+                            <h3 class="h4">Requisitos</h3>
+                            <p> <?php echo $vaga->requisitos;?></p>
+                            <br>
+                            <h3 class="h4">Data limite para se candidatar</h3>
+                            <p> <?php echo Helper::dataBrasil($vaga->encerramento);?></p>
+                            <div class="blog-share-links d-md-flex align-items-center">
+                                <h5 class="font-theme text-normal d-inline-block mb-3 mb-md-0 mr-20">Tags:</h5>
+                                <div class="tagcloud">
+                                    <a href="#">Mobile</a>
+                                    <a href="#">Multiplayer</a>
+                                    <a href="#">Rotação</a>
+                                </div>
+                            </div>
+                             
+                            <div class="blog-social-links">
+                                    <div class="nav nav-fill reply_and_edit">
+                                        <a class="vs-btn" href="#">
+                                            <span class="vs-btn"> Inscreva-se</span>
+                                        </a>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-written-author d-md-flex bg-smoke px-60 pb-60 pt-55 my-40">
+                        <div class="media-img mb-10 mb-md-0 mr-40 align-self-center">
+                            <img src="assets/img/author/blog-author.png" alt="Blog Author" class="rounded-circle">
+                        </div>
+                        
+                        <div class="media-body text-center text-md-start">
+                            <span class="fs-xs text-theme2">Vaga por:</span>
+                            <h3 class="font-theme text-normal mb-1"><?php echo $equipe->nome;?></h3>
+                            <p><?php echo $equipe->descricao;?></p>                            
+                            <div class="d-flex gap-2 text-white">
+                                <a class="icon-btn3 size-40" href="https://google.com"><i class="fab fa-facebook-f"></i></a>
+                                <a class="icon-btn3 size-40" href="https://google.com"><i class="fab fa-twitch"></i></a>
+                                <a class="icon-btn3 size-40" href="https://google.com"><i class="fab fa-linkedin-in"></i></a>
+                                <a class="icon-btn3 size-40" href="https://google.com"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <?php
-                    }
-               ?>
-            </div>
+                <?php } ?> 
+                <div class="col-lg-4">
+                    <aside class="sidebar-area sticky-top overflow-hidden">
+                        <div class="widget widget_search   ">
+                            <form class="search-form">
+                                <input type="text" placeholder="buscar">
+                                <button type="submit"><i class="far fa-search"></i></button>
+                            </form>
+                        </div>
+                        <h3 class="sidebox-title-v2 h5">Outras Vagas</h3>
+                        <div class="vs-sidebox-v2 px-0 pb-0 pt-20 mb-0">
+                            <div class="nav nav-fill  tab-menu1 tab-indicator bg-white" role="tablist">
+                                <a class="nav-link active" id="recente-tab" data-bs-toggle="tab" href="#recente" role="tab" aria-controls="recente" aria-selected="true">Recentes</a>
+                                <a class="nav-link" id="popular-tab" data-bs-toggle="tab" href="#popular" role="tab" aria-controls="popular" aria-selected="false">Popular</a>
+                            </div>
+                        </div>
+                        <div class="tab-content">
+                            <div class="tab-pane show active" id="recente" role="tabpanel" aria-labelledby="recente-tab">
+                                <?php 
+                                    $vagas = $objVaga->listar();
+                                    foreach ($vagas as $vaga){
+                                ?>
+                                <div class="post-thumb-style1 vs-sidebox-v2 pb-1">
+                                    <div class="vs-blog d-flex gap-3">
+                                        <div class="media-img">
+                                            <a href="vaga-details1.php?id=<?php echo $vaga->id_vaga; ?>"><img src="assets/img/team/mlbb.png" width="100px;" alt="foto do jogo"></a>
+                                        </div>
+                                        <div class="media-body align-self-center">
+                                            <h4 class="h5 blog-title font-theme lh-base mb-0"><a href="vaga-details1.php?id=<?php echo $vaga->id_vaga; ?>"><?php echo $vaga->titulo_vaga; ?></a></h4>
+                                            <div class="blog-meta link-inherit fs-xs mt-1">
+                                                <a href="vagas.php"><i class="fal fa-calendar-alt text-theme2"></i><?php echo $vaga->jogo; ?></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                   </div>
+                                <?php } ?>
+                            </div>
+                            <div class="tab-pane" id="popular" role="tabpanel" aria-labelledby="popular-tab">
+                                <div class="post-thumb-style1 vs-sidebox-v2 pb-1">
+                                <?php 
+                                    $vagas = $objVaga->listar();
+                                    foreach ($vagas as $vaga){
+                                ?>
+                                <div class="post-thumb-style1 vs-sidebox-v2 pb-1">
+                                    <div class="vs-blog d-flex gap-3">
+                                        <div class="media-img">
+                                            <a href="vaga-details1.php?id=<?php echo $vaga->id_vaga; ?>"><img src="assets/img/team/mlbb.png" width="100px;" alt="foto do jogo"></a>
+                                        </div>
+                                        <div class="media-body align-self-center">
+                                            <h4 class="h5 blog-title font-theme lh-base mb-0"><a href="vaga-details1.php?id=<?php echo $vaga->id_vaga; ?>"><?php echo $vaga->titulo_vaga; ?></a></h4>
+                                            <div class="blog-meta link-inherit fs-xs mt-1">
+                                                <a href="vagas.php"><i class="fal fa-calendar-alt text-theme2"></i><?php echo $vaga->jogo; ?></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                   </div>
+                                <?php } ?>
+                                </div>
+                            </div>
+                            
+                        </div>
 
-            <div class="pagination-wrapper pagination-layout1 mt-lg-30 mb-30">
-                <ul id="paginação">
-                    <li><a href="#" class="pagina ativo" data-page="1"><span class="text">1</span></a></li>
-                    <li><a href="#" class="pagina" data-page="2"><span class='text'>2</span></a></li>
-                    <li><a href="#" class="pagina" data-page="3"><span class='text'>3</span></a></li>
-                    <li><a href="#" class="pagina" data-page="4"><span class='text'>4</span></a></li>
-                </ul>
+                        <h3 class="sidebox-title-v2 h5">Categorias</h3>
+                        <div class="vs-sidebox-v2 ">
+                            <ul class="vs-cat-list1">
+                                <li><a href="3">Futebol <span class="cat-number">10</span></a></li>
+                                <li><a href="3">Basquete <span class="cat-number">07</span></a></li>
+                                <li><a href="3">Basebal <span class="cat-number">05</span></a></li>
+                                <li><a href="3">esports <span class="cat-number">02</span></a></li>
+                            </ul>
+                        </div>
+                        <h3 class="sidebox-title-v2 h5">Top Games</h3>
+                        <div class="vs-sidebox bg-smoke">
+                            <div class="row no-gutters g-2">
+                                <div class="col-6">
+                                    <div class="image-scale-hover"><a href="#"><img src="assets/img/widget/sidebbox-img-1.jpg" class="w-100" alt="Sidebox Image"></a></div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="image-scale-hover"><a href="#"><img src="assets/img/widget/sidebbox-img-2.jpg" class="w-100" alt="Sidebox Image"></a></div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="image-scale-hover"><a href="#"><img src="assets/img/widget/sidebbox-img-3.jpg" class="w-100" alt="Sidebox Image"></a></div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="image-scale-hover"><a href="#"><img src="assets/img/widget/sidebbox-img-4.jpg" class="w-100" alt="Sidebox Image"></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
             </div>
         </div>
     </section>
-   <!--==============================
+    <!--==============================
 			Footer Area
 	==============================-->
     <footer class="footer-wrapper footer-layout2 bg-dark bg-fluid" data-bg-src="assets/img/bg/footer-bg-2-1.jpg">
-    <div class="footer-widget-wrapper  dark-style1 pb-30">
-        <div class="container">
-            <div class="row justify-content-between">
-                <div class="col-md-6 col-lg-3 col-xl-3">
-                    <div class="widget footer-widget pt-0">
-                        <h3 class="widget_title text-white">Sobre Nós</h3>
-                        <div class="vs-widget-about">
-                            <p class="pe-xl-3">Nosso compromisso é simplificar a conexão entre jogadores e equipes, 
-                            facilitando a formação de times eficientes para desafios online. Junte-se a nós e eleve sua experiência de jogo!</p>
-                            <div class="d-flex gap-2 text-white mt-25">
-                                <a class="icon-btn3 text-white" href="https://google.com"><i class="fab fa-facebook-f"></i></a>
-                                <a class="icon-btn3 text-white" href="https://google.com"><i class="fab fa-twitter"></i></a>
-                                <a class="icon-btn3 text-white" href="https://google.com"><i class="fab fa-instagram"></i></a>
-                                <a class="icon-btn3 text-white" href="https://google.com"><i class="fab fa-youtube"></i></a>
+        <div class="footer-widget-wrapper  dark-style1 pb-30">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-md-6 col-lg-3 col-xl-3">
+                        <div class="widget footer-widget pt-0">
+                            <h3 class="widget_title text-white">Sobre Nós</h3>
+                            <div class="vs-widget-about">
+                                <p class="pe-xl-3">Nosso compromisso é simplificar a conexão entre jogadores e equipes, 
+                                facilitando a formação de times eficientes para desafios online. Junte-se a nós e eleve sua experiência de jogo!</p>
+                                <div class="d-flex gap-2 text-white mt-25">
+                                    <a class="icon-btn3 text-white" href="https://google.com"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="icon-btn3 text-white" href="https://google.com"><i class="fab fa-twitter"></i></a>
+                                    <a class="icon-btn3 text-white" href="https://google.com"><i class="fab fa-instagram"></i></a>
+                                    <a class="icon-btn3 text-white" href="https://google.com"><i class="fab fa-youtube"></i></a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-sm-5 col-md-6 col-lg-2 col-xl-2">
-                    <div class="widget footer-widget  ">
-                        <h3 class="widget_title font-theme3">Precisa de Ajuda?</h3>
-                        <ul class="custom-links">
-                                <li><a href="#">Companhia</a></li>
-                                <li><a href="#">Privacidade</a></li>
-                                <li><a href="#">Politica</a></li>
-                        </ul>
+                    <div class="col-sm-5 col-md-6 col-lg-2 col-xl-2">
+                        <div class="widget footer-widget  ">
+                            <h3 class="widget_title font-theme3">Precisa de Ajuda?</h3>
+                            <ul class="custom-links">
+                                    <li><a href="#">Companhia</a></li>
+                                    <li><a href="#">Privacidade</a></li>
+                                    <li><a href="#">Politica</a></li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="col-sm-7 col-md-6 col-lg-4 col-xl-3">
-                    <div class="widget footer-widget  ">
-                        <h3 class="widget_title font-theme3">Plataformas</h3>
-                        <div class="row no-gutters">
-                            <div class="col-sm-5">
-                                <ul class="custom-links">
-                                <li><a href="#">Playstation 5</a></li>
-                            <li><a href="#">XBOX One</a></li>
-                            <li><a href="#">PC</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-sm-7">
-                                <ul class="custom-links">
-                                <li><a href="#">Steam</a></li>
-                                <li><a href="#">Mobile</a></li>
-                                </ul>
+                    <div class="col-sm-7 col-md-6 col-lg-4 col-xl-3">
+                        <div class="widget footer-widget  ">
+                            <h3 class="widget_title font-theme3">Plataformas</h3>
+                            <div class="row no-gutters">
+                                <div class="col-sm-5">
+                                    <ul class="custom-links">
+                                    <li><a href="#">Playstation 5</a></li>
+                                <li><a href="#">XBOX One</a></li>
+                                <li><a href="#">PC</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-7">
+                                    <ul class="custom-links">
+                                    <li><a href="#">Steam</a></li>
+                                    <li><a href="#">Mobile</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-lg-3 col-xl-4">
-                    <div class="widget footer-widget  ">
-                        <h3 class="widget_title">Contate-nos</h3>
-                        <div class="vs-widget-about">
-                            <p class="contact-info"><i class="fal fa-map-marker-alt text-white"></i>R. Conceição,
-                                321 - Santo Antônio, São Caetano do Sul - SP, 09530-060</p>
-                            <p class="contact-info"><i class="fal fa-phone text-white"></i><a
-                                    href="#">(11) 7070 - 7070</a></p>
-                            <p class="contact-info"><i class="fal fa-fax text-white"></i><a
-                                    href="#">(11) 1234 - 5678</a></p>
-                            <p class="contact-info"><i class="fal fa-envelope text-white"></i><a
-                                    href="#">Tseek@gmail.com</a></p>
+                    <div class="col-md-6 col-lg-3 col-xl-4">
+                        <div class="widget footer-widget  ">
+                            <h3 class="widget_title">Contate-nos</h3>
+                            <div class="vs-widget-about">
+                                <p class="contact-info"><i class="fal fa-map-marker-alt text-white"></i>R. Conceição,
+                                    321 - Santo Antônio, São Caetano do Sul - SP, 09530-060</p>
+                                <p class="contact-info"><i class="fal fa-phone text-white"></i><a
+                                        href="#">(11) 7070 - 7070</a></p>
+                                <p class="contact-info"><i class="fal fa-fax text-white"></i><a
+                                        href="#">(11) 1234 - 5678</a></p>
+                                <p class="contact-info"><i class="fal fa-envelope text-white"></i><a
+                                        href="#">Tseek@gmail.com</a></p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="footer-copyright">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-7 text-center">
-                    <div class="copyright-shape bg-light-dark">
-                        <p class="text-light fw-bold text-bold mb-0">&copy; 2024 <a class="text-white" href="index.php">TSeeK</a></p>
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-7 text-center">
+                        <div class="copyright-shape bg-light-dark">
+                            <p class="text-light fw-bold text-bold mb-0">&copy; 2024 <a class="text-white" href="index.php">TSeeK</a></p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
 
 
-     <!--********************************
+
+
+    <!--********************************
 			Codigo termina aqui
 	******************************** -->
 
@@ -554,35 +696,6 @@ Mobile Menu
     <script src="assets/js/ajax-mail.js"></script>
     <!-- Main Js File -->
     <script src="assets/js/main.js"></script>
-
-
-    <!-- PAGINAÇÃO -->
-    <script>
-        // Obtém todos os links da página
-        var linksPagina = document.querySelectorAll('#paginação .pagina');
-
-        // Itera sobre cada link da página para adicionar evento de clique
-        linksPagina.forEach(function(link) {
-            link.addEventListener('click', function(e) {
-                e.preventDefault(); // Impede o comportamento padrão do link
-                
-                // Remove a classe 'ativo' de todos os links da página
-                linksPagina.forEach(function(link) {
-                    link.classList.remove('ativo');
-                });
-
-                // Adiciona a classe 'ativo' ao link clicado
-                this.classList.add('ativo');
-
-                // Obtém o número da página a partir do atributo data-page
-                var pagina = this.getAttribute('data-page');
-
-                // Aqui você pode fazer uma requisição AJAX para carregar o conteúdo da página
-                // Por enquanto, apenas vamos exibir a página selecionada
-                document.getElementById('conteudoPagina').textContent = 'Conteúdo da página ' + pagina;
-            });
-        });
-    </script>
 
 </body>
 

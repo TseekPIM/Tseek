@@ -728,57 +728,56 @@ $objVaga = new Vaga();
     <!--==============================
 			Footer Area (rodapé)
 	==============================-->
-    <footer class="footer-wrapper footer-layout1 bg-fluid bg-major-black position-relative">
-        <div class="bg-fluid d-none d-none d-xl-block position-absolute start-0 top-0 w-100 h-100"
-            data-bg-src="assets/img/bg/footer-bg-1-1.jpg"></div>
-        <div class="footer-widget-wrapper  dark-style1 z-index-common">
+    <footer class="footer-wrapper footer-layout2 bg-dark bg-fluid" data-bg-src="assets/img/bg/footer-bg-2-1.jpg">
+        <div class="footer-widget-wrapper  dark-style1 pb-30">
             <div class="container">
                 <div class="row justify-content-between">
-                    <div class="col-md-6 col-lg-3 col-xl-4">
+                    <div class="col-md-6 col-lg-3 col-xl-3">
                         <div class="widget footer-widget pt-0">
-                            <h3 class="widget_title">Sobre Nós</h3>
+                            <h3 class="widget_title text-white">Sobre Nós</h3>
                             <div class="vs-widget-about">
-                                <p class="about-text text-footer1 pe-xl-5">The League of Legends offseason is in full
-                                    effect and teams are looking to sign new players to strengthen their roster or to
-                                    re-sign their current players.</p>
-                                <div class="d-flex gap-2 text-white mt-45">
-                                    <a class="icon-btn1 skew-right" href="https://google.com"><i
-                                            class="fab fa-facebook-f"></i></a>
-                                    <a class="icon-btn1 skew-right" href="https://google.com"><i
-                                            class="fab fa-twitter"></i></a>
-                                    <a class="icon-btn1 skew-right" href="https://google.com"><i
-                                            class="fab fa-linkedin-in"></i></a>
-                                    <a class="icon-btn1 skew-right" href="https://google.com"><i
-                                            class="fab fa-youtube"></i></a>
+                                <p class="pe-xl-3">Nosso compromisso é simplificar a conexão entre jogadores e equipes, 
+                                facilitando a formação de times eficientes para desafios online. Junte-se a nós e eleve sua experiência de jogo!</p>
+                                <div class="d-flex gap-2 text-white mt-25">
+                                    <a class="icon-btn3 text-white" href="https://google.com"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="icon-btn3 text-white" href="https://google.com"><i class="fab fa-twitter"></i></a>
+                                    <a class="icon-btn3 text-white" href="https://google.com"><i class="fab fa-instagram"></i></a>
+                                    <a class="icon-btn3 text-white" href="https://google.com"><i class="fab fa-youtube"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-6 col-lg-3 col-xl-2">
-                        <div class="widget widget_categories footer-widget   ">
-                            <h3 class="widget_title">Categorias</h3>
-                            <ul>
-                                <li><a href="#">Mooba</a></li>
-                                <li><a href="#">Fantasia</a></li>
-                                <li><a href="#">Terror</a></li>
-                                <li><a href="#">Tiro</a></li>
-                                <li><a href="#">RPG</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-6 col-lg-3 col-xl-2">
-                        <div class="widget widget_nav_menu footer-widget  ">
-                            <h3 class="widget_title">Precisa de Ajuda?</h3>
-                            <div class="menu-all-pages-container">
-                                <ul class="menu">
+                    <div class="col-sm-5 col-md-6 col-lg-2 col-xl-2">
+                        <div class="widget footer-widget  ">
+                            <h3 class="widget_title font-theme3">Precisa de Ajuda?</h3>
+                            <ul class="custom-links">
                                     <li><a href="#">Companhia</a></li>
                                     <li><a href="#">Privacidade</a></li>
                                     <li><a href="#">Politica</a></li>
-                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-7 col-md-6 col-lg-4 col-xl-3">
+                        <div class="widget footer-widget  ">
+                            <h3 class="widget_title font-theme3">Plataformas</h3>
+                            <div class="row no-gutters">
+                                <div class="col-sm-5">
+                                    <ul class="custom-links">
+                                    <li><a href="#">Playstation 5</a></li>
+                                <li><a href="#">XBOX One</a></li>
+                                <li><a href="#">PC</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-7">
+                                    <ul class="custom-links">
+                                    <li><a href="#">Steam</a></li>
+                                    <li><a href="#">Mobile</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-3 col-xl-3">
+                    <div class="col-md-6 col-lg-3 col-xl-4">
                         <div class="widget footer-widget  ">
                             <h3 class="widget_title">Contate-nos</h3>
                             <div class="vs-widget-about">
@@ -796,25 +795,13 @@ $objVaga = new Vaga();
                 </div>
             </div>
         </div>
-        <div class="footer-copyright bg-black z-index-step1">
+        <div class="footer-copyright">
             <div class="container">
-                <div class="row">
-                    <div class="col-xl-8 d-none d-xl-block">
-                        <!-- <div class="footer-menu">
-                            <ul>
-                                <li><a href="#">Features</a></li>
-                                <li><a href="#">Request</a></li>
-                                <li><a href="#">Imprint</a></li>
-                                <li><a href="#">Privacy</a></li>
-                                <li><a href="#">Policy</a></li>
-                                <li><a href="#">Cookie</a></li>
-                                <li><a href="#">Content</a></li>
-                            </ul>
-                        </div> -->
-                    </div>
-                    <div class="col-xl-4 align-self-center text-center py-3 py-xl-0 text-xl-end">
-                        <p class="text-light fw-bold text-bold mb-0">&copy; 2024 <a class="text-white"
-                                href="index.php">TSeeK</a></p>
+                <div class="row justify-content-center">
+                    <div class="col-md-7 text-center">
+                        <div class="copyright-shape bg-light-dark">
+                            <p class="text-light fw-bold text-bold mb-0">&copy; 2024 <a class="text-white" href="index.php">TSeeK</a></p>
+                        </div>
                     </div>
                 </div>
             </div>

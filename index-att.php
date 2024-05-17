@@ -3,10 +3,13 @@ include('protect.php');
 include('class/Classes.php');
 // Helper::logado();
 $objCandidato = new Candidato();
+$objVaga = new Vaga();
+
 // $id_candidato = $_GET['id'];
 // $candidato = $objCandidato->Mostrar($_GET['id']);
-print_r($_SESSION);
+// print_r($_SESSION);
 ?>
+
 <!doctype html>
 <html class="no-js" lang="pt-br">
 
@@ -165,7 +168,7 @@ print_r($_SESSION);
                                 </ul> -->
                             </li>
                             <li class="mega-menu-wrap menu-item-has-children">
-                                <a href="#">Times</a>
+                                <a href="team.php">Times</a>
                                 <!-- <ul class="mega-menu">
                                     <li><a href="#">RANK</a>
                                         <ul>
@@ -609,14 +612,14 @@ print_r($_SESSION);
             <div class="container">
                 <div class="row align-items-center ">
                     <div class="col-md-5 col-xl-6">
-                        <div class="section-title">
+                        <!-- <div class="section-title">
                             <span class="sub-title1">Lista</span>
                             <h2 class="sec-title1 text-white">Vagas</h2>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="col-lg-7 col-xl-6 text-center text-lg-end">
                         <div class="filter-menu-style1 filter-menu-active mb-70">
-                            <button data-filter="*" class="active">All</button>
+                            <button data-filter="*" class="active">Todos</button>
                             <button data-filter=".csgo"> csgo</button>
                             <button data-filter=".dota">dota 2</button>
                             <button data-filter=".fortnite">fortnite</button>
@@ -625,27 +628,30 @@ print_r($_SESSION);
                     </div>
                 </div>
                 <div class="mb-15 filter-active row">
+                <?php
+        $vagas = $objVaga->listar();
+        foreach ($vagas as $vaga){
+    ?>
                     <div class="col-md-6 col-lg-12 grid-item pubg fortnite csgo ">
                         <div class="vs-match">
                             <div class="row align-items-center justify-content-center justify-content-lg-start">
                                 <div class="col-lg-3">
                                     <div class="match-logo">
-                                        <a href="team-details.html"><img src="assets/img/logos/logo-1-7.png"
+                                        <a href="vaga-details.php?id=<?php echo $vaga->id_vaga; ?>"><img src="assets/img/logos/logo-1-7.png"
                                                 alt="vaga Logo" style="width:80px;"></a>
-                                        <!-- <span class="versus"></span> -->
                                         </div>
                                 </div>
                                 <div class="col-lg">
                                     <div class="match-about pl-35">
                                         <h3 class="team-name h5 text-white mb-1 mb-lg-2"><a
-                                                href="team-details.html">Nome da vaga</a>
+                                                href="vaga-details.php?id=<?php echo $vaga->id_vaga; ?>"><?php echo $vaga->jogo; ?></a>
                                         </h3>
-                                        <p class="match-date mb-0">Empresa</p>
-                                        <p class="match-date mb-0">Endereço</p>
+                                        <p class="match-date mb-0">Cargo: <?php echo $vaga->titulo_vaga; ?></p>
+                                        <p class="match-date mb-0">Salário: R$ <?php echo $vaga->salario; ?></p>
                                     </div>
                                 </div>
                                 <div class="col-auto col-xl-2">
-                                    <div class="team-name h5 text-white mb-1 mb-lg-2">Nº de vagas</div>
+                                    <div class="team-name h5 text-white mb-1 mb-lg-2">Nº de vagas: <?php echo $vaga->num_vagas; ?></div>
                                 </div>
                                 <div class="col-auto col-xl-2 text-end ">
                                     <a href="#"
@@ -656,99 +662,9 @@ print_r($_SESSION);
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-12 grid-item pubg fortnite csgo ">
-                        <div class="vs-match">
-                            <div class="row align-items-center justify-content-center justify-content-lg-start">
-                                <div class="col-lg-3">
-                                    <div class="match-logo">
-                                        <a href="team-details.html"><img src="assets/img/logos/logo-1-7.png"
-                                                alt="vaga Logo" style="width:80px;"></a>
-                                        <!-- <span class="versus"></span> -->
-                                        </div>
-                                </div>
-                                <div class="col-lg">
-                                    <div class="match-about pl-35">
-                                        <h3 class="team-name h5 text-white mb-1 mb-lg-2"><a
-                                                href="team-details.html">Nome da vaga</a>
-                                        </h3>
-                                        <p class="match-date mb-0">Empresa</p>
-                                        <p class="match-date mb-0">Endereço</p>
-                                    </div>
-                                </div>
-                                <div class="col-auto col-xl-2">
-                                    <div class="team-name h5 text-white mb-1 mb-lg-2">Nº de vagas</div>
-                                </div>
-                                <div class="col-auto col-xl-2 text-end ">
-                                    <a href="#"
-                                        class="icon-btn3"><i class="fad fa-paper-plane"></i></a>
-                                    <a href="#"
-                                        class="icon-btn3"><i class="fab fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-12 grid-item pubg fortnite csgo ">
-                        <div class="vs-match">
-                            <div class="row align-items-center justify-content-center justify-content-lg-start">
-                                <div class="col-lg-3">
-                                    <div class="match-logo">
-                                        <a href="team-details.html"><img src="assets/img/logos/logo-1-7.png"
-                                                alt="vaga Logo" style="width:80px;"></a>
-                                        <!-- <span class="versus"></span> -->
-                                        </div>
-                                </div>
-                                <div class="col-lg">
-                                    <div class="match-about pl-35">
-                                        <h3 class="team-name h5 text-white mb-1 mb-lg-2"><a
-                                                href="team-details.html">Nome da vaga</a>
-                                        </h3>
-                                        <p class="match-date mb-0">Empresa</p>
-                                        <p class="match-date mb-0">Endereço</p>
-                                    </div>
-                                </div>
-                                <div class="col-auto col-xl-2">
-                                    <div class="team-name h5 text-white mb-1 mb-lg-2">Nº de vagas</div>
-                                </div>
-                                <div class="col-auto col-xl-2 text-end ">
-                                    <a href="#"
-                                        class="icon-btn3"><i class="fad fa-paper-plane"></i></a>
-                                    <a href="#"
-                                        class="icon-btn3"><i class="fab fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-12 grid-item pubg fortnite csgo ">
-                        <div class="vs-match">
-                            <div class="row align-items-center justify-content-center justify-content-lg-start">
-                                <div class="col-lg-3">
-                                    <div class="match-logo">
-                                        <a href="team-details.html"><img src="assets/img/logos/logo-1-7.png"
-                                                alt="vaga Logo" style="width:80px;"></a>
-                                        <!-- <span class="versus"></span> -->
-                                        </div>
-                                </div>
-                                <div class="col-lg">
-                                    <div class="match-about pl-35">
-                                        <h3 class="team-name h5 text-white mb-1 mb-lg-2"><a
-                                                href="team-details.html">Nome da vaga</a>
-                                        </h3>
-                                        <p class="match-date mb-0">Empresa</p>
-                                        <p class="match-date mb-0">Endereço</p>
-                                    </div>
-                                </div>
-                                <div class="col-auto col-xl-2">
-                                    <div class="team-name h5 text-white mb-1 mb-lg-2">Nº de vagas</div>
-                                </div>
-                                <div class="col-auto col-xl-2 text-end ">
-                                    <a href="#"
-                                        class="icon-btn3"><i class="fad fa-paper-plane"></i></a>
-                                    <a href="#"
-                                        class="icon-btn3"><i class="fab fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <?php 
+                        }
+                    ?>
                 </div>
             </div>
         </section>
@@ -764,90 +680,26 @@ print_r($_SESSION);
             </div>
             <div class="row vs-carousel arrow-white" data-arrows="true" data-xl-arrows="true" data-lg-slide-show="4"
                 data-md-slide-show="3" data-sm-slide-show="2" data-xs-slide-show="1" data-slide-show="4">
+                <?php
+                    $candidatos = $objCandidato->listar();
+                    foreach ($candidatos as $candidato){
+                ?>
                 <div class="col-lg-3">
                     <div class="vs-member">
                         <div class="member-img">
-                            <a href="player-details.html"><img src="assets/img/member/member-1-1.png" class="w-100"
+                            <a href="player-details.php?id=<?php echo $candidato->id_candidato; ?>"><img src="assets/img/member/member-1-1.png" class="w-100"
                                     alt="Member Image"></a>
                         </div>
                         <div class="member-content">
                             <span class="degi">Tom Clancy's Rainbow Six Siege</span>
-                            <h3 class="member-name fs-20"><a href="player-details.html">iCross7z</a></h3>
+                            <h3 class="member-name fs-20"><a href="player-details.php?id=<?php echo $candidato->id_candidato; ?>"><?php echo $candidato->nome; ?></a></h3>
                         </div>
                     </div>
+                    
                 </div>
-                <div class="col-lg-3">
-                    <div class="vs-member">
-                        <div class="member-img">
-                            <a href="player-details.html"><img src="assets/img/member/member-1-2.png" class="w-100"
-                                    alt="Member Image"></a>
-                        </div>
-                        <div class="member-content">
-                            <span class="degi">Tom Clancy's Rainbow Six Siege</span>
-                            <h3 class="member-name fs-20"><a href="player-details.html">Revelantionz</a></h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="vs-member">
-                        <div class="member-img">
-                            <a href="player-details.html"><img src="assets/img/member/member-1-3.png" class="w-100"
-                                    alt="Member Image"></a>
-                        </div>
-                        <div class="member-content">
-                            <span class="degi">Tom Clancy's Rainbow Six Siege</span>
-                            <h3 class="member-name fs-20"><a href="player-details.html">Analaizer</a></h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="vs-member">
-                        <div class="member-img">
-                            <a href="player-details.html"><img src="assets/img/member/member-1-4.png" class="w-100"
-                                    alt="Member Image"></a>
-                        </div>
-                        <div class="member-content">
-                            <span class="degi">Tom Clancy's Rainbow Six Siege</span>
-                            <h3 class="member-name fs-20"><a href="player-details.html">Supryzyy</a></h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="vs-member">
-                        <div class="member-img">
-                            <a href="player-details.html"><img src="assets/img/member/member-1-5.png" class="w-100"
-                                    alt="Member Image"></a>
-                        </div>
-                        <div class="member-content">
-                            <span class="degi">Tom Clancy's Rainbow Six Siege</span>
-                            <h3 class="member-name fs-20"><a href="player-details.html">Siim@o</a></h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="vs-member">
-                        <div class="member-img">
-                            <a href="player-details.html"><img src="assets/img/member/member-1-6.png" class="w-100"
-                                    alt="Member Image"></a>
-                        </div>
-                        <div class="member-content">
-                            <span class="degi">Tom Clancy's Rainbow Six Siege</span>
-                            <h3 class="member-name fs-20"><a href="player-details.html">Darkgreen</a></h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="vs-member">
-                        <div class="member-img">
-                            <a href="player-details.html"><img src="assets/img/member/member-1-7.png" class="w-100"
-                                    alt="Member Image"></a>
-                        </div>
-                        <div class="member-content">
-                            <span class="degi">Tom Clancy's Rainbow Six Siege</span>
-                            <h3 class="member-name fs-20"><a href="player-details.html">Alanzoka</a></h3>
-                        </div>
-                    </div>
-                </div>
+                <?php
+                    }
+                ?>
             </div>
         </div>
     </section>
@@ -899,94 +751,80 @@ print_r($_SESSION);
     <!--==============================
 			Footer Area (rodapé)
 	==============================-->
-    <footer class="footer-wrapper footer-layout1 bg-fluid bg-major-black position-relative">
-        <div class="bg-fluid d-none d-none d-xl-block position-absolute start-0 top-0 w-100 h-100"
-            data-bg-src="assets/img/bg/footer-bg-1-1.jpg"></div>
-        <div class="footer-widget-wrapper  dark-style1 z-index-common">
+    <footer class="footer-wrapper footer-layout2 bg-dark bg-fluid" data-bg-src="assets/img/bg/footer-bg-2-1.jpg">
+        <div class="footer-widget-wrapper  dark-style1 pb-30">
             <div class="container">
                 <div class="row justify-content-between">
-                    <div class="col-md-6 col-lg-3 col-xl-4">
+                    <div class="col-md-6 col-lg-3 col-xl-3">
                         <div class="widget footer-widget pt-0">
-                            <h3 class="widget_title">Sobre Nós</h3>
+                            <h3 class="widget_title text-white">Sobre Nós</h3>
                             <div class="vs-widget-about">
-                                <p class="about-text text-footer1 pe-xl-5">The League of Legends offseason is in full
-                                    effect and teams are looking to sign new players to strengthen their roster or to
-                                    re-sign their current players.</p>
-                                <div class="d-flex gap-2 text-white mt-45">
-                                    <a class="icon-btn1 skew-right" href="https://google.com"><i
-                                            class="fab fa-facebook-f"></i></a>
-                                            <a class="icon-btn1 skew-right" href="https://google.com"><i
-                                            class="fab fa-twitter"></i></a>
-                                    <a class="icon-btn1 skew-right" href="https://google.com"><i
-                                            class="fab fa-linkedin-in"></i></a>
-                                    <a class="icon-btn1 skew-right" href="https://google.com"><i
-                                            class="fab fa-youtube"></i></a>
+                                <p class="pe-xl-3">Nosso compromisso é simplificar a conexão entre jogadores e equipes, 
+                                facilitando a formação de times eficientes para desafios online. Junte-se a nós e eleve sua experiência de jogo!</p>
+                                <div class="d-flex gap-2 text-white mt-25">
+                                    <a class="icon-btn3 text-white" href="https://google.com"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="icon-btn3 text-white" href="https://google.com"><i class="fab fa-twitter"></i></a>
+                                    <a class="icon-btn3 text-white" href="https://google.com"><i class="fab fa-instagram"></i></a>
+                                    <a class="icon-btn3 text-white" href="https://google.com"><i class="fab fa-youtube"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-6 col-lg-3 col-xl-2">
-                        <div class="widget widget_categories footer-widget   ">
-                            <h3 class="widget_title">Categorias</h3>
-                            <ul>
-                                <li><a href="#">Mooba</a></li>
-                                <li><a href="#">Fantasia</a></li>
-                                <li><a href="#">Terror</a></li>
-                                <li><a href="#">Tiro</a></li>
-                                <li><a href="#">RPG</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-6 col-lg-3 col-xl-2">
-                        <div class="widget widget_nav_menu footer-widget  ">
-                            <h3 class="widget_title">Precisa de Ajuda?</h3>
-                            <div class="menu-all-pages-container">
-                                <ul class="menu">
+                    <div class="col-sm-5 col-md-6 col-lg-2 col-xl-2">
+                        <div class="widget footer-widget  ">
+                            <h3 class="widget_title font-theme3">Precisa de Ajuda?</h3>
+                            <ul class="custom-links">
                                     <li><a href="#">Companhia</a></li>
                                     <li><a href="#">Privacidade</a></li>
                                     <li><a href="#">Politica</a></li>
-                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-7 col-md-6 col-lg-4 col-xl-3">
+                        <div class="widget footer-widget  ">
+                            <h3 class="widget_title font-theme3">Plataformas</h3>
+                            <div class="row no-gutters">
+                                <div class="col-sm-5">
+                                    <ul class="custom-links">
+                                    <li><a href="#">Playstation 5</a></li>
+                                <li><a href="#">XBOX One</a></li>
+                                <li><a href="#">PC</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-7">
+                                    <ul class="custom-links">
+                                    <li><a href="#">Steam</a></li>
+                                    <li><a href="#">Mobile</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-3 col-xl-3">
+                    <div class="col-md-6 col-lg-3 col-xl-4">
                         <div class="widget footer-widget  ">
                             <h3 class="widget_title">Contate-nos</h3>
                             <div class="vs-widget-about">
                                 <p class="contact-info"><i class="fal fa-map-marker-alt text-white"></i>R. Conceição,
                                     321 - Santo Antônio, São Caetano do Sul - SP, 09530-060</p>
                                 <p class="contact-info"><i class="fal fa-phone text-white"></i><a
-                                        href="tel:+65965252561">(11) 7070 - 7070</a></p>
+                                        href="#">(11) 7070 - 7070</a></p>
                                 <p class="contact-info"><i class="fal fa-fax text-white"></i><a
-                                        href="tel:+65965252561">(11) 1234 - 5678</a></p>
+                                        href="#">(11) 1234 - 5678</a></p>
                                 <p class="contact-info"><i class="fal fa-envelope text-white"></i><a
-                                        href="mailto:info@example.com">Tseek@gmail.com</a></p>
-                                <!-- <p class="contact-info"><i class="fal fa-globe text-white"></i><a href="https://example.com">www.example.com</a></p> -->
+                                        href="#">Tseek@gmail.com</a></p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="footer-copyright bg-black z-index-step1">
+        <div class="footer-copyright">
             <div class="container">
-                <div class="row">
-                    <div class="col-xl-8 d-none d-xl-block">
-                        <!-- <div class="footer-menu">
-                            <ul>
-                                <li><a href="#">Features</a></li>
-                                <li><a href="#">Request</a></li>
-                                <li><a href="#">Imprint</a></li>
-                                <li><a href="#">Privacy</a></li>
-                                <li><a href="#">Policy</a></li>
-                                <li><a href="#">Cookie</a></li>
-                                <li><a href="#">Content</a></li>
-                            </ul>
-                        </div> -->
-                    </div>
-                    <div class="col-xl-4 align-self-center text-center py-3 py-xl-0 text-xl-end">
-                        <p class="text-light fw-bold text-bold mb-0">&copy; 2024 <a class="text-white"
-                                href="index.php">TSeeK</a></p>
+                <div class="row justify-content-center">
+                    <div class="col-md-7 text-center">
+                        <div class="copyright-shape bg-light-dark">
+                            <p class="text-light fw-bold text-bold mb-0">&copy; 2024 <a class="text-white" href="index.php">TSeeK</a></p>
+                        </div>
                     </div>
                 </div>
             </div>

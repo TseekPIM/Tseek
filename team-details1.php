@@ -1,14 +1,26 @@
+<?php
+// include('protect.php');
+//  echo $_SESSION['nome'];
+//  echo $_GET['id'];
+// print_r($_SESSION);
+require_once('class/Classes.php');
+//  $objHelper = new Helper();
+//  $objHelper->logado();
+ 
+
+ 
+ $objEquipe = new Equipe();
+ $objCandidato = new Candidato();
+ 
+?>
 <!doctype html>
-<html class="no-js" lang="pt-br">
+<html class="no-js" lang="zxx">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>TSeeK - E-Sports</title>
     <meta name="author" content="TSeeK">
     <meta name="description" content="TSeeK - eSports">
     <meta name="keywords" content="TSeeK - eSports " />
-    <meta name="robots" content="INDEX,FOLLOW">
 
     <!-- Mobile Specific Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -19,25 +31,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-    <!-- Favicons - Place favicon.ico in the root directory -->
-    <link rel="apple-touch-icon" sizes="57x57" href="assets/img/logo.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="assets/img/logo.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="assets/img/logo.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/logo.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="assets/img/logo.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="assets/img/logo.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="assets/img/logo.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="assets/img/logo.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/logo.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/logo.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/logo.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/logo.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/logo.png">
+    <!-- logo aba  -->
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/img/logo1.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/img/logo1.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/img/logo1.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/logo1.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/img/logo1.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/img/logo1.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/img/logo1.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/img/logo1.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/logo1.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/logo1.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/logo1.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/logo1.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/logo1.png">
     <link rel="manifest" href="assets/img/favicons/manifest.json">
 
     <!--==============================
 	    All CSS File
 	============================== -->
+    <!-- menu lateral -->
+    <link rel="stylesheet" href="sidebar/css/style.css">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- Fontawesome Icon -->
@@ -52,14 +66,14 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Theme Color CSS -->
     <link rel="stylesheet" href="assets/css/theme-color1.css">
-
+   
 
 </head>
 
 <body>
 
-    <!--********************************
-   		Code Start From Here 
+ <!--********************************
+   		Codigo começa aqui
 	******************************** -->
 
 
@@ -77,6 +91,7 @@
         </div>
     </div>
 </div>
+
 <!--========================
 Icons ao lado superior direito (menu retrátil)
 ========================-->
@@ -92,8 +107,8 @@ Icons ao lado superior direito (menu retrátil)
                 <nav class="main-menu menu-sticky1 d-none d-lg-block link-inherit">
                     <ul>
                         <li class="menu-item-has-children">
-                            <a href="#">Categorias</a>
-                            <ul class="sub-menu">
+                            <a href="vagas1.php">Vagas</a>
+                            <!-- <ul class="sub-menu">
                                 <li><a href="#">Ação</a></li>
                                 <li><a href="#">Aventura</a></li>
                                 <li><a href="#">Battle Royale</a></li>
@@ -104,11 +119,11 @@ Icons ao lado superior direito (menu retrátil)
                                 <li><a href="#">MOBA</a></li>
                                 <li><a href="#">RPG</a></li>
                                 <li><a href="#">Tiro</a></li>
-                            </ul>
+                            </ul> -->
                         </li>
                         <li class="mega-menu-wrap menu-item-has-children">
-                            <a href="#">Jogadores</a>
-                            <ul class="mega-menu">
+                            <a href="player1.php">Jogadores</a>
+                            <!-- <ul class="mega-menu">
                                 <li><a href="#">RANK</a>
                                     <ul>
                                         <li><a href="#"></a>
@@ -128,11 +143,11 @@ Icons ao lado superior direito (menu retrátil)
                                         <li><a href="#"></a>
                                         <li><a href="#"></a>
                                     </ul>
-                            </ul>
+                            </ul> -->
                         </li>
                         <li class="mega-menu-wrap menu-item-has-children">
-                            <a href="#">Times</a>
-                            <ul class="mega-menu">
+                            <a href="team1.php">Times</a>
+                            <!-- <ul class="mega-menu">
                                 <li><a href="#">RANK</a>
                                     <ul>
                                         <li><a href="#"></a>
@@ -152,7 +167,7 @@ Icons ao lado superior direito (menu retrátil)
                                         <li><a href="#"></a>
                                         <li><a href="#"></a>
                                     </ul>
-                            </ul>
+                            </ul> -->
                         </li>
                         <li class="menu-item-has-children">
                             <a href="#">Planos</a>
@@ -163,6 +178,43 @@ Icons ao lado superior direito (menu retrátil)
     </div>
 </div>
 <!--==============================
+    Sidemenu
+============================== -->
+<div class="sidemenu-wrapper d-none d-lg-block  ">
+        <div class="sidemenu-content bg-light-dark">
+            <button class="closeButton border-theme text-theme bg-theme-hover sideMenuCls"><i
+                    class="far fa-times"></i></button>
+
+            <nav id="sidebar">
+                <div class="img bg-wrap text-center py-4" style="background-color: transparent;">
+                    <div class="user-logo">
+                        <div class="img" style="background-image: url(assets/img/team/team-1-1.png);"></div>
+                        <h3><?php echo $_SESSION['nome']; ?></h3>
+                    </div>
+                </div>
+                <ul class="list-unstyled components mb-5">
+                    <li class="active">
+                        <a href="#"><span class="fa fa-home mr-3"></span> Inicio</a>
+                    </li>
+                    <li class="active">
+                        <a href="player-details1.php?id=<?php echo $_SESSION['id']; ?>"><span class="fa fa-user mr-3"></span> Perfil</a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="fa fa-trophy mr-3"></span> Melhores Jogadas</a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="fa fa-cog mr-3"></span> Configurações</a>
+                    </li>
+                    <li>
+                        <a href="index.php"><span class="fa fa-sign-out mr-3"></span> Desconectar</a>
+                    </li>
+                </ul>
+<!-- <?php //} ?> -->
+            </nav>
+        </div>
+    </div>
+    </div>
+<!--==============================
 Busca
 ============================== -->
 <div class="popup-search-box d-none d-lg-block  ">
@@ -172,14 +224,14 @@ Busca
         <button type="submit"><i class="fal fa-search"></i></button>
     </form>
 </div>
-<!--==============================
-Mobile Menu
-============================== -->
-<div class="vs-menu-wrapper">
+    <!--==============================
+    Mobile Menu
+  ============================== -->
+  <div class="vs-menu-wrapper">
     <div class="vs-menu-area bg-dark">
         <button class="vs-menu-toggle"><i class="fal fa-times"></i></button>
         <div class="mobile-logo">
-            <a href="index.php"><img src="assets/img/logo.png" alt="TSeeK"></a>
+            <a href="index.php"><img src="assets/img/logo1.png" alt="TSeeK"></a>
         </div>
         <div class="vs-mobile-menu link-inherit"></div><!-- Menu Will Append With Javascript -->
     </div>
@@ -192,7 +244,6 @@ Mobile Menu
         <div class="container">
             <div class="row py-md-2">
                 <div class="col-sm-6 d-none d-md-block">
-                    <!-- <p class="mb-0 fs-xs text-white">Bem vindo a sua <a class="text-inherit" href="team.html"><u class=" fw-bold">Esports team</u></a></p> -->
                 </div>
                 <div class="col-sm-6 text-end d-none d-md-block">
                     <ul class="social-links fs-xs text-white">
@@ -212,15 +263,15 @@ Mobile Menu
                 <div class="row align-items-center">
                     <div class="col-6 col-lg-4 d-block d-xl-none py-3 py-xl-0">
                         <div class="header-logo">
-                            <a href="index.php"><img src="assets/img/logo.png" alt="TSeeK"></a>
+                            <a href="index-att.php"><img src="assets/img/logo1.png" alt="TSeeK"></a>
                         </div>
                     </div>
                     <div class="col-6 col-lg-8 col-xl-5 text-end text-xl-start">
                         <nav class="main-menu menu-style1 mobile-menu-active" data-expand="992">
                             <ul>
                                 <li class="menu-item-has-children">
-                                    <a href="#">Categorias</a>
-                                    <ul class="sub-menu">
+                                    <a href="vagas1.php">Vagas</a>
+                                    <!-- <ul class="sub-menu">
                                         <li><a href="#">Ação</a></li>
                                         <li><a href="#">Aventura</a></li>
                                         <li><a href="#">Battle Royale</a></li>
@@ -231,11 +282,11 @@ Mobile Menu
                                         <li><a href="#">MOBA</a></li>
                                         <li><a href="#">RPG</a></li>
                                         <li><a href="#">Tiro</a></li>
-                                    </ul>
+                                    </ul> -->
                                 </li>
                                 <li class="mega-menu-wrap menu-item-has-children">
-                                    <a href="player.html">Jogadores</a>
-                                    <ul class="mega-menu">
+                                    <a href="player1.php">Jogadores</a>
+                                    <!-- <ul class="mega-menu">
                                         <li><a href="#">RANK</a>
                                             <ul>
                                                 <li><a href="#"></a>
@@ -255,11 +306,11 @@ Mobile Menu
                                                 <li><a href="#"></a>
                                                 <li><a href="#"></a>
                                             </ul>
-                                    </ul>
+                                    </ul> -->
                                 </li>
                                 <li class="mega-menu-wrap menu-item-has-children">
-                                    <a href="#">Times</a>
-                                    <ul class="mega-menu">
+                                    <a href="team1.php">Times</a>
+                                    <!-- <ul class="mega-menu">
                                         <li><a href="#">RANK</a>
                                             <ul>
                                                 <li><a href="#"></a>
@@ -279,7 +330,7 @@ Mobile Menu
                                                 <li><a href="#"></a>
                                                 <li><a href="#"></a>
                                             </ul>
-                                    </ul>
+                                    </ul> -->
                                 </li>
                                 <li class="menu-item-has-children">
                                     <a href="planos.html">Planos</a>
@@ -288,7 +339,7 @@ Mobile Menu
                     </div>
                     <div class="col-md-4 col-lg-2 text-center d-none d-xl-block">
                         <div class="header-logo1">
-                            <a href="index.php"><img src="assets/img/logo.png" alt="TSeeK"></a>
+                            <a href="index.php"><img src="assets/img/logo1.png" alt="TSeeK"></a>
                         </div>
                     </div>
                     <div class="col-md-4 col-lg-5 d-none d-xl-block">
@@ -298,13 +349,17 @@ Mobile Menu
                             <ul class="header-list1 list-style-none ml-30">
                                 <li>
                                     <button class="dropdown-toggle" type="button" title="Login">
-                                        <a href="login1.html"><img src="assets/img/flag/flag-1.png"
+                                        <a href="login2.php"><img src="assets/img/flag/flag-1.png"
                                                 alt="Country Flag" class="flag radius-circle"> </a>
                                     </button>
                                 </li>
                                 <li>
-                                    <button class="searchBoxTggler"><i class="far fa-search"></i></button>
-                                </li>
+                                        <button class="searchBoxTggler"><i class="far fa-search"></i></button>
+                                    </li>
+                                <!-- <li>
+                                <button class="sideMenuToggler"><i
+                                                class="fal fa-grip-horizontal fs-2"></i></button>
+                                </li> -->
                             </ul>
                         </div>
                     </div>
@@ -313,13 +368,18 @@ Mobile Menu
         </div>
     </div>
 </header>
+<?php
+    if(isset($_GET['id'])&& $_GET['id'] != ''){
+        $equipe = $objEquipe->mostrar($_GET['id']);
+    // $id_equipe = $_SESSION['id_equipe'];
+?>
     <!--==============================
     Breadcumb
 ============================== -->
     <div class="breadcumb-wrapper breadcumb-layout1 pt-200 pb-50" data-bg-src="assets/img/breadcumb/breadcumb-1.jpg" data-overlay>
         <div class="container z-index-common">
             <div class="breadcumb-content text-center">
-                <h1 class="breadcumb-title h1 text-white my-0">Matheus</h1>
+                <h1 class="breadcumb-title h1 text-white my-0"><?php echo $equipe->nome;?></h1>
                 <h2 class="breadcumb-bg-title">Gamers</h2>
                 <ul class="breadcumb-menu-style1 text-white mx-auto fs-xs">
                     <li><a href="index.php"><i class="fal fa-home"></i>Home</a></li>
@@ -328,65 +388,97 @@ Mobile Menu
             </div>
         </div>
     </div>
+   
     <!--==============================
-  Player Details
+  Team Details
     ==============================-->
-    <section class="vs-player-wrapper space-top newsletter-pb">
+    <section class="vs-team-wrapper space-top newsletter-pb">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
-                    <div class="vs-box1 d-md-flex mb-30 info-box4 align-items-center">
-                        <!-- <div class="pro-tag position-absolute end-0 top-0 bg-gradient text-white">
-                            <i class="fas fa-check-circle"></i>
-                            pro
-                        </div> -->
+                    <div class="vs-box1 d-md-flex mb-20 info-box4 align-items-center">
                         <div class="inner-img1">
-                            <img src="assets/img/member/member-d-2" alt="Member Image" width="200px">
+                            <img src="assets/img/team/team-d-1.jpg" alt="Team Image">
                         </div>
                         <div class="media-body ml-lg-30">
-                            <h2 class="h4 mb-0">Matheus</h2>
-                            <span class="text-theme2">Pro-Player</span>
-                            <table class="info-table mt-2 mb-0">
+                        <table class="info-table mb-0">
                                 <tr>
-                                    <td>Entrou:</td>
-                                    <td>2023</td>
+                                    <td>Criado:</td>
+                                    <td>2021</td>
                                 </tr>
                                 <tr>
                                     <td>Perfil:</td>
-                                    <td>Público</td>
+                                    <td>Publico</td>
                                 </tr>
                                 <tr>
-                                    <td>Cidade, País:</td>
-                                    <td>Santo André, Brasil</td>
+                                    <td>Website:</td>
+                                    <td><a href="#">www.site.com</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Quantidade de Membros:</td>
+                                    <td>14</td>
+                                </tr>
+                                <tr>
+                                    <td>Estado:</td>
+                                    <td>São Paulo</td>
                                 </tr>
                             </table>
                         </div>
                     </div>
-                    <!-- Skill Area -->
+
+                    <div class="vs-member mb-20-layout3  ">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <h3 class="h4">Players</h3>
+                            </div>
+                            <div class="col-sm-6 pt-2 text-end d-none d-sm-block">
+                                <button class="icon1 mr-10 text-theme-hover" type="button" data-slick-prev="#memberslide3"><i class="far fa-angle-left"></i></button>
+                                <button class="icon1 text-theme-hover" type="button" data-slick-next="#memberslide3"><i class="far fa-angle-right"></i></button>
+                            </div>
+                        </div>
+                        <div class="row link-inherit vs-carousel" id="memberslide3" data-slide-show="4" data-lg-slide-show="3" data-md-slide-show="3" data-sm-slide-show="2" data-xs-slide-show="1">
+                            <?php  
+                                    $candidatos = $objCandidato->listar();
+                                    foreach ($candidatos as $candidato){
+                                ?>   
+                            <div class="col-xl-3">
+                            
+                                <div class="vs-member mb-25">
+                                    <div class="member-img image-scale-hover mb-15">
+                                        <a href="player-details.php?id=<?php echo $candidato->id_candidato; ?>"><img src="assets/img/member/member-3-1.jpg" alt="Member Image" class="w-100"></a>
+                                    </div>
+                                    <h4 class="member-name font-theme mb-0 text-normal h5"><a href="player-details.php?id=<?php echo $candidato->id_candidato; ?>"><?php echo $candidato->nome;?></a></h4>
+                                    <span class="degi fs-xs">Pro-Player</span>
+                                </div>
+                                
+                            </div>
+                            <?php } ?> 
+                        </div>
+                    </div> <!-- Skill Area -->
                     <div class="vs-box1 p-0 mb-30">
                         <div class="nav  tab-menu1 tab-indicator justify-content-center justify-content-sm-start"
                             role="tablist">
                             <a class="nav-link active" id="skill1-tab" data-bs-toggle="tab" href="#skill1" role="tab"
-                                aria-controls="skill1" aria-selected="true">Jogos Favoritos</a>
+                                aria-controls="skill1" aria-selected="true">Jogos</a>
                             <a class="nav-link" id="skill3-tab" data-bs-toggle="tab" href="#skill3" role="tab"
-                                aria-controls="skill3" aria-selected="false">Views de Partidas</a>
+                                aria-controls="skill3" aria-selected="false">Twitch</a>
                         </div>
                         <div class="tab-content mt-30">
                             <div class="tab-pane show active" id="skill1" role="tabpanel" aria-labelledby="skill1-tab">
                                 <div class="skill-box1 d-sm-flex px-30 pb-30 text-center text-sm-start">
                                     <div class="media-img position-relative">
-                                        <img src="assets/img/team/team-d-2-4" alt="Team Image" width="150px">
+                                        <img src="assets/img/team/team-d-2.jpg" alt="Team Image" width="150px">
                                     </div>
                                     <div class="media-body align-self-center ml-lg-30">
-                                        <h5 class="fs-20 mb-0 font-theme">Counter Strike 2</h5>
+                                        <h5 class="fs-20 mb-0 font-theme">Mobile Legends</h5>
                                     </div>
                                 </div>
                                 <div class="skill-box1 d-sm-flex px-30 pb-30 text-center text-sm-start">
                                     <div class="media-img position-relative">
-                                        <img src="assets/img/team/team-d-3.jpg" alt="Team Image" width="150px">
+                                        <img src="assets/img/team/team-d-3-1.jpg" alt="Team Image" width="150px">
                                     </div>
                                     <div class="media-body align-self-center ml-lg-30">
-                                        <h5 class="fs-20 mb-0 font-theme">Dead by Daylight</h5>
+                                        <h5 class="fs-20 mb-0 font-theme">Phasmophobia</h5>
                                     </div>
                                 </div>
                             </div>
@@ -397,59 +489,14 @@ Mobile Menu
                                         <div class="col-sm-6 col-xl-4">
                                             <div class="team-video-thumb">
                                                 <div class="thumb-img">
-                                                    <img src="assets/img/team/team-d-video-1-5"
-                                                        alt="Video Thumb Image">
-                                                    <div class="tag">CS2</div>
-                                                    <a href="#" class="play-btn popup-video"><i
-                                                            class="fas fa-play"></i></a>
-                                                </div>
-                                                <div class="thumb-content">
-                                                    <h5 class="thumb-title"><a href="#">Partida mais fácil que essa não tem!</a></h5>
-                                                    <span class="total-views">15.200 views</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6 col-xl-4">
-                                            <div class="team-video-thumb">
-                                                <div class="thumb-img">
-                                                    <img src="assets/img/team/team-d-video-2-5"
-                                                        alt="Video Thumb Image">
-                                                    <div class="tag">CS2</div>
-                                                    <a href="#" class="play-btn popup-video"><i
-                                                            class="fas fa-play"></i></a>
-                                                </div>
-                                                <div class="thumb-content">
-                                                    <h5 class="thumb-title"><a href="#">A smoke perfeita na Mirage</a></h5>
-                                                    <span class="total-views">5.235 views</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6 col-xl-4">
-                                            <div class="team-video-thumb">
-                                                <div class="thumb-img">
-                                                    <img src="assets/img/team/team-d-video-3-5"
-                                                        alt="Video Thumb Image">
-                                                    <div class="tag">CS2</div>
-                                                    <a href="#" class="play-btn popup-video"><i
-                                                            class="fas fa-play"></i></a>
-                                                </div>
-                                                <div class="thumb-content">
-                                                    <h5 class="thumb-title"><a href="#">Global em 3 horas?!</a></h5>
-                                                    <span class="total-views">26.485 views</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6 col-xl-4">
-                                            <div class="team-video-thumb">
-                                                <div class="thumb-img">
-                                                    <img src="assets/img/team/team-d-video-1.jpg"
+                                                    <img src="assets/img/team/team-d-video-1-1.jpg"
                                                         alt="Video Thumb Image">
                                                     <div class="tag">Mobile Legends</div>
                                                     <a href="#" class="play-btn popup-video"><i
                                                             class="fas fa-play"></i></a>
                                                 </div>
                                                 <div class="thumb-content">
-                                                    <h5 class="thumb-title"><a href="#">Nana Gameplay</a></h5>
+                                                    <h5 class="thumb-title"><a href="#">Selena Gameplay</a></h5>
                                                     <span class="total-views">12.542 views</span>
                                                 </div>
                                             </div>
@@ -457,14 +504,14 @@ Mobile Menu
                                         <div class="col-sm-6 col-xl-4">
                                             <div class="team-video-thumb">
                                                 <div class="thumb-img">
-                                                    <img src="assets/img/team/team-d-video-2.jpg"
+                                                    <img src="assets/img/team/team-d-video-2-1.jpg"
                                                         alt="Video Thumb Image">
                                                     <div class="tag">Mobile Legends</div>
                                                     <a href="#" class="play-btn popup-video"><i
                                                             class="fas fa-play"></i></a>
                                                 </div>
                                                 <div class="thumb-content">
-                                                    <h5 class="thumb-title"><a href="#">Fanny Gameplay</a></h5>
+                                                    <h5 class="thumb-title"><a href="#">Brody Gameplay</a></h5>
                                                     <span class="total-views">3.256 views</span>
                                                 </div>
                                             </div>
@@ -472,15 +519,60 @@ Mobile Menu
                                         <div class="col-sm-6 col-xl-4">
                                             <div class="team-video-thumb">
                                                 <div class="thumb-img">
-                                                    <img src="assets/img/team/team-d-video-3.jpg"
+                                                    <img src="assets/img/team/team-d-video-3-1.jpg"
                                                         alt="Video Thumb Image">
                                                     <div class="tag">Mobile Legends</div>
                                                     <a href="#" class="play-btn popup-video"><i
                                                             class="fas fa-play"></i></a>
                                                 </div>
                                                 <div class="thumb-content">
-                                                    <h5 class="thumb-title"><a href="#">Pharsa Gameplay</a></h5>
+                                                    <h5 class="thumb-title"><a href="#">Luo Yi Gameplay</a></h5>
                                                     <span class="total-views">23.529 views</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-xl-4">
+                                            <div class="team-video-thumb">
+                                                <div class="thumb-img">
+                                                    <img src="assets/img/team/team-d-video-4-1.jpg"
+                                                        alt="Video Thumb Image">
+                                                    <div class="tag">Phasmophobia</div>
+                                                    <a href="#" class="play-btn popup-video"><i
+                                                            class="fas fa-play"></i></a>
+                                                </div>
+                                                <div class="thumb-content">
+                                                    <h5 class="thumb-title"><a href="#">Esse jogo é só por Deus</a></h5>
+                                                    <span class="total-views">15.200 views</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-xl-4">
+                                            <div class="team-video-thumb">
+                                                <div class="thumb-img">
+                                                    <img src="assets/img/team/team-d-video-5-1.jpg"
+                                                        alt="Video Thumb Image">
+                                                    <div class="tag">Phasmophobia</div>
+                                                    <a href="#" class="play-btn popup-video"><i
+                                                            class="fas fa-play"></i></a>
+                                                </div>
+                                                <div class="thumb-content">
+                                                    <h5 class="thumb-title"><a href="#">Fui o primeiro a morre kkk</a></h5>
+                                                    <span class="total-views">5.235 views</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-xl-4">
+                                            <div class="team-video-thumb">
+                                                <div class="thumb-img">
+                                                    <img src="assets/img/team/team-d-video-6-1.jpg"
+                                                        alt="Video Thumb Image">
+                                                    <div class="tag">Phasmophobia</div>
+                                                    <a href="#" class="play-btn popup-video"><i
+                                                            class="fas fa-play"></i></a>
+                                                </div>
+                                                <div class="thumb-content">
+                                                    <h5 class="thumb-title"><a href="#">Vou ter que compra um cel novo</a></h5>
+                                                    <span class="total-views">26.485 views</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -488,13 +580,12 @@ Mobile Menu
                                 </div>
                             </div>
                         </div>
-                    </div> 
-                    <!-- Video Area -->
+                    </div> <!-- Video Area -->
                     <div class="vs-box1 mb-30">
                         <h4 class="h5 mb-25 mt-n1">Live Stream</h4>
                         <div class="hover-shape position-relative">
                             <span class="bg-gradient  text-white post-time d-none d-sm-inline-block">12 Horas atras</span>
-                            <img src="assets/img/video/video-img-3-6" alt="Video Image" class="w-100">
+                            <img src="assets/img/video/video-img-3-2.jpg" alt="Video Image" class="w-100">
                             <a href="https://www.youtube-nocookie.com/embed/uoonAnmKQhI" class="play-btn overlay-center popup-video"><i class="fas fa-play"></i></a>
                         </div>
                         <div class="row mt-20 mt-lg-30 flex-row-reverse">
@@ -509,15 +600,23 @@ Mobile Menu
                             </div>
                             <div class="col-md-5">
                                 <div class="author-box d-flex">
-                                    <img src="assets/img/member/member-d-2" alt="Author Image">
+                                    <img src="assets/img/member/member-d-3" alt="Author Image">
                                     <div class="media-body align-self-center">
-                                        <h6 class="name mb-0 text-normal lh-base"><a href="#">Matheus</a></h6>
+                                        <h6 class="name mb-0 text-normal lh-base"><a href="#"><?php echo $equipe->nome; ?></a></h6>
                                         <span class="fs-xs">250k views</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <h3 class="h4 font-theme">Social Links</h3>
+                    <div class="d-inline-flex gap-2 mb-25">
+                        <a class="icon-btn3 size-40" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="icon-btn3 size-40" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="icon-btn3 size-40" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="icon-btn3 size-40" href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <?php } ?>
                 </div>
                 <div class="col-lg-4">
                     <aside class="sidebar-area sticky-top overflow-hidden">
@@ -530,10 +629,10 @@ Mobile Menu
                         <h3 class="sidebox-title-v2 h5">Categorias</h3>
                         <div class="vs-sidebox-v2 ">
                             <ul class="vs-cat-list1">
-                                <li><a href="#">Ação <span class="cat-number">10</span></a></li>
-                                <li><a href="#">Aventura <span class="cat-number">07</span></a></li>
-                                <li><a href="#">Battle - Royale <span class="cat-number">05</span></a></li>
-                                <li><a href="#">E-sports <span class="cat-number">02</span></a></li>
+                                <li><a href="3">Futebol <span class="cat-number">10</span></a></li>
+                                <li><a href="3">Basquete <span class="cat-number">07</span></a></li>
+                                <li><a href="3">Basebal <span class="cat-number">05</span></a></li>
+                                <li><a href="3">esports <span class="cat-number">02</span></a></li>
                             </ul>
                         </div>
                         <h3 class="sidebox-title-v2 h5">Top Games</h3>
@@ -558,100 +657,83 @@ Mobile Menu
             </div>
         </div>
     </section>
-  
     <!--==============================
 			Footer Area
 	==============================-->
-    <footer class="footer-wrapper footer-layout1 bg-fluid bg-major-black position-relative">
-        <div class="bg-fluid d-none d-none d-xl-block position-absolute start-0 top-0 w-100 h-100"
-            data-bg-src="assets/img/bg/footer-bg-1-1.jpg"></div>
-        <div class="footer-widget-wrapper  dark-style1 z-index-common">
+    <footer class="footer-wrapper footer-layout2 bg-dark bg-fluid" data-bg-src="assets/img/bg/footer-bg-2-1.jpg">
+        <div class="footer-widget-wrapper  dark-style1 pb-30">
             <div class="container">
                 <div class="row justify-content-between">
-                    <div class="col-md-6 col-lg-3 col-xl-4">
+                    <div class="col-md-6 col-lg-3 col-xl-3">
                         <div class="widget footer-widget pt-0">
-                            <h3 class="widget_title">Sobre Nós</h3>
+                            <h3 class="widget_title text-white">Sobre Nós</h3>
                             <div class="vs-widget-about">
-                                <p class="about-text text-footer1 pe-xl-5">The League of Legends offseason is in full
-                                    effect and teams are looking to sign new players to strengthen their roster or to
-                                    re-sign their current players.</p>
-                                <div class="d-flex gap-2 text-white mt-45">
-                                    <a class="icon-btn1 skew-right" href="https://google.com"><i
-                                            class="fab fa-facebook-f"></i></a>
-                                    <a class="icon-btn1 skew-right" href="https://google.com"><i
-                                            class="fab fa-twitter"></i></a>
-                                    <a class="icon-btn1 skew-right" href="https://google.com"><i
-                                            class="fab fa-linkedin-in"></i></a>
-                                    <a class="icon-btn1 skew-right" href="https://google.com"><i
-                                            class="fab fa-youtube"></i></a>
+                                <p class="pe-xl-3">Nosso compromisso é simplificar a conexão entre jogadores e equipes, 
+                                facilitando a formação de times eficientes para desafios online. Junte-se a nós e eleve sua experiência de jogo!</p>
+                                <div class="d-flex gap-2 text-white mt-25">
+                                    <a class="icon-btn3 text-white" href="https://google.com"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="icon-btn3 text-white" href="https://google.com"><i class="fab fa-twitter"></i></a>
+                                    <a class="icon-btn3 text-white" href="https://google.com"><i class="fab fa-instagram"></i></a>
+                                    <a class="icon-btn3 text-white" href="https://google.com"><i class="fab fa-youtube"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-6 col-lg-3 col-xl-2">
-                        <div class="widget widget_categories footer-widget   ">
-                            <h3 class="widget_title">Categorias</h3>
-                            <ul>
-                                <li><a href="#">Mooba</a></li>
-                                <li><a href="#">Fantasia</a></li>
-                                <li><a href="#">Terror</a></li>
-                                <li><a href="#">Tiro</a></li>
-                                <li><a href="#">RPG</a></li>
+                    <div class="col-sm-5 col-md-6 col-lg-2 col-xl-2">
+                        <div class="widget footer-widget  ">
+                            <h3 class="widget_title font-theme3">Precisa de Ajuda?</h3>
+                            <ul class="custom-links">
+                                    <li><a href="#">Companhia</a></li>
+                                    <li><a href="#">Privacidade</a></li>
+                                    <li><a href="#">Politica</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-6 col-lg-3 col-xl-2">
-                        <div class="widget widget_nav_menu footer-widget  ">
-                            <h3 class="widget_title">Precisa de Ajuda?</h3>
-                            <div class="menu-all-pages-container">
-                                <ul class="menu">
-                                    <li><a href="#">Companhia</a></li>
-                                    <li><a href="#">For the fans</a></li>
-                                    <li><a href="#">Press</a></li>
-                                    <li><a href="#">Privacidade</a></li>
-                                    <li><a href="#">Politica</a></li>
-                                </ul>
+                    <div class="col-sm-7 col-md-6 col-lg-4 col-xl-3">
+                        <div class="widget footer-widget  ">
+                            <h3 class="widget_title font-theme3">Plataformas</h3>
+                            <div class="row no-gutters">
+                                <div class="col-sm-5">
+                                    <ul class="custom-links">
+                                    <li><a href="#">Playstation 5</a></li>
+                                <li><a href="#">XBOX One</a></li>
+                                <li><a href="#">PC</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-7">
+                                    <ul class="custom-links">
+                                    <li><a href="#">Steam</a></li>
+                                    <li><a href="#">Mobile</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-3 col-xl-3">
+                    <div class="col-md-6 col-lg-3 col-xl-4">
                         <div class="widget footer-widget  ">
                             <h3 class="widget_title">Contate-nos</h3>
                             <div class="vs-widget-about">
                                 <p class="contact-info"><i class="fal fa-map-marker-alt text-white"></i>R. Conceição,
                                     321 - Santo Antônio, São Caetano do Sul - SP, 09530-060</p>
                                 <p class="contact-info"><i class="fal fa-phone text-white"></i><a
-                                        href="tel:+65965252561">(11) 7070 - 7070</a></p>
+                                        href="#">(11) 7070 - 7070</a></p>
                                 <p class="contact-info"><i class="fal fa-fax text-white"></i><a
-                                        href="tel:+65965252561">(11) 1234 - 5678</a></p>
+                                        href="#">(11) 1234 - 5678</a></p>
                                 <p class="contact-info"><i class="fal fa-envelope text-white"></i><a
-                                        href="mailto:info@example.com">Tseek@gmail.com</a></p>
-                                <!-- <p class="contact-info"><i class="fal fa-globe text-white"></i><a href="https://example.com">www.example.com</a></p> -->
+                                        href="#">Tseek@gmail.com</a></p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="footer-copyright bg-black z-index-step1">
+        <div class="footer-copyright">
             <div class="container">
-                <div class="row">
-                    <div class="col-xl-8 d-none d-xl-block">
-                        <!-- <div class="footer-menu">
-                            <ul>
-                                <li><a href="#">Features</a></li>
-                                <li><a href="#">Request</a></li>
-                                <li><a href="#">Imprint</a></li>
-                                <li><a href="#">Privacy</a></li>
-                                <li><a href="#">Policy</a></li>
-                                <li><a href="#">Cookie</a></li>
-                                <li><a href="#">Content</a></li>
-                            </ul>
-                        </div> -->
-                    </div>
-                    <div class="col-xl-4 align-self-center text-center py-3 py-xl-0 text-xl-end">
-                        <p class="text-light fw-bold text-bold mb-0">&copy; 2023 <a class="text-white"
-                                href="index.php">TSeeK</a></p>
+                <div class="row justify-content-center">
+                    <div class="col-md-7 text-center">
+                        <div class="copyright-shape bg-light-dark">
+                            <p class="text-light fw-bold text-bold mb-0">&copy; 2024 <a class="text-white" href="index.php">TSeeK</a></p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -661,7 +743,7 @@ Mobile Menu
 
 
     <!--********************************
-			Code End  Here 
+			Codigo termina aqui
 	******************************** -->
 
     <!-- Scroll Top Top Button -->
@@ -670,8 +752,8 @@ Mobile Menu
 
 
 
-    <div class="vs-cursor"></div>
-    <div class="vs-cursor2"></div>
+    <!-- <div class="vs-cursor"></div>
+    <div class="vs-cursor2"></div> -->
 
 
 
@@ -709,6 +791,7 @@ Mobile Menu
     <script src="assets/js/ajax-mail.js"></script>
     <!-- Main Js File -->
     <script src="assets/js/main.js"></script>
+    
 
 </body>
 

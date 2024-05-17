@@ -3,12 +3,12 @@
 require_once('class/Classes.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST["username"];
-    $password = $_POST["password"];
+    $email = $_POST["email"];
+    $senha = $_POST["senha"];
 
     // Instancie a classe de autenticação e chame o método de login
     $auth = new Authentication();
-    $login_result = $auth->login($username, $password);
+    $login_result = $auth->login($email, $senha);
 
     if ($login_result === true) {
         // Login bem-sucedido, você pode redirecionar ou exibir uma mensagem de boas-vindas.

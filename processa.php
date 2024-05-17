@@ -2,8 +2,8 @@
 session_start();
 include("class/Conexao.php");
 
-$nome = mysqli_real_escape_string($mysqli, trim($_POST['nome']));
-$apelido = mysqli_real_escape_string($mysqli, trim($_POST['apelido']));
+// $nome = mysqli_real_escape_string($mysqli, trim($_POST['nome']));
+// $apelido = mysqli_real_escape_string($mysqli, trim($_POST['apelido']));
 $email = mysqli_real_escape_string($mysqli, trim($_POST['email']));
 $senha = mysqli_real_escape_string($mysqli, trim($_POST['senha']));
 $mysqli = new mysqli();   

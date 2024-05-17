@@ -6,6 +6,17 @@
   box-sizing: border-box;
   font-family: 'Quicksand', sans-serif;
 }
+
+.opcoes {
+  display: flex;
+  align-items: center; /* Alinha os itens verticalmente */
+}
+
+.opcoes label {
+  margin-right: 10px; /* Adiciona um espaço entre as labels e os botões */
+}
+
+
 body 
 {
   display: flex;

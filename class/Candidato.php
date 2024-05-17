@@ -1,6 +1,6 @@
 <?php
-require_once('class/Conexao.php');
-class Candidato extends Conexao
+// require_once('class/Conexao.php');
+class Candidato
 {
     public $pdo;
     public $salt = 'Sen@c!';
@@ -11,22 +11,211 @@ class Candidato extends Conexao
     }
 
     
+    /**
+     * Cadastra um novo usuário
+     *
+     * @param array $dados     
+     * @return int
+     */
+    public function cadastrar(array $dados, $foto_enviada = null)
+    {
+        $sql = $this->pdo->prepare('INSERT INTO candidato 
+                                    (nome, apelido, email, senha)
+                                    values
+                                    (:nome, :apelido, :email, :senha)'
+                                    );
+
+        //tratar os dados recebidos        
+        $nome               = $dados['nome'];
+        $apelido            = $dados['apelido'];
+        $email              = strtolower(trim($dados['email']));
+        $senha              = crypt($dados['senha'],$this->salt);
+        // $foto = '';
+
+        // if($foto_enviada){
+        //     $nome_da_foto = Helper::sobeArquivo($foto_enviada,'imagens/usuarios/');
+        //     //verificar se o upload deu certo
+        //     if($nome_da_foto){
+        //            $foto = $nome_da_foto;
+        //     }
+        // }
+
+        //mesclar os dados com os parametros
+        $sql->bindParam(':nome',$nome);
+        $sql->bindParam(':apelido',$apelido);
+        $sql->bindParam(':email',$email);
+        $sql->bindParam(':senha',$senha);     
+        // $sql->bindParam(':foto',$foto);  
+        // executar
+        $sql->execute();
+        return $this->pdo->lastInsertId();
+
+    }
     
+/**
+ * atualiza um determinado candidato
+ *
+ * @param array $dados
+//  * @param file $imagem
+ * @return int id - do candidato
+ */
+public function editar(array $dados, $foto_atual = null)
+{
+    $sql = $this->pdo->prepare("UPDATE candidato SET
+                                nome = :nome,
+                                apelido = :apelido,
+                                email = :email,
+                                senha = :senha
+                                WHERE id_candidato = :id_candidato
+                              ");
+    // tratar os dados
+    $id_candidato          = $dados['id_candidato'];       
+    $nome                  = $dados['nome'];
+    $apelido               = $dados['apelido'];
+    $email                 = strtolower(trim($dados['email']));
+    $senha                 = crypt($dados['senha'],$this->salt);
+    // $foto               = '';
+
+        // verificar se alguma imagem foi enviada 
+        // e realizar o upload da imagem
+        // verificar sew o upload deu certo
+        // if($foto){
+        //     $nome_da_foto = Helper::sobeArquivo($foto_atual,'imagens/usuario/');
+        //     //verificar se o upload deu certo
+        //     if($nome_da_foto){
+        //         $foto = $nome_da_foto;
+        //     }
+        //     else
+        //     {
+        //         // manter a foto que já existia na notícia
+        //         $foto = $dados['foto_atual'];
+        //     }
+        // }
+   //mesclar os dados com os parametros
+   $sql->bindParam(':id_candidato',$id_candidato);
+   $sql->bindParam(':nome',$nome);
+   $sql->bindParam(':apelido',$apelido);
+   $sql->bindParam(':email',$email);
+   $sql->bindParam(':senha',$senha);     
+//    $sql->bindParam(':foto',$foto);  
+
+    // excutar o SQL
+    $sql->execute();
+    return $id_candidato;
+
+}
+
+/**
+     * atualiza o candidato
+     *
+     * @param array $dados
+    //  * @param file $foto_enviada
+     * @return int
+     */
+    public function Atualizar(array $dados, $foto = null)
+    {
+        $sql = $this->pdo->prepare("UPDATE candidato SET
+                                    nome = :nome,
+                                    apelido = :apelido,
+                                    email = :email,
+                                    senha = :senha
+                                    WHERE id_candidato = :id_candidato
+                                  ");
+        // tratar os dados
+        $id_candidato          = $dados['id_candidato'];       
+        $nome                  = $dados['nome'];
+        $apelido               = $dados['apelido'];
+        $email                 = strtolower(trim($dados['email']));
+        $senha                 = crypt($dados['senha'],$this->salt);
+
+            // verificar se alguma foto foi enviada 
+            // e realizar o upload da foto
+            // verificar sew o upload deu certo
+            // if($foto){
+            //     $nome_da_foto = Helper::sobeArquivo($foto,'imagens/candidatos/');
+            //     //verificar se o upload deu certo
+            //     if($nome_da_foto){
+            //         $foto = $nome_da_foto;
+            //     }
+            //     else
+            //     {
+            //         // manter a foto que já existia na notícia
+            //         $foto = $dados['foto_atual'];
+            //     }
+            // }
+        
+
+        //mesclar os dados com os parametros
+        $sql->bindParam(':id_candidato',$id_candidato);
+        $sql->bindParam(':nome',$nome);
+        $sql->bindParam(':apelido',$apelido);
+        $sql->bindParam(':email',$email);
+        $sql->bindParam(':senha',$senha);     
+        // $sql->bindParam(':foto',$foto);  
+ 
+        // executar
+        $sql->execute();
+        return $dados['id_candidato'];
+    }
+
     /**
      * lista os candidatos
      *   
      * @return array
      * 
      */
-    public function Listar(int $id_candidato = null)
+    public function listar(int $id_candidato = null)
     {
-       $sql = $this->pdo->prepare('SELECT * FROM candidato 
-       WHERE id_candidato = :id_candidato ORDER BY nome ');
-       $sql->bindParam(':id_candidato', $id_candidato);
+       $sql = $this->pdo->prepare('SELECT * FROM candidato ORDER BY id_candidato ');
+    //    $sql->bindParam(':id_candidato', $id_candidato);
        $sql->execute();      
        $dados =  $sql->fetchAll(PDO::FETCH_OBJ);
        return $dados;
     }
+
+
+    /**
+     * ===============================
+     *  FUNÇÕES DE LOGIN 
+     * ===============================
+     */
+
+     /**
+      * realiza o login no sistema
+      *
+      * @param string $email
+      * @param string $senha
+      * @return void
+      */
+      public function logar(string $email, string $senha)
+      {
+          $email =  trim(strtolower($email));
+          $senha =  crypt($senha,$this->salt);
+ 
+          $sql = $this->pdo->prepare('SELECT * FROM candidato 
+                                     WHERE 
+                                     email = :email  AND senha = :senha');
+         $sql->bindParam(':email',$email);
+         $sql->bindParam(':senha',$senha);
+         $sql->execute();
+         @session_start();
+         // verificar se a consulta retornou alguma informação
+         if($sql->rowCount() == 1)
+         {
+             $candidato = $sql->fetch(PDO::FETCH_OBJ);
+             $_SESSION['nome'] = $candidato->nome;           
+             $_SESSION['id_candidato'] = $candidato->id_candidato;
+             $_SESSION['logado'] = true;            
+             header('location:index-att.php');
+ 
+         }
+         else
+         {
+             session_destroy();
+             header('location:index.php?e');
+         }
+ 
+      }
 
 
    /**
@@ -35,7 +224,7 @@ class Candidato extends Conexao
     * @param integer $id_candidato
     * @return object
     */
-    public function Mostrar( $id_candidato)
+    public function mostrar( $id_candidato)
     {
         $sql = $this->pdo->prepare('SELECT * FROM candidato 
                                     WHERE id_candidato = :id_candidato');
@@ -71,34 +260,34 @@ class Candidato extends Conexao
       * @param string $senha
       * @return response
       */
-     public function logado(string $email, string $senha)
-     {
-         $email =  trim(strtolower($email));
-         $senha =  crypt($senha,$this->salt);
+//      public function logado(string $email, string $senha)
+//      {
+//          $email =  trim(strtolower($email));
+//          $senha =  crypt($senha,$this->salt);
 
-         $sql = $this->pdo->prepare('SELECT * FROM candidato 
-                                    WHERE 
-                                    email = :email  AND senha = :senha');
-        $sql->bindParam(':email',$email);
-        $sql->bindParam(':senha',$senha);
-        $sql->execute();
-        @session_start();
-        // verificar se a consulta retornou alguma informação
-        if($sql->rowCount() == 1)
-        {
-            $candidato = $sql->fetch(PDO::FETCH_OBJ);
-            $_SESSION['nome'] = $candidato->nome;           
-            $_SESSION['id_candidato'] = $candidato->id_candidato;
-            $_SESSION['logado'] = true;            
-            header('location:index-att.php');
+//          $sql = $this->pdo->prepare('SELECT * FROM candidato 
+//                                     WHERE 
+//                                     email = :email  AND senha = :senha');
+//         $sql->bindParam(':email',$email);
+//         $sql->bindParam(':senha',$senha);
+//         $sql->execute();
+//         @session_start();
+//         // verificar se a consulta retornou alguma informação
+//         if($sql->rowCount() == 1)
+//         {
+//             $candidato = $sql->fetch(PDO::FETCH_OBJ);
+//             $_SESSION['nome'] = $candidato->nome;           
+//             $_SESSION['id_candidato'] = $candidato->id_candidato;
+//             $_SESSION['logado'] = true;            
+//             header('location:index-att.php');
 
-        }
-        else
-        {
-            session_destroy();
-            header('location:index.php?e');
-        }
+//         }
+//         else
+//         {
+//             session_destroy();
+//             header('location:index.php?e');
+//         }
 
-     }
+//      }
 }
 ?>

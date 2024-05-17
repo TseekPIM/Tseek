@@ -1,10 +1,11 @@
 <?php
 include('class/Classes.php');
+// include('class/processa_login.php');
 $Candidato = new Candidato();
 
-if (isset($_POST['btnLogar'])) {
-  $Candidato->logar($_POST['email'],$_POST['senha']);
-}
+// if (isset($_POST['btnLogar'])) {
+//   $Candidato->logar($_POST['email'],$_POST['senha']);
+// }
 ?>
 <!DOCTYPE html>
 <html lang="pt-br" >
@@ -55,20 +56,20 @@ if (isset($_POST['btnLogar'])) {
               <input type="submit" value="Login" id='btnLogar'>
             </div>
             <div class="links">
-              <a href="index.php.html">Voltar</a>
+              <a href="index.php">Voltar</a>
             </div>
           </div>
 
           <?php 
-            if (isset($_GET['e'])) {
-              echo '<div class="alert alert danger" role="alert">E-mail ou senha inválida </div>';
-            }
+            // if (isset($_GET['e'])) {
+            //   echo '<div class="alert alert danger" role="alert">E-mail ou senha inválida </div>';
+            // }
           ?>
           <?php 
-            if (isset($_GET['ok'])) {
-              echo '<div class="alert alert danger" role="alert">Fechado com sucesso</div>';
-            }
-          ?>
+          //   if (isset($_GET['ok'])) {
+          //     echo '<div class="alert alert danger" role="alert">Fechado com sucesso</div>';
+          //   }
+          // ?>
         </form>
     </div> 
 

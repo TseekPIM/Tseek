@@ -67,8 +67,7 @@ if(isset($_POST['btnCadastrar'])){
 
         <input name= "senha" type="password" id="senha" required> <i>Senha</i> 
  
-       </div> 
-
+      </div> 
 
       <div class="inputBox"> 
 
@@ -76,7 +75,17 @@ if(isset($_POST['btnCadastrar'])){
         <div id="alertaEmail" class="alert alert-danger" style="display: none;"></div>
        </div> 
 
-      <div class="links"> <p style="color: white;">Já tem cadastro? Clique em</p> <a href="login2.php">Login</a> 
+
+      <div style="color: #fff;">
+        <label for="jogador">Jogador :</label>
+        <input style="margin-right: 50px;"  type="radio" id="jogador" name="jogador" value="jogador">
+  
+        <label for="recrutador">Recrutador :</label>
+        <input type="radio" id="recrutador" name="recrutador" value="recrutador">
+      </div>
+
+      <div class="links"> <p style="color: white;">Já tem cadastro? 
+      <br>Clique em</p> <a href="login2.php"><br>Login</a> 
 
       </div> 
 
