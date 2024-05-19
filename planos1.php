@@ -394,58 +394,62 @@ Mobile Menu
     ============================== -->
     <div id="mainCoantiner">
         <div class="margin-body">
-            <div>
-                <div class="starsec"></div>
-                <div class="starthird"></div>
-                <div class="starfourth"></div>
-                <div class="starfifth"></div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12 col-md-12">
-                    <div class="wpb_text_column wpb_content_element ">
-                        <div class="wpb_wrapper">
-                            <div class="title-h1 text-center"><span><span class="light">pricing </span> table</span></div>
-                        </div>
-                    </div>
-                </div>
-             </div>
-        <div class="row">
-            <div class="col-sm-3 col-md-3 pricing-column-wrapper">
-                <div class="pricing-column">
-                    <div class="pricing-price-row">
-                        <div class="pricing-price-wrapper">
-                            <div class="pricing-price">
-                                <div class="pricing-cost">$10</div>
-                                <div class="time">Per Month</div>
-                            </div>
-                        </div>
-                    </div>
-                <div class="pricing-row-title">
-                    <div class="pricing_row_title">tiny</div>
-                </div>
-                <figure class="pricing-row">Photo sharing school</figure>
-                <figure class="pricing-row"><span>Drop out ramen hustle</span></figure>
-                <figure class="pricing-row strike">Crush revenue traction</figure>
-                <figure class="pricing-row strike">Crush revenue traction</figure>
-                <figure class="pricing-row strike">User base minimum viable</figure>
-                <figure class="pricing-row strike">Lorem ipsum dolor</figure>
-                <div class="pricing-footer">
-                    <div class="gem-button-container gem-button-position-center"><a href="#" class="gem-button gem-green">order now</a></div>
-                </div>
-            </div>
+  
+  <div>
+    <div class="starsec"></div>
+    <div class="starthird"></div>
+    <div class="starfourth"></div>
+    <div class="starfifth"></div>
+  </div>
+  <!--Dust particle end--->
+
+  <div class="row">
+    <div class="col-sm-12 col-md-12">
+      <div class="wpb_text_column wpb_content_element ">
+          <div class="wpb_wrapper">
+            <div class="title-h1 text-center"><span><span class="light">Ta esperando o que?  </span> <br><br>Vem ser PRÓ!</span></div>
+          </div>
+        </div>
     </div>
-    <div class="col-sm-3 col-md-3 pricing-column-wrapper">
-       <div class="pricing-column">
+  </div>
+  
+  <div class="row">
+    <div class="col-sm-3 col-md-4 pricing-column-wrapper">
+         <div class="pricing-column">
               <div class="pricing-price-row">
                 <div class="pricing-price-wrapper">
                   <div class="pricing-price">
-                    <div class="pricing-cost">$45</div>
-                    <div class="time">Per Month</div>
+                    <div class="pricing-cost">FREE</div>
+                    <div class="time">Por Mês</div>
                   </div>
                 </div>
               </div>
               <div class="pricing-row-title">
-                <div class="pricing_row_title">small</div>
+                <div class="pricing_row_title">Básico</div>
+              </div>
+              <figure class="pricing-row">Photo sharing school</figure>
+              <figure class="pricing-row"><span>Drop out ramen hustle</span></figure>
+              <figure class="pricing-row strike">Crush revenue traction</figure>
+              <figure class="pricing-row strike">Crush revenue traction</figure>
+              <figure class="pricing-row strike">User base minimum viable</figure>
+              <figure class="pricing-row strike">Lorem ipsum dolor</figure>
+              <div class="pricing-footer">
+                <div class="gem-button-container gem-button-position-center"><a href="#" class="gem-button gem-green">Assine já!</a></div>
+              </div>
+            </div>
+    </div>
+    <div class="col-sm-3 col-md-4 pricing-column-wrapper">
+       <div class="pricing-column">
+              <div class="pricing-price-row">
+                <div class="pricing-price-wrapper">
+                  <div class="pricing-price">
+                    <div class="pricing-cost">R$50</div>
+                    <div class="time">Por Mês</div>
+                  </div>
+                </div>
+              </div>
+              <div class="pricing-row-title">
+                <div class="pricing_row_title">Jogadores</div>
               </div>
               <figure class="pricing-row">Photo sharing school</figure>
               <figure class="pricing-row"><span style="color: #5f727f;">Drop out ramen hustle</span></figure>
@@ -454,22 +458,22 @@ Mobile Menu
               <figure class="pricing-row strike">User base minimum viable</figure>
               <figure class="pricing-row strike">Lorem ipsum dolor</figure>
               <div class="pricing-footer">
-                <div class="gem-button-container gem-button-position-center"><a class="gem-button gem-purpel">order now</a></div>
+                <div class="gem-button-container gem-button-position-center"><a class="gem-button gem-purpel">Assine já!</a></div>
               </div>
             </div>
     </div>
-    <div class="col-sm-3 col-md-3 pricing-column-wrapper">
+    <div class="col-sm-3 col-md-4 pricing-column-wrapper">
       <div class="pricing-column">
               <div class="pricing-price-row">
                 <div class="pricing-price-wrapper">
                   <div class="pricing-price">
-                    <div class="pricing-cost">$99</div>
-                    <div class="time">Per Month</div>
+                    <div class="pricing-cost">R$110</div>
+                    <div class="time">Por Mês</div>
                   </div>
                 </div>
               </div>
               <div class="pricing-row-title">
-                <div class="pricing_row_title">medium</div>
+                <div class="pricing_row_title">Equipes</div>
               </div>
               <figure class="pricing-row">Photo sharing school</figure>
               <figure class="pricing-row"><span>Drop out ramen hustle</span></figure>
@@ -479,38 +483,14 @@ Mobile Menu
               <figure class="pricing-row strike">Lorem ipsum dolor</figure>
               <div class="pricing-footer">
                 <div class="gem-button-container gem-button-position-center">
-                  <a class="gem-button gem-orange">order now</a></div>
-              </div>
-            </div>
-    </div>
-    <div class="col-sm-3 col-md-3 pricing-column-wrapper">
-      <div class="pricing-column">
-              <div class="pricing-price-row">
-                <div class="pricing-price-wrapper">
-                  <div class="pricing-price">
-                    <div style=" " class="pricing-cost">$145</div>
-                    <div class="time" style="display:inline-block;">Per Month</div>
-                  </div>
-                </div>
-              </div>
-              <div class="pricing-row-title">
-                <div class="pricing_row_title">large</div>
-              </div>
-              <figure class="pricing-row">Photo sharing school</figure>
-              <figure class="pricing-row"><span style="color: #5f727f;">Drop out ramen hustle</span></figure>
-              <figure class="pricing-row"><span style="color: #5f727f;">Crush revenue traction</span></figure>
-              <figure class="pricing-row">Crush revenue traction</figure>
-              <figure class="pricing-row">User base minimum</figure>
-              <figure class="pricing-row strike">Lorem ipsum dolor</figure>
-              <div class="pricing-footer">
-                <div class="gem-button-container gem-button-position-center"><a class="gem-button gem-yellow">order now</a></div>
+                  <a class="gem-button gem-orange">Assine já!</a></div>
               </div>
             </div>
     </div>
   </div>
 
- </di>
-</div>
+        </div>
+    </div>
 
     <!--==============================
 			Footer Area

@@ -393,8 +393,7 @@ Mobile Menu
     planos Area
     ============================== -->
     <div id="mainCoantiner">
-  <!--dust particel-->
-  <div class="margin-body">
+        <div class="margin-body">
   
   <div>
     <div class="starsec"></div>
@@ -444,8 +443,8 @@ Mobile Menu
               <div class="pricing-price-row">
                 <div class="pricing-price-wrapper">
                   <div class="pricing-price">
-                    <div class="pricing-cost">$45</div>
-                    <div class="time">Per Month</div>
+                    <div class="pricing-cost">R$50</div>
+                    <div class="time">Por Mês</div>
                   </div>
                 </div>
               </div>
@@ -468,8 +467,8 @@ Mobile Menu
               <div class="pricing-price-row">
                 <div class="pricing-price-wrapper">
                   <div class="pricing-price">
-                    <div class="pricing-cost">$99</div>
-                    <div class="time">Per Month</div>
+                    <div class="pricing-cost">R$110</div>
+                    <div class="time">Por Mês</div>
                   </div>
                 </div>
               </div>
@@ -490,8 +489,8 @@ Mobile Menu
     </div>
   </div>
 
- </div>
-</div>
+        </div>
+    </div>
 
     <!--==============================
 			Footer Area

@@ -172,7 +172,7 @@ Icons ao lado superior direito (menu retrátil)
                             </ul> -->
                         </li>
                         <li class="menu-item-has-children">
-                            <a href="#">Planos</a>
+                            <a href="planos1.php">Planos</a>
                         </li>
                     </ul>
             </div>
@@ -246,7 +246,6 @@ Mobile Menu
         <div class="container">
             <div class="row py-md-2">
                 <div class="col-sm-6 d-none d-md-block">
-                    <!-- <p class="mb-0 fs-xs text-white">Bem vindo a sua <a class="text-inherit" href="team.html"><u class=" fw-bold">Esports team</u></a></p> -->
                 </div>
                 <div class="col-sm-6 text-end d-none d-md-block">
                     <ul class="social-links fs-xs text-white">
@@ -336,7 +335,7 @@ Mobile Menu
                                     </ul> -->
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="planos.html">Planos</a>
+                                    <a href="planos1.php">Planos</a>
                                 </li>
                             </ul>
                     </div>
