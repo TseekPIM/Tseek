@@ -5,7 +5,7 @@ include('class/Classes.php');
 if(isset($_POST['btnCadastrar'])){
     $Candidato = new Candidato();
     $id = $Candidato->cadastrar($_POST,$_FILES['foto']);  
-    header('location:player-details1.php?'.$id);
+    header('location:login2.php');
   }
 ?>
 <!DOCTYPE html>
@@ -42,7 +42,7 @@ if(isset($_POST['btnCadastrar'])){
 
      <h2>Cadastra-se</h2> 
 
-     <form action="processa.php" method="POST">
+     <form action="?" method="POST" enctype="multipart/form-data">
           <div class="form">
 
       <div class="inputBox"> 
@@ -76,12 +76,17 @@ if(isset($_POST['btnCadastrar'])){
        </div> 
 
 
-      <div style="color: #fff;">
+      <!-- <div style="color: #fff;">
         <label for="jogador">Jogador :</label>
         <input style="margin-right: 50px;"  type="radio" id="jogador" name="jogador" value="jogador">
   
         <label for="recrutador">Recrutador :</label>
         <input type="radio" id="recrutador" name="recrutador" value="recrutador">
+      </div> -->
+
+      <div>
+        <label class="fw-bolder" for="foto">Foto</label>
+        <input class="form-control" type="file" name="foto" id="foto">
       </div>
 
       <div class="links"> <p style="color: white;">Já tem cadastro? 

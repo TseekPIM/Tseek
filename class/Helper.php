@@ -13,31 +13,34 @@ class Helper{
    *                             será armazenado
    * @return string || false     - nome do arquivo
    */
-// public static function sobeArquivo($arquivo,$diretorio = 'imagens/'){
-//     $arquivo = $arquivo;
-//     // pegar apenas o nome original do arquivo
-//     $nome_arquivo = $arquivo['name'];
-//       // verificar se algum arquivo foi enviado
-//       if(trim($nome_arquivo)!= '') {
-//           // pegar a extensao do arquivo         
-//           $extensao = explode('.', $nome_arquivo);
-//           // gerar nome         
-//           $novo_nome = date('YmdHis').rand(0,1000).'.'.end($extensao);         
+  public static function sobeArquivo($arquivo,$diretorio = 'imagens/'){
+    $arquivo = $arquivo;
+    // pegar apenas o nome original do arquivo
+    $nome_arquivo = $arquivo['name'];
+      // verificar se algum arquivo foi enviado
+      if(trim($nome_arquivo)!= '') {
+          // pegar a extensao do arquivo         
+          $extensao = explode('.', $nome_arquivo);
+          // gerar nome         
+          $novo_nome = date('YmdHis').rand(0,1000).'.'.end($extensao);         
 
-//           // montar o destino onde o arquivo será armazenado         
-//           $destino = $diretorio.$novo_nome;                  
-//           $ok = move_uploaded_file($arquivo['tmp_name'],$destino);
-//           // verificar se o upload foi realizado
-//           if($ok) {
-//             return $novo_nome;            
-//           } else {
-//             return false;
-//           }
+          // montar o destino onde o arquivo será armazenado         
+          $destino = $diretorio.$novo_nome;                  
+          $ok = move_uploaded_file($arquivo['tmp_name'],$destino);
+          // verificar se o upload foi realizado
+          if($ok) {
+            return $novo_nome;            
+          } else {
+            return false;
+          }
 
-//       } else {
-//         return false;
-//       }
-//   }
+      } else {
+        return false;
+      }
+  }
+
+
+  
 
 
     /**

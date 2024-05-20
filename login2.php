@@ -3,9 +3,11 @@ include('class/Classes.php');
 // include('class/processa_login.php');
 $Candidato = new Candidato();
 
-// if (isset($_POST['btnLogar'])) {
-//   $Candidato->logar($_POST['email'],$_POST['senha']);
-// }
+if (isset($_POST['btnLogar'])) {
+  $Candidato->logar($_POST['email'],$_POST['senha']);
+  header('location:index-att.php');
+
+}
 ?>
 <!DOCTYPE html>
 <html lang="pt-br" >
@@ -38,7 +40,7 @@ $Candidato = new Candidato();
     <div class="signin">
       <div class="content">
         <h2>Login</h2>
-        <form action="" method="POST">
+        <form action="?" method="POST">
           <div class="form">
             <div class="inputBox">
               <input type="text" name="email" id="email" required> <!-- Adicione o atributo "name" -->
@@ -61,14 +63,14 @@ $Candidato = new Candidato();
           </div>
 
           <?php 
-            // if (isset($_GET['e'])) {
-            //   echo '<div class="alert alert danger" role="alert">E-mail ou senha inválida </div>';
-            // }
+            if (isset($_GET['e'])) {
+              echo '<div class="alert alert danger" role="alert">E-mail ou senha inválida </div>';
+            }
           ?>
           <?php 
-          //   if (isset($_GET['ok'])) {
-          //     echo '<div class="alert alert danger" role="alert">Fechado com sucesso</div>';
-          //   }
+            if (isset($_GET['ok'])) {
+              echo '<div class="alert alert danger" role="alert">Fechado com sucesso</div>';
+            }
           // ?>
         </form>
     </div> 

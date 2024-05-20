@@ -105,7 +105,7 @@ require_once('class/Classes.php');
         <div class="row align-items-center">
             <div class="col-5 col-md-3">
                 <div class="logo">
-                    <a href="index.php"><img src="assets/img/logo-2.png" alt="TSeeK"></a>
+                    <a href="index-att.php"><img src="assets/img/logo-2.png" alt="TSeeK"></a>
                 </div>
             </div>
             <div class="col-7 col-md-9 text-end position-static">
@@ -345,7 +345,7 @@ Mobile Menu
                     </div>
                     <div class="col-md-4 col-lg-2 text-center d-none d-xl-block">
                         <div class="header-logo1">
-                            <a href="index.php"><img src="assets/img/logo1.png" alt="TSeeK"></a>
+                            <a href="index-att.php"><img src="assets/img/logo1.png" alt="TSeeK"></a>
                         </div>
                     </div>
                     <div class="col-md-4 col-lg-5 d-none d-xl-block">

@@ -20,38 +20,77 @@ class Candidato
     public function cadastrar(array $dados, $foto_enviada = null)
     {
         $sql = $this->pdo->prepare('INSERT INTO candidato 
-                                    (nome, apelido, email, senha)
+                                    (nome, apelido, email, senha, foto)
                                     values
-                                    (:nome, :apelido, :email, :senha)'
+                                    (:nome, :apelido, :email, :senha, :foto)'
                                     );
 
         //tratar os dados recebidos        
         $nome               = $dados['nome'];
         $apelido            = $dados['apelido'];
         $email              = strtolower(trim($dados['email']));
-        $senha              = crypt($dados['senha'],$this->salt);
-        // $foto = '';
+        $senha              = $dados['senha'];
+        $foto = '';
 
-        // if($foto_enviada){
-        //     $nome_da_foto = Helper::sobeArquivo($foto_enviada,'imagens/usuarios/');
-        //     //verificar se o upload deu certo
-        //     if($nome_da_foto){
-        //            $foto = $nome_da_foto;
-        //     }
-        // }
+        if($foto_enviada){
+            $nome_da_foto = Helper::sobeArquivo($foto_enviada,'imagens/candidatos/');
+            //verificar se o upload deu certo
+            if($nome_da_foto){
+                   $foto = $nome_da_foto;
+            }
+        }
 
         //mesclar os dados com os parametros
         $sql->bindParam(':nome',$nome);
         $sql->bindParam(':apelido',$apelido);
         $sql->bindParam(':email',$email);
         $sql->bindParam(':senha',$senha);     
-        // $sql->bindParam(':foto',$foto);  
+        $sql->bindParam(':foto',$foto);  
         // executar
         $sql->execute();
         return $this->pdo->lastInsertId();
 
     }
-    
+
+
+    /**
+     * ===============================
+     *  FUNÇÕES DE LOGIN 
+     * ===============================
+     */
+
+     /**
+      * realiza o login no sistema
+      *
+      * @param string $email
+      * @param string $senha
+      * @return void
+      */
+      public function logar(string $email, string $senha)
+      {
+          $email = trim(strtolower($email));
+      
+          $sql = $this->pdo->prepare('SELECT * FROM candidato 
+                                      WHERE 
+                                      email = :email  AND senha = :senha');
+          $sql->bindParam(':email', $email);
+          $sql->bindParam(':senha', $senha);
+          $sql->execute();
+          @session_start();
+          // verificar se a consulta retornou alguma informação
+          if ($sql->rowCount() == 1) {
+              $candidato = $sql->fetch(PDO::FETCH_OBJ);
+              $_SESSION['nome'] = $candidato->nome;
+              $_SESSION['id_candidato'] = $candidato->id_candidato;
+              $_SESSION['id'] = $candidato->id_candidato; // Definindo o ID do candidato na sessão
+              $_SESSION['logado'] = true;
+              header('location:index-att.php');
+          } else {
+              session_destroy();
+              header('location:index.php?e');
+          }
+      }
+      
 /**
  * atualiza um determinado candidato
  *
@@ -174,48 +213,7 @@ public function editar(array $dados, $foto_atual = null)
     }
 
 
-    /**
-     * ===============================
-     *  FUNÇÕES DE LOGIN 
-     * ===============================
-     */
-
-     /**
-      * realiza o login no sistema
-      *
-      * @param string $email
-      * @param string $senha
-      * @return void
-      */
-      public function logar(string $email, string $senha)
-      {
-          $email =  trim(strtolower($email));
-          $senha =  crypt($senha,$this->salt);
- 
-          $sql = $this->pdo->prepare('SELECT * FROM candidato 
-                                     WHERE 
-                                     email = :email  AND senha = :senha');
-         $sql->bindParam(':email',$email);
-         $sql->bindParam(':senha',$senha);
-         $sql->execute();
-         @session_start();
-         // verificar se a consulta retornou alguma informação
-         if($sql->rowCount() == 1)
-         {
-             $candidato = $sql->fetch(PDO::FETCH_OBJ);
-             $_SESSION['nome'] = $candidato->nome;           
-             $_SESSION['id_candidato'] = $candidato->id_candidato;
-             $_SESSION['logado'] = true;            
-             header('location:index-att.php');
- 
-         }
-         else
-         {
-             session_destroy();
-             header('location:index.php?e');
-         }
- 
-      }
+    
 
 
    /**

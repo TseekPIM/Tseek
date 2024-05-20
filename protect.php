@@ -1,6 +1,7 @@
 <?php
-if(!isset($_SESSION)){
+if(!isset($_SESSION['id'])) {
     session_start();
+    $id = $_SESSION['id'];
 }
 
 // if(!isset($_SESSION['id'])){
