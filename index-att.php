@@ -4,9 +4,8 @@ include('class/Classes.php');
 // Helper::logado();
 $objCandidato = new Candidato();
 $objVaga = new Vaga();
-
-
-
+ echo $_SESSION['id_candidato'];
+$candidato = $_SESSION['id_candidato'];
 ?>
 
 <!doctype html>
@@ -228,18 +227,10 @@ $objVaga = new Vaga();
             <nav id="sidebar">
                 <div class="img bg-wrap text-center py-4" style="background-color: transparent;">
                 <div class="user-logo">
-                        <div class="img"><?php if (isset($_SESSION['id'])) {
-    // Obtém o ID do usuário logado
-    $id = $_SESSION['id'];
-    // Obtém e exibe a foto do usuário logado
-    echo Helper::fotoDocandidato($id);
-} else {
-    // Se o usuário não estiver logado, exiba uma mensagem ou redirecione para a página de login
-    echo "Usuário não logado";
-}?></div>
-                        <h3><?php echo $_SESSION['nome']; ?></h3>
-                    </div>
-                </div>
+                        <div class="img"><?php echo Helper::fotoDoCandidato($candidato);?></div>
+                        <div></div>
+                        <div><h3><?php echo Helper::nomeDoCandidato($candidato); ?></h3></div>
+                    </div>                   
                 <ul class="list-unstyled components mb-5">
                     <li class="active">
                         <a href="#"><span class="fa fa-home mr-3"></span> Inicio</a>

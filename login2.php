@@ -5,7 +5,7 @@ $Candidato = new Candidato();
 
 if (isset($_POST['btnLogar'])) {
   $Candidato->logar($_POST['email'],$_POST['senha']);
-  header('location:index-att.php');
+  // header('location:index-att.php');
 
 }
 ?>
@@ -55,7 +55,7 @@ if (isset($_POST['btnLogar'])) {
               <a href="signup2.php">Cadastra-se</a>
             </div>
             <div class="inputBox">
-              <input type="submit" value="Login" id='btnLogar'>
+              <input type="submit" value="Login" id='btnLogar' name="btnLogar">
             </div>
             <div class="links">
               <a href="index.php">Voltar</a>
