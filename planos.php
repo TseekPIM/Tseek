@@ -1,17 +1,17 @@
 <?php
 include('protect.php');
- echo $_SESSION['nome'];
+//  echo $_SESSION['nome'];
 //  echo $_GET['id'];
-print_r($_SESSION);
+// print_r($_SESSION);
 require_once('class/Classes.php');
 //  $objHelper = new Helper();
 //  $objHelper->logado();
  
 
  
- $objVaga = new Vaga();
-//  $id_vaga = $_SESSION['id'];
-//  $Vaga = $objVaga->Mostrar($_SESSION['id']);
+ $objCandidato = new Candidato();
+//  $id_candidato = $_SESSION['id'];
+//  $candidato = $objCandidato->Mostrar($_SESSION['id']);
 
  
 ?>
@@ -69,6 +69,9 @@ require_once('class/Classes.php');
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Theme Color CSS -->
     <link rel="stylesheet" href="assets/css/theme-color1.css">
+    <!-- planos -->
+    <link rel="stylesheet" href="planos.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
 
 </head>
@@ -102,7 +105,7 @@ require_once('class/Classes.php');
         <div class="row align-items-center">
             <div class="col-5 col-md-3">
                 <div class="logo">
-                    <a href="index.php"><img src="assets/img/logo-2.png" alt="TSeeK"></a>
+                    <a href="index-att.php"><img src="assets/img/logo-2.png" alt="TSeeK"></a>
                 </div>
             </div>
             <div class="col-7 col-md-9 text-end position-static">
@@ -172,7 +175,7 @@ require_once('class/Classes.php');
                             </ul> -->
                         </li>
                         <li class="menu-item-has-children">
-                            <a href="#">Planos</a>
+                            <a href="planos.php">Planos</a>
                         </li>
                     </ul>
             </div>
@@ -336,13 +339,13 @@ Mobile Menu
                                     </ul> -->
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="planos.html">Planos</a>
+                                    <a href="planos.php">Planos</a>
                                 </li>
                             </ul>
                     </div>
                     <div class="col-md-4 col-lg-2 text-center d-none d-xl-block">
                         <div class="header-logo1">
-                            <a href="index.php"><img src="assets/img/logo1.png" alt="TSeeK"></a>
+                            <a href="index-att.php"><img src="assets/img/logo1.png" alt="TSeeK"></a>
                         </div>
                     </div>
                     <div class="col-md-4 col-lg-5 d-none d-xl-block">
@@ -377,118 +380,118 @@ Mobile Menu
     <div class="breadcumb-wrapper breadcumb-layout1 pt-200 pb-50" data-bg-src="assets/img/breadcumb/breadcumb-1.jpg" data-overlay>
         <div class="container z-index-common">
             <div class="breadcumb-content text-center">
-                <h1 class="breadcumb-title h1 text-white my-0">Vagas</h1>
-                <h2 class="breadcumb-bg-title">Vagas</h2>
+                <h1 class="breadcumb-title h1 text-white my-0">Planos</h1>
+                <h2 class="breadcumb-bg-title">Gamers</h2>
                 <ul class="breadcumb-menu-style1 text-white mx-auto fs-xs">
                     <li><a href="index.php"><i class="fal fa-home"></i>Home</a></li>
-                    <li class="active">Vagas</li>
+                    <li class="active">Planos</li>
                 </ul>
             </div>
         </div>
     </div>
     <!--==============================
-    vagas Area
+    planos Area
     ============================== -->
-    <!-- <section class="vs-member-area vs-member-layout2 space-top newsletter-pb">
-    <div class="container">
-            <div class="row justify-content-center">
-            <?php
-        $vagas = $objVaga->listar();
-        foreach ($vagas as $vaga){
-    ?>
-                <div class="col-xl-3 col-lg-4 col-sm-6">
-                    <div class="vs-member image-scale-hover">
-                        <div class="member-img">
-                            <a href="player-details.php?id=<?php echo $vaga->id_vaga; ?>"><img src="assets/img/member/member-2-2.jpg" class="w-100" alt="Member Image"></a>
-                        </div>
-                        <div class="member-content">
-                            <div class="links-wrap text-start position-relative mb-30">
-                                <span class="icon-btn3 style-white plus-icon"><i class="far fa-plus text-white"></i></span>
-                                <div class="member-links">
-                                    <a href="https://web.facebook.com/?locale=pt_BR&_rdc=1&_rdr" class="icon-btn3"><i class="fab fa-facebook"></i></a>
-                                    <a href="https://www.twitch.tv/directory" class="icon-btn3"><i class="fab fa-twitch"></i></a>
-                                    <a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoicHQifQ%3D%3D%22%7D" class="icon-btn3"><i class="fab fa-twitter"></i></a>
-                                </div>
-                            </div>
-                            <h3 class="member-name h5 mb-0 text-white"><a href="player-details.php?id=<?php echo $vaga->id_vaga; ?>"><?php echo $vaga->nome; ?></a></h3>
-                            <span class="degi text-white">Mobile Legends</span>
-                        </div>
-                    </div>
-                </div>
-                <?php
-                    }
-               ?>
-            </div>
-            <div class="pagination-wrapper pagination-layout1 mt-lg-30 mb-30">
-                <ul>
-                    <li><a href="#" class="active"><span class="text">1</span></a></li>
-                    <li><a href="#"><span class='text'>2</span></a></li>
-                    <li><a href="#"><span class='text'>3</span></a></li>
-                    <li><a href="#"><span class='text'>4</span></a></li>
-                </ul>
-            </div>
+    <div id="mainCoantiner">
+        <div class="margin-body">
+  
+  <div>
+    <div class="starsec"></div>
+    <div class="starthird"></div>
+    <div class="starfourth"></div>
+    <div class="starfifth"></div>
+  </div>
+  <!--Dust particle end--->
+
+  <div class="row">
+    <div class="col-sm-12 col-md-12">
+      <div class="wpb_text_column wpb_content_element ">
+          <div class="wpb_wrapper">
+            <div class="title-h1 text-center"><span><span class="light">Ta esperando o que?  </span> <br><br>Vem ser PRÓ!</span></div>
+          </div>
         </div>
-    </section> -->
-    <section class="vs-match-wrapper vs-match-layout1 space-top space-bottom">
-            <div class="container">
-                <div class="row align-items-center ">
-                    <div class="col-md-5 col-xl-6">
-                        <!-- <div class="section-title">
-                            <span class="sub-title1">Lista</span>
-                            <h2 class="sec-title1 text-white">Vagas</h2>
-                        </div> -->
-                    </div>
-                    <div class="col-lg-7 col-xl-6 text-center text-lg-end">
-                        <div class="filter-menu-style1 filter-menu-active mb-70">
-                            <button data-filter="*" class="active">Todos</button>
-                            <button data-filter=".csgo"> csgo</button>
-                            <button data-filter=".dota">dota 2</button>
-                            <button data-filter=".fortnite">fortnite</button>
-                            <button data-filter=".pubg">pubg</button>
-                        </div>
-                    </div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-sm-3 col-md-4 pricing-column-wrapper">
+         <div class="pricing-column">
+              <div class="pricing-price-row">
+                <div class="pricing-price-wrapper">
+                  <div class="pricing-price">
+                    <div class="pricing-cost">FREE</div>
+                    <div class="time">Por Mês</div>
+                  </div>
                 </div>
-                <div class="mb-15 filter-active row">
-                <?php
-        $vagas = $objVaga->listar();
-        foreach ($vagas as $vaga){
-    ?>
-                    <div class="col-md-6 col-lg-12 grid-item pubg fortnite csgo ">
-                        <div class="vs-match">
-                            <div class="row align-items-center justify-content-center justify-content-lg-start">
-                                <div class="col-lg-3">
-                                    <div class="match-logo">
-                                        <a href="vaga-details.php?id=<?php echo $vaga->id_vaga; ?>"><img src="assets/img/logos/logo-1-7.png"
-                                                alt="vaga Logo" style="width:80px;"></a>
-                                        </div>
-                                </div>
-                                <div class="col-lg">
-                                    <div class="match-about pl-35">
-                                        <h3 class="team-name h5 text-white mb-1 mb-lg-2"><a
-                                                href="vaga-details.php?id=<?php echo $vaga->id_vaga; ?>"><?php echo $vaga->titulo_vaga; ?></a>
-                                        </h3>
-                                        <p class="match-date mb-0">Jogo: <?php echo $vaga->jogo; ?></p>
-                                        <p class="match-date mb-0">Salário: R$ <?php echo $vaga->salario; ?></p>
-                                    </div>
-                                </div>
-                                <div class="col-auto col-xl-2">
-                                    <div class="team-name h5 text-white mb-1 mb-lg-2">Nº de vagas: <?php echo $vaga->num_vagas; ?></div>
-                                </div>
-                                <div class="col-auto col-xl-2 text-end ">
-                                    <a href="#"
-                                        class="icon-btn3"><i class="fad fa-paper-plane"></i></a>
-                                    <a href="#"
-                                        class="icon-btn3"><i class="fab fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <?php 
-                        } //fecha foreach
-                    ?>
-                </div>
+              </div>
+              <div class="pricing-row-title">
+                <div class="pricing_row_title">Básico</div>
+              </div>
+              <figure class="pricing-row">Photo sharing school</figure>
+              <figure class="pricing-row"><span>Drop out ramen hustle</span></figure>
+              <figure class="pricing-row strike">Crush revenue traction</figure>
+              <figure class="pricing-row strike">Crush revenue traction</figure>
+              <figure class="pricing-row strike">User base minimum viable</figure>
+              <figure class="pricing-row strike">Lorem ipsum dolor</figure>
+              <div class="pricing-footer">
+                <div class="gem-button-container gem-button-position-center"><a href="#" class="gem-button gem-green">Assine já!</a></div>
+              </div>
             </div>
-        </section>
+    </div>
+    <div class="col-sm-3 col-md-4 pricing-column-wrapper">
+       <div class="pricing-column">
+              <div class="pricing-price-row">
+                <div class="pricing-price-wrapper">
+                  <div class="pricing-price">
+                    <div class="pricing-cost">R$50</div>
+                    <div class="time">Por Mês</div>
+                  </div>
+                </div>
+              </div>
+              <div class="pricing-row-title">
+                <div class="pricing_row_title">Jogadores</div>
+              </div>
+              <figure class="pricing-row">Photo sharing school</figure>
+              <figure class="pricing-row"><span style="color: #5f727f;">Drop out ramen hustle</span></figure>
+              <figure class="pricing-row"><span style="color: #5f727f;">Crush revenue traction</span></figure>
+              <figure class="pricing-row strike">Crush revenue traction</figure>
+              <figure class="pricing-row strike">User base minimum viable</figure>
+              <figure class="pricing-row strike">Lorem ipsum dolor</figure>
+              <div class="pricing-footer">
+                <div class="gem-button-container gem-button-position-center"><a class="gem-button gem-purpel">Assine já!</a></div>
+              </div>
+            </div>
+    </div>
+    <div class="col-sm-3 col-md-4 pricing-column-wrapper">
+      <div class="pricing-column">
+              <div class="pricing-price-row">
+                <div class="pricing-price-wrapper">
+                  <div class="pricing-price">
+                    <div class="pricing-cost">R$110</div>
+                    <div class="time">Por Mês</div>
+                  </div>
+                </div>
+              </div>
+              <div class="pricing-row-title">
+                <div class="pricing_row_title">Equipes</div>
+              </div>
+              <figure class="pricing-row">Photo sharing school</figure>
+              <figure class="pricing-row"><span>Drop out ramen hustle</span></figure>
+              <figure class="pricing-row"><span style="color: #5f727f;">Crush revenue traction</span></figure>
+              <figure class="pricing-row">Crush revenue traction</figure>
+              <figure class="pricing-row strike">User base minimum viable</figure>
+              <figure class="pricing-row strike">Lorem ipsum dolor</figure>
+              <div class="pricing-footer">
+                <div class="gem-button-container gem-button-position-center">
+                  <a class="gem-button gem-orange">Assine já!</a></div>
+              </div>
+            </div>
+    </div>
+  </div>
+
+        </div>
+    </div>
+
     <!--==============================
 			Footer Area
 	==============================-->
@@ -618,13 +621,11 @@ Mobile Menu
     <script src="assets/js/vs-cursor.min.js"></script>
     <!-- Mobile Menu -->
     <script src="assets/js/vsmenu.min.js"></script>
-    <!-- Map Js -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC3Ip9iVC0nIxC6V14CKLQ1HZNF_65qEQ "></script>
-    <script src="assets/js/map.js"></script>
     <!-- Form Js -->
     <script src="assets/js/ajax-mail.js"></script>
     <!-- Main Js File -->
     <script src="assets/js/main.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js	"></script>
 
 </body>
 

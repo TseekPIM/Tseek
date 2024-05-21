@@ -1,8 +1,8 @@
 <?php
 include('protect.php');
- echo $_SESSION['nome'];
+//  echo $_SESSION['nome'];
 //  echo $_GET['id'];
-print_r($_SESSION);
+// print_r($_SESSION);
 require_once('class/Classes.php');
 //  $objHelper = new Helper();
 //  $objHelper->logado();
@@ -172,7 +172,7 @@ Icons ao lado superior direito (menu retrátil)
                             </ul> -->
                         </li>
                         <li class="menu-item-has-children">
-                            <a href="#">Planos</a>
+                            <a href="planos.php">Planos</a>
                         </li>
                     </ul>
             </div>
@@ -196,7 +196,7 @@ Icons ao lado superior direito (menu retrátil)
                 </div>
                 <ul class="list-unstyled components mb-5">
                     <li class="active">
-                        <a href="#"><span class="fa fa-home mr-3"></span> Inicio</a>
+                        <a href="index-att.php"><span class="fa fa-home mr-3"></span> Inicio</a>
                     </li>
                     <li class="active">
                         <a href="player-details1.php?id=<?php echo $_SESSION['id']; ?>"><span class="fa fa-user mr-3"></span> Perfil</a>
@@ -233,7 +233,7 @@ Mobile Menu
     <div class="vs-menu-area bg-dark">
         <button class="vs-menu-toggle"><i class="fal fa-times"></i></button>
         <div class="mobile-logo">
-            <a href="index.php"><img src="assets/img/logo1.png" alt="TSeeK"></a>
+            <a href="index-att.php"><img src="assets/img/logo1.png" alt="TSeeK"></a>
         </div>
         <div class="vs-mobile-menu link-inherit"></div><!-- Menu Will Append With Javascript -->
     </div>
@@ -246,7 +246,6 @@ Mobile Menu
         <div class="container">
             <div class="row py-md-2">
                 <div class="col-sm-6 d-none d-md-block">
-                    <!-- <p class="mb-0 fs-xs text-white">Bem vindo a sua <a class="text-inherit" href="team.html"><u class=" fw-bold">Esports team</u></a></p> -->
                 </div>
                 <div class="col-sm-6 text-end d-none d-md-block">
                     <ul class="social-links fs-xs text-white">
@@ -336,13 +335,13 @@ Mobile Menu
                                     </ul> -->
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="planos.html">Planos</a>
+                                    <a href="planos.php">Planos</a>
                                 </li>
                             </ul>
                     </div>
                     <div class="col-md-4 col-lg-2 text-center d-none d-xl-block">
                         <div class="header-logo1">
-                            <a href="index.php"><img src="assets/img/logo1.png" alt="TSeeK"></a>
+                            <a href="index-att.php"><img src="assets/img/logo1.png" alt="TSeeK"></a>
                         </div>
                     </div>
                     <div class="col-md-4 col-lg-5 d-none d-xl-block">
@@ -371,11 +370,6 @@ Mobile Menu
         </div>
     </div>
 </header>
-<?php
-    // if(isset($_GET['id'])&& $_GET['id'] != ''){
-    //     $candidato = $objCandidato->Mostrar($_GET['id']);
-    $id_candidato = $_SESSION['id_candidato'];
-?>
     <!--==============================
     Breadcumb
 ============================== -->

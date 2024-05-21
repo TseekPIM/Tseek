@@ -5,9 +5,8 @@ include('class/Classes.php');
 $objCandidato = new Candidato();
 $objVaga = new Vaga();
 
-// $id_candidato = $_GET['id'];
-// $candidato = $objCandidato->Mostrar($_GET['id']);
-// print_r($_SESSION);
+
+
 ?>
 
 <!doctype html>
@@ -228,8 +227,16 @@ $objVaga = new Vaga();
 
             <nav id="sidebar">
                 <div class="img bg-wrap text-center py-4" style="background-color: transparent;">
-                    <div class="user-logo">
-                        <div class="img" style="background-image: url(assets/img/team/team-1-1.png);"></div>
+                <div class="user-logo">
+                        <div class="img"><?php if (isset($_SESSION['id'])) {
+    // Obtém o ID do usuário logado
+    $id = $_SESSION['id'];
+    // Obtém e exibe a foto do usuário logado
+    echo Helper::fotoDocandidato($id);
+} else {
+    // Se o usuário não estiver logado, exiba uma mensagem ou redirecione para a página de login
+    echo "Usuário não logado";
+}?></div>
                         <h3><?php echo $_SESSION['nome']; ?></h3>
                     </div>
                 </div>
@@ -247,7 +254,7 @@ $objVaga = new Vaga();
                         <a href="#"><span class="fa fa-cog mr-3"></span> Configurações</a>
                     </li>
                     <li>
-                        <a href="index.php"><span class="fa fa-sign-out mr-3"></span> Desconectar</a>
+                        <a href="logout.php"><span class="fa fa-sign-out mr-3"></span> Desconectar</a>
                     </li>
                 </ul>
 <!-- <?php //} ?> -->
@@ -483,7 +490,7 @@ $objVaga = new Vaga();
                     data-ls-mobile="left: 50%; top: 660px; width: 100px; height: 100px;" style="left: 0; top: 635px;"
                     data-ls="durationin: 1000; delayin: 0; easingin:easeOutQuint; offsetyin: 50; transitionout: true; offsetxout: 300; durationout: 3000; fadeout: true; skewxout: 10;">
                     <div class="ls-btn-group">
-                        <a href="team.html" class="vs-btn gradient-btn">Equipes</a>
+                        <a href="team.php" class="vs-btn gradient-btn">Equipes</a>
                         <!-- <a href="shop.html" class="vs-btn black-skew"><i class="fal fa-shopping-cart"></i>Merch shop</a> -->
                     </div>
                 </div>
@@ -516,7 +523,7 @@ $objVaga = new Vaga();
                     data-ls-mobile="left: 50%; top: 660px; width: 100px; height: 100px;" style="left: 0; top: 635px;"
                     data-ls="durationin: 1000; delayin: 0; easingin:easeOutQuint; offsetyin: 50; transitionout: true; offsetxout: 300; durationout: 3000; fadeout: true; skewxout: 10;">
                     <div class="ls-btn-group">
-                        <a href="team.html" class="vs-btn gradient-btn">Jogadores</a>
+                        <a href="player.php" class="vs-btn gradient-btn">Jogadores</a>
                         <!-- <a href="shop.html" class="vs-btn black-skew"><i class="fal fa-shopping-cart"></i>Merch shop</a> -->
                     </div>
                 </div>
@@ -530,7 +537,7 @@ $objVaga = new Vaga();
                 <p class="ls-l ls-hide-phone"
                     style="left: 40px; top: 363px; text-transform: uppercase; color: #ffffff; font-weight: 700; font-size: 16px; line-height: 1; letter-spacing: 0.2em;"
                     data-ls="minfontsize: 10px; offsetxin: -100; durationin: 1000; delayin: 0; easingin:easeOutQuint; texttransitionin: true; texttypein: chars_asc; textstartatin: transitioninstart; textdurationin: 100; textfadein: true; textoffsetxin: -20; textshiftin: 20;  transitionout: true; offsetxout: 600; durationout: 3000; fadeout: true; skewxout: 10;">
-                    Participe e Acompanhe os Torneios!</p>
+                    Candidata-se a grandes equipes!</p>
                 <h2 class="ls-l ls-responsive"
                     data-ls-mobile="left: 50%; top: 300px; text-align: center; font-size: 110px;"
                     style="left: -2px; top: 400px; text-transform: uppercase; color: #ffffff; font-weight: 700; font-size: 72px; letter-spacing: -0.03em;"
@@ -544,12 +551,12 @@ $objVaga = new Vaga();
                 <p class="ls-l ls-hide-phone"
                     style="left: 0; top: 575px; color: #fff; font-size: 18px; width: 335px; min-width: 90px; white-space: normal; line-height: 1; padding: 5px 30px; background-image: -webkit-linear-gradient(0deg, #0047ab 0%, #409de9 100%);"
                     data-ls="minfontsize: 16px; durationin: 1000; delayin: 0; easingin:easeOutQuint; offsetyin: 50; transitionout: true; offsetxout: 300; durationout: 3000; fadeout: true; skewxout: 10;">
-                    Partipe ou veja sua equipe favorita!</p>
+                    Venha ser parte de um deles!</p>
                 <div class="ls-l ls-center-xs ls-responsive"
                     data-ls-mobile="left: 50%; top: 660px; width: 100px; height: 100px;" style="left: 0; top: 635px;"
                     data-ls="durationin: 1000; delayin: 0; easingin:easeOutQuint; offsetyin: 50; transitionout: true; offsetxout: 300; durationout: 3000; fadeout: true; skewxout: 10;">
                     <div class="ls-btn-group">
-                        <a href="team.html" class="vs-btn gradient-btn">Confira!</a>
+                        <a href="vagas.php" class="vs-btn gradient-btn">Vagas</a>
                         <!-- <a href="shop.html" class="vs-btn black-skew"><i class="fal fa-shopping-cart"></i>Merch shop</a> -->
                     </div>
                 </div>

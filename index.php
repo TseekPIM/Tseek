@@ -9,7 +9,7 @@ $objVaga = new Vaga();
 <html class="no-js" lang="pt-br">
 
 <head>
-    <title>TSeeK - E-Sports </title>
+     <title>TSeeK - E-Sports </title>
     <meta name="author" content="TSeeK">
     <meta name="description" content="TSeeK - eSports">
     <meta name="keywords" content="TSeeK - eSports " />
@@ -192,7 +192,7 @@ $objVaga = new Vaga();
                                 </ul> -->
                             </li>
                             <li class="menu-item-has-children">
-                                <a href="#">Planos</a>
+                                <a href="planos.php">Planos</a>
                             </li>
                         </ul>
                 </div>
@@ -202,9 +202,10 @@ $objVaga = new Vaga();
     <!--==============================
     Sidemenu
 ============================== -->
-    <div class="sidemenu-wrapper d-none d-lg-block  ">
+<div class="sidemenu-wrapper d-none d-lg-block  ">
         <div class="sidemenu-content bg-light-dark">
-            <button class="closeButton border-theme text-theme bg-theme-hover sideMenuCls"><i class="far fa-times"></i></button>
+            <button class="closeButton border-theme text-theme bg-theme-hover sideMenuCls"><i
+                    class="far fa-times"></i></button>
 
             <nav id="sidebar">
                 <div class="img bg-wrap text-center py-4" style="background-color: transparent;">
@@ -272,7 +273,7 @@ $objVaga = new Vaga();
                     </div>
                     <div class="col-sm-6 text-end d-none d-md-block">
                         <ul class="social-links fs-xs text-white">
-                            <li><a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoicHQifQ%3D%3D%22%7D"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoicHQifQ%3D%3D%22%7D"><i class="fab fa-twitter"></i></a></li>
                             <li><a href="https://www.twitch.tv/directory"><i class="fab fa-twitch"></i></a></li>
                             <li><a href="https://br.linkedin.com/"><i class="fab fa-linkedin-in"></i></a></li>
                             <li><a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a></li>
@@ -391,7 +392,7 @@ $objVaga = new Vaga();
                                         </ul>
                                     </li> -->
                                     <li class="menu-item-has-children">
-                                        <a href="planos.html">Planos</a>
+                                        <a href="planos.php">Planos</a>
                                     </li>
                                 </ul>
                         </div>
@@ -402,11 +403,13 @@ $objVaga = new Vaga();
                         </div>
                         <div class="col-md-4 col-lg-5 d-none d-xl-block">
                             <div class="header-right d-flex align-items-center justify-content-end">
-                                <a href="https://www.twitch.tv/directory" class="vs-btn outline1 d-none d-xl-inline-block"><i class="fab fa-twitch"></i><strong>Live Streaming</strong></a>
+                                <a href="https://www.twitch.tv/directory" class="vs-btn outline1 d-none d-xl-inline-block"><i
+                                        class="fab fa-twitch"></i><strong>Live Streaming</strong></a>
                                 <ul class="header-list1 list-style-none ml-30">
                                     <li>
                                         <button class="dropdown-toggle" type="button" title="Login">
-                                            <a href="login2.php"><img src="assets/img/flag/flag-1.png" alt="Country Flag" class="flag radius-circle"> </a>
+                                            <a href="login2.php"><img src="assets/img/flag/flag-1.png"
+                                                    alt="Country Flag" class="flag radius-circle"> </a>
                                         </button>
                                     </li>
                                     <li>
@@ -425,61 +428,105 @@ $objVaga = new Vaga();
     ==============================-->
     <section class="vs-hero-wrapper  ">
         <div class="vs-hero-carousel" data-height="900" data-container="1170" data-slidertype="fullwidth">
-            <a href="#" class="ls-arrow text-white d-none d-xl-inline-block" data-ls-go="next">Next<i class="fal fa-arrow-right"></i></a>
-            <a href="#" class="ls-arrow text-white d-none d-xl-inline-block" data-ls-go="prev"><i class="fal fa-arrow-left"></i>Prev</a>
+            <a href="#" class="ls-arrow text-white d-none d-xl-inline-block" data-ls-go="next">Next<i
+                    class="fal fa-arrow-right"></i></a>
+            <a href="#" class="ls-arrow text-white d-none d-xl-inline-block" data-ls-go="prev"><i
+                    class="fal fa-arrow-left"></i>Prev</a>
             <div class="ls-slide" data-ls="duration: 8000; transition2d: 5;">
                 <img src="assets/img/hero/mobile.jpg" alt="Hero Bg Image" class="ls-bg">
-                <p class="ls-l mb-2 mb-md-0 ls-hide-phone" style="left: 0; top: 350px; width: 318px; min-width: 200px; min-height: 20px; height: 30px; line-height: 1; padding: 5px 40px; background-image: -webkit-linear-gradient(0deg, #0047ab 0%, #409de9 100%); " data-ls="offsetxin: -100; durationin: 1000; delayin: 0; easingin:easeOutQuint;  transitionout: true; offsetxout: 600; durationout: 3000; fadeout: true; skewxout: 10;">
+                <p class="ls-l mb-2 mb-md-0 ls-hide-phone"
+                    style="left: 0; top: 350px; width: 318px; min-width: 200px; min-height: 20px; height: 30px; line-height: 1; padding: 5px 40px; background-image: -webkit-linear-gradient(0deg, #0047ab 0%, #409de9 100%); "
+                    data-ls="offsetxin: -100; durationin: 1000; delayin: 0; easingin:easeOutQuint;  transitionout: true; offsetxout: 600; durationout: 3000; fadeout: true; skewxout: 10;">
                 </p>
-                <p class="ls-l ls-hide-phone" style="left: 40px; top: 363px; text-transform: uppercase; color: #ffffff; font-weight: 700; font-size: 16px; line-height: 1; letter-spacing: 0.2em;" data-ls="minfontsize: 10px; offsetxin: -100; durationin: 1000; delayin: 0; easingin:easeOutQuint;  texttransitionin: true; texttypein: chars_asc; textstartatin: transitioninstart; textdurationin: 100; textfadein: true; textoffsetxin: -20; textshiftin: 20;  transitionout: true; offsetxout: 600; durationout: 3000; fadeout: true; skewxout: 10;">
+                <p class="ls-l ls-hide-phone"
+                    style="left: 40px; top: 363px; text-transform: uppercase; color: #ffffff; font-weight: 700; font-size: 16px; line-height: 1; letter-spacing: 0.2em;"
+                    data-ls="minfontsize: 10px; offsetxin: -100; durationin: 1000; delayin: 0; easingin:easeOutQuint;  texttransitionin: true; texttypein: chars_asc; textstartatin: transitioninstart; textdurationin: 100; textfadein: true; textoffsetxin: -20; textshiftin: 20;  transitionout: true; offsetxout: 600; durationout: 3000; fadeout: true; skewxout: 10;">
                     Encontre seu time!</p>
-                <h2 class="ls-l ls-responsive" data-ls-mobile="left: 50%; top: 300px; text-align: center; font-size: 110px;" style="left: -2px; top: 400px; text-transform: uppercase; color: #ffffff; font-weight: 700; font-size: 72px; letter-spacing: -0.03em;" data-ls="durationin: 1000; delayin: 0; easingin:easeOutQuint; texttransitionin: true; textfadein: true; texttypein: words_asc; textstartatin: transitioninstart; textshiftin: 300; textoffsetyin: 50; transitionout: true; offsetxout: 500; durationout: 3000; fadeout: true; skewxout: 10;">
+                <h2 class="ls-l ls-responsive"
+                    data-ls-mobile="left: 50%; top: 300px; text-align: center; font-size: 110px;"
+                    style="left: -2px; top: 400px; text-transform: uppercase; color: #ffffff; font-weight: 700; font-size: 72px; letter-spacing: -0.03em;"
+                    data-ls="durationin: 1000; delayin: 0; easingin:easeOutQuint; texttransitionin: true; textfadein: true; texttypein: words_asc; textstartatin: transitioninstart; textshiftin: 300; textoffsetyin: 50; transitionout: true; offsetxout: 500; durationout: 3000; fadeout: true; skewxout: 10;">
                     Mobile</h2>
-                <h2 class="ls-l ls-responsive" data-ls-mobile="left: 50%; top: 450px; text-align: center; font-size: 110px;" style="left: -2px; top: 480px; text-transform: uppercase; color: #ffffff; font-weight: 700; font-size: 72px; letter-spacing: -0.03em;" data-ls="durationin: 1000; delayin: 0; easingin:easeOutQuint; texttransitionin: true; textfadein: true; texttypein: words_asc; textstartatin: transitioninstart; textshiftin: 300; textoffsetyin: 50; transitionout: true; offsetxout: 400; durationout: 3000; fadeout: true; skewxout: 10;">
+                <h2 class="ls-l ls-responsive"
+                    data-ls-mobile="left: 50%; top: 450px; text-align: center; font-size: 110px;"
+                    style="left: -2px; top: 480px; text-transform: uppercase; color: #ffffff; font-weight: 700; font-size: 72px; letter-spacing: -0.03em;"
+                    data-ls="durationin: 1000; delayin: 0; easingin:easeOutQuint; texttransitionin: true; textfadein: true; texttypein: words_asc; textstartatin: transitioninstart; textshiftin: 300; textoffsetyin: 50; transitionout: true; offsetxout: 400; durationout: 3000; fadeout: true; skewxout: 10;">
                     Legends</h2>
-                <p class="ls-l ls-hide-phone" style="left: 0; top: 575px; color: #fff; font-size: 18px; width: 335px; min-width: 90px; white-space: normal; line-height: 1; padding: 5px 30px; background-image: -webkit-linear-gradient(0deg, #0047ab 0%, #409de9 100%);" data-ls="minfontsize: 16px; durationin: 1000; delayin: 0; easingin:easeOutQuint; offsetyin: 50; transitionout: true; offsetxout: 300; durationout: 3000; fadeout: true; skewxout: 10;">
+                <p class="ls-l ls-hide-phone"
+                    style="left: 0; top: 575px; color: #fff; font-size: 18px; width: 335px; min-width: 90px; white-space: normal; line-height: 1; padding: 5px 30px; background-image: -webkit-linear-gradient(0deg, #0047ab 0%, #409de9 100%);"
+                    data-ls="minfontsize: 16px; durationin: 1000; delayin: 0; easingin:easeOutQuint; offsetyin: 50; transitionout: true; offsetxout: 300; durationout: 3000; fadeout: true; skewxout: 10;">
                     As melhores equipes esperam por você!</p>
-                <div class="ls-l ls-center-xs ls-responsive" data-ls-mobile="left: 50%; top: 660px; width: 100px; height: 100px;" style="left: 0; top: 635px;" data-ls="durationin: 1000; delayin: 0; easingin:easeOutQuint; offsetyin: 50; transitionout: true; offsetxout: 300; durationout: 3000; fadeout: true; skewxout: 10;">
+                <div class="ls-l ls-center-xs ls-responsive"
+                    data-ls-mobile="left: 50%; top: 660px; width: 100px; height: 100px;" style="left: 0; top: 635px;"
+                    data-ls="durationin: 1000; delayin: 0; easingin:easeOutQuint; offsetyin: 50; transitionout: true; offsetxout: 300; durationout: 3000; fadeout: true; skewxout: 10;">
                     <div class="ls-btn-group">
-                        <a href="team.html" class="vs-btn gradient-btn">Equipes</a>
+                        <a href="team1.php" class="vs-btn gradient-btn">Equipes</a>
                         <!-- <a href="shop.html" class="vs-btn black-skew"><i class="fal fa-shopping-cart"></i>Merch shop</a> -->
                     </div>
                 </div>
             </div>
             <div class="ls-slide" data-ls="duration: 8000; transition2d: 5;">
                 <img src="assets/img/hero/hero-img-2.jpg" alt="Hero Bg Image" class="ls-bg">
-                <p class="ls-l mb-2 mb-md-0 ls-hide-phone" style="left: 0; top: 350px; width: 318px; min-width: 200px; min-height: 20px; height: 30px; line-height: 1; padding: 5px 40px; background-image: -webkit-linear-gradient(0deg, #0047ab 0%, #409de9 100%); " data-ls="offsetxin: -100; durationin: 1000; delayin: 0; easingin:easeOutQuint;  transitionout: true; offsetxout: 600; durationout: 3000; fadeout: true; skewxout: 10;">
+                <p class="ls-l mb-2 mb-md-0 ls-hide-phone"
+                    style="left: 0; top: 350px; width: 318px; min-width: 200px; min-height: 20px; height: 30px; line-height: 1; padding: 5px 40px; background-image: -webkit-linear-gradient(0deg, #0047ab 0%, #409de9 100%); "
+                    data-ls="offsetxin: -100; durationin: 1000; delayin: 0; easingin:easeOutQuint;  transitionout: true; offsetxout: 600; durationout: 3000; fadeout: true; skewxout: 10;">
                 </p>
-                <p class="ls-l ls-hide-phone" style="left: 40px; top: 363px; text-transform: uppercase; color: #ffffff; font-weight: 700; font-size: 16px; line-height: 1; letter-spacing: 0.2em;" data-ls="minfontsize: 10px; offsetxin: -100; durationin: 1000; delayin: 0; easingin:easeOutQuint; texttransitionin: true; texttypein: chars_asc; textstartatin: transitioninstart; textdurationin: 100; textfadein: true; textoffsetxin: -20; textshiftin: 20;  transitionout: true; offsetxout: 600; durationout: 3000; fadeout: true; skewxout: 10;">
+                <p class="ls-l ls-hide-phone"
+                    style="left: 40px; top: 363px; text-transform: uppercase; color: #ffffff; font-weight: 700; font-size: 16px; line-height: 1; letter-spacing: 0.2em;"
+                    data-ls="minfontsize: 10px; offsetxin: -100; durationin: 1000; delayin: 0; easingin:easeOutQuint; texttransitionin: true; texttypein: chars_asc; textstartatin: transitioninstart; textdurationin: 100; textfadein: true; textoffsetxin: -20; textshiftin: 20;  transitionout: true; offsetxout: 600; durationout: 3000; fadeout: true; skewxout: 10;">
                     Encontre seu Jogador!</p>
-                <h2 class="ls-l ls-responsive" data-ls-mobile="left: 50%; top: 300px; text-align: center; font-size: 110px;" style="left: -2px; top: 400px; text-transform: uppercase; color: #ffffff; font-weight: 700; font-size: 72px; letter-spacing: -0.03em;" data-ls="durationin: 1000; delayin: 0; easingin:easeOutQuint; texttransitionin: true; textfadein: true; texttypein: words_asc; textstartatin: transitioninstart; textshiftin: 300; textoffsetyin: 50; transitionout: true; offsetxout: 500; durationout: 3000; fadeout: true; skewxout: 10;">
+                <h2 class="ls-l ls-responsive"
+                    data-ls-mobile="left: 50%; top: 300px; text-align: center; font-size: 110px;"
+                    style="left: -2px; top: 400px; text-transform: uppercase; color: #ffffff; font-weight: 700; font-size: 72px; letter-spacing: -0.03em;"
+                    data-ls="durationin: 1000; delayin: 0; easingin:easeOutQuint; texttransitionin: true; textfadein: true; texttypein: words_asc; textstartatin: transitioninstart; textshiftin: 300; textoffsetyin: 50; transitionout: true; offsetxout: 500; durationout: 3000; fadeout: true; skewxout: 10;">
                     Rocket</h2>
-                <h2 class="ls-l ls-responsive" data-ls-mobile="left: 50%; top: 450px; text-align: center; font-size: 110px;" style="left: -2px; top: 480px; text-transform: uppercase; color: #ffffff; font-weight: 700; font-size: 72px; letter-spacing: -0.03em;" data-ls="durationin: 1000; delayin: 0; easingin:easeOutQuint; texttransitionin: true; textfadein: true; texttypein: words_asc; textstartatin: transitioninstart; textshiftin: 300; textoffsetyin: 50; transitionout: true; offsetxout: 400; durationout: 3000; fadeout: true; skewxout: 10;">
+                <h2 class="ls-l ls-responsive"
+                    data-ls-mobile="left: 50%; top: 450px; text-align: center; font-size: 110px;"
+                    style="left: -2px; top: 480px; text-transform: uppercase; color: #ffffff; font-weight: 700; font-size: 72px; letter-spacing: -0.03em;"
+                    data-ls="durationin: 1000; delayin: 0; easingin:easeOutQuint; texttransitionin: true; textfadein: true; texttypein: words_asc; textstartatin: transitioninstart; textshiftin: 300; textoffsetyin: 50; transitionout: true; offsetxout: 400; durationout: 3000; fadeout: true; skewxout: 10;">
                     League</h2>
-                <p class="ls-l ls-hide-phone" style="left: 0; top: 575px; color: #fff; font-size: 18px; width: 335px; min-width: 90px; white-space: normal; line-height: 1; padding: 5px 30px; background-image: -webkit-linear-gradient(0deg, #0047ab 0%, #409de9 100%);" data-ls="minfontsize: 16px; durationin: 1000; delayin: 0; easingin:easeOutQuint; offsetyin: 50; transitionout: true; offsetxout: 300; durationout: 3000; fadeout: true; skewxout: 10;">
-                    Grandes jogadores esperando para fazer parte de uma equipe!</p>
-                <div class="ls-l ls-center-xs ls-responsive" data-ls-mobile="left: 50%; top: 660px; width: 100px; height: 100px;" style="left: 0; top: 635px;" data-ls="durationin: 1000; delayin: 0; easingin:easeOutQuint; offsetyin: 50; transitionout: true; offsetxout: 300; durationout: 3000; fadeout: true; skewxout: 10;">
+                <p class="ls-l ls-hide-phone"
+                    style="left: 0; top: 575px; color: #fff; font-size: 18px; width: 335px; min-width: 90px; white-space: normal; line-height: 1; padding: 5px 30px; background-image: -webkit-linear-gradient(0deg, #0047ab 0%, #409de9 100%);"
+                    data-ls="minfontsize: 16px; durationin: 1000; delayin: 0; easingin:easeOutQuint; offsetyin: 50; transitionout: true; offsetxout: 300; durationout: 3000; fadeout: true; skewxout: 10;">
+                    Grandes jogares esperando para fazer parte de uma equipe!</p>
+                <div class="ls-l ls-center-xs ls-responsive"
+                    data-ls-mobile="left: 50%; top: 660px; width: 100px; height: 100px;" style="left: 0; top: 635px;"
+                    data-ls="durationin: 1000; delayin: 0; easingin:easeOutQuint; offsetyin: 50; transitionout: true; offsetxout: 300; durationout: 3000; fadeout: true; skewxout: 10;">
                     <div class="ls-btn-group">
-                        <a href="team.html" class="vs-btn gradient-btn">Jogadores</a>
+                        <a href="player1.php" class="vs-btn gradient-btn">Jogares</a>
                         <!-- <a href="shop.html" class="vs-btn black-skew"><i class="fal fa-shopping-cart"></i>Merch shop</a> -->
                     </div>
                 </div>
             </div>
             <div class="ls-slide" data-ls="duration: 8000; transition2d: 5;">
                 <img src="assets/img/hero/hero-img-33.jpg" alt="Hero Bg Image" class="ls-bg">
-                <p class="ls-l mb-2 mb-md-0 ls-hide-phone" style="left: 0; top: 350px; width: 430px; min-width: 200px; min-height: 20px; height: 30px; line-height: 1; padding: 5px 40px; background-image: -webkit-linear-gradient(0deg, #0047ab 0%, #409de9 100%); " data-ls="offsetxin: -100; durationin: 1000; delayin: 0; easingin:easeOutQuint;  transitionout: true; offsetxout: 600; durationout: 3000; fadeout: true; skewxout: 10;">
+                <p class="ls-l mb-2 mb-md-0 ls-hide-phone"
+                    style="left: 0; top: 350px; width: 430px; min-width: 200px; min-height: 20px; height: 30px; line-height: 1; padding: 5px 40px; background-image: -webkit-linear-gradient(0deg, #0047ab 0%, #409de9 100%); "
+                    data-ls="offsetxin: -100; durationin: 1000; delayin: 0; easingin:easeOutQuint;  transitionout: true; offsetxout: 600; durationout: 3000; fadeout: true; skewxout: 10;">
                 </p>
-                <p class="ls-l ls-hide-phone" style="left: 40px; top: 363px; text-transform: uppercase; color: #ffffff; font-weight: 700; font-size: 16px; line-height: 1; letter-spacing: 0.2em;" data-ls="minfontsize: 10px; offsetxin: -100; durationin: 1000; delayin: 0; easingin:easeOutQuint; texttransitionin: true; texttypein: chars_asc; textstartatin: transitioninstart; textdurationin: 100; textfadein: true; textoffsetxin: -20; textshiftin: 20;  transitionout: true; offsetxout: 600; durationout: 3000; fadeout: true; skewxout: 10;">
-                    Participe e Acompanhe os Torneios!</p>
-                <h2 class="ls-l ls-responsive" data-ls-mobile="left: 50%; top: 300px; text-align: center; font-size: 110px;" style="left: -2px; top: 400px; text-transform: uppercase; color: #ffffff; font-weight: 700; font-size: 72px; letter-spacing: -0.03em;" data-ls="durationin: 1000; delayin: 0; easingin:easeOutQuint; texttransitionin: true; textfadein: true; texttypein: words_asc; textstartatin: transitioninstart; textshiftin: 300; textoffsetyin: 50; transitionout: true; offsetxout: 500; durationout: 3000; fadeout: true; skewxout: 10;">
+                <p class="ls-l ls-hide-phone"
+                    style="left: 40px; top: 363px; text-transform: uppercase; color: #ffffff; font-weight: 700; font-size: 16px; line-height: 1; letter-spacing: 0.2em;"
+                    data-ls="minfontsize: 10px; offsetxin: -100; durationin: 1000; delayin: 0; easingin:easeOutQuint; texttransitionin: true; texttypein: chars_asc; textstartatin: transitioninstart; textdurationin: 100; textfadein: true; textoffsetxin: -20; textshiftin: 20;  transitionout: true; offsetxout: 600; durationout: 3000; fadeout: true; skewxout: 10;">
+                    Candidata-se a grandes equipes!</p>
+                <h2 class="ls-l ls-responsive"
+                    data-ls-mobile="left: 50%; top: 300px; text-align: center; font-size: 110px;"
+                    style="left: -2px; top: 400px; text-transform: uppercase; color: #ffffff; font-weight: 700; font-size: 72px; letter-spacing: -0.03em;"
+                    data-ls="durationin: 1000; delayin: 0; easingin:easeOutQuint; texttransitionin: true; textfadein: true; texttypein: words_asc; textstartatin: transitioninstart; textshiftin: 300; textoffsetyin: 50; transitionout: true; offsetxout: 500; durationout: 3000; fadeout: true; skewxout: 10;">
                     Counter-Strike</h2>
-                <h2 class="ls-l ls-responsive" data-ls-mobile="left: 50%; top: 450px; text-align: center; font-size: 110px;" style="left: -2px; top: 480px; text-transform: uppercase; color: #ffffff; font-weight: 700; font-size: 72px; letter-spacing: -0.03em;" data-ls="durationin: 1000; delayin: 0; easingin:easeOutQuint; texttransitionin: true; textfadein: true; texttypein: words_asc; textstartatin: transitioninstart; textshiftin: 300; textoffsetyin: 50; transitionout: true; offsetxout: 400; durationout: 3000; fadeout: true; skewxout: 10;">
+                <h2 class="ls-l ls-responsive"
+                    data-ls-mobile="left: 50%; top: 450px; text-align: center; font-size: 110px;"
+                    style="left: -2px; top: 480px; text-transform: uppercase; color: #ffffff; font-weight: 700; font-size: 72px; letter-spacing: -0.03em;"
+                    data-ls="durationin: 1000; delayin: 0; easingin:easeOutQuint; texttransitionin: true; textfadein: true; texttypein: words_asc; textstartatin: transitioninstart; textshiftin: 300; textoffsetyin: 50; transitionout: true; offsetxout: 400; durationout: 3000; fadeout: true; skewxout: 10;">
                     Global Offensive</h2>
-                <p class="ls-l ls-hide-phone" style="left: 0; top: 575px; color: #fff; font-size: 18px; width: 335px; min-width: 90px; white-space: normal; line-height: 1; padding: 5px 30px; background-image: -webkit-linear-gradient(0deg, #0047ab 0%, #409de9 100%);" data-ls="minfontsize: 16px; durationin: 1000; delayin: 0; easingin:easeOutQuint; offsetyin: 50; transitionout: true; offsetxout: 300; durationout: 3000; fadeout: true; skewxout: 10;">
-                    Partipe ou veja sua equipe favorita!</p>
-                <div class="ls-l ls-center-xs ls-responsive" data-ls-mobile="left: 50%; top: 660px; width: 100px; height: 100px;" style="left: 0; top: 635px;" data-ls="durationin: 1000; delayin: 0; easingin:easeOutQuint; offsetyin: 50; transitionout: true; offsetxout: 300; durationout: 3000; fadeout: true; skewxout: 10;">
+                <p class="ls-l ls-hide-phone"
+                    style="left: 0; top: 575px; color: #fff; font-size: 18px; width: 335px; min-width: 90px; white-space: normal; line-height: 1; padding: 5px 30px; background-image: -webkit-linear-gradient(0deg, #0047ab 0%, #409de9 100%);"
+                    data-ls="minfontsize: 16px; durationin: 1000; delayin: 0; easingin:easeOutQuint; offsetyin: 50; transitionout: true; offsetxout: 300; durationout: 3000; fadeout: true; skewxout: 10;">
+                    Venha ser parte de um deles!</p>
+                <div class="ls-l ls-center-xs ls-responsive"
+                    data-ls-mobile="left: 50%; top: 660px; width: 100px; height: 100px;" style="left: 0; top: 635px;"
+                    data-ls="durationin: 1000; delayin: 0; easingin:easeOutQuint; offsetyin: 50; transitionout: true; offsetxout: 300; durationout: 3000; fadeout: true; skewxout: 10;">
                     <div class="ls-btn-group">
-                        <a href="team.html" class="vs-btn gradient-btn">Confira!</a>
+                        <a href="vagas1.php" class="vs-btn gradient-btn">Vagas</a>
                         <!-- <a href="shop.html" class="vs-btn black-skew"><i class="fal fa-shopping-cart"></i>Merch shop</a> -->
                     </div>
                 </div>
@@ -492,13 +539,17 @@ $objVaga = new Vaga();
   ============================== -->
         <div class="vs-video-area  space-top">
             <div class="container ">
-                <div class="row align-items-center gx-xl-0 arrow-white vs-carousel" data-slide-show="3" data-sm-slide-show="2" data-xs-slide-show="1" data-arrows="true" data-xl-arrows="true" data-ml-arrows="true" data-center-mode="true" data-xl-center-mode="true" data-ml-center-mode="true" data-lg-center-mode="true" data-md-center-mode="true">
+                <div class="row align-items-center gx-xl-0 arrow-white vs-carousel" data-slide-show="3"
+                    data-sm-slide-show="2" data-xs-slide-show="1" data-arrows="true" data-xl-arrows="true"
+                    data-ml-arrows="true" data-center-mode="true" data-xl-center-mode="true" data-ml-center-mode="true"
+                    data-lg-center-mode="true" data-md-center-mode="true">
                     <div class="col-lg-4">
                         <div class="video-box1">
                             <a href="https://www.youtube-nocookie.com/embed/uoonAnmKQhI" class="popup-video">
                                 <img src="assets/img/video/video-img-1-1.jpg" alt="Video Image" class="w-100">
                             </a>
-                            <a href="https://www.youtube-nocookie.com/embed/uoonAnmKQhI" class="play-btn popup-video overlay-center"><i class="fas fa-play"></i></a>
+                            <a href="https://www.youtube-nocookie.com/embed/uoonAnmKQhI"
+                                class="play-btn popup-video overlay-center"><i class="fas fa-play"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-4">
@@ -506,7 +557,8 @@ $objVaga = new Vaga();
                             <a href="https://www.youtube-nocookie.com/embed/uoonAnmKQhI" class="popup-video">
                                 <img src="assets/img/video/video-img-1-2.jpg" alt="Video Image" class="w-100">
                             </a>
-                            <a href="https://www.youtube-nocookie.com/embed/uoonAnmKQhI" class="play-btn popup-video overlay-center"><i class="fas fa-play"></i></a>
+                            <a href="https://www.youtube-nocookie.com/embed/uoonAnmKQhI"
+                                class="play-btn popup-video overlay-center"><i class="fas fa-play"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-4">
@@ -514,7 +566,8 @@ $objVaga = new Vaga();
                             <a href="https://www.youtube-nocookie.com/embed/uoonAnmKQhI" class="popup-video">
                                 <img src="assets/img/video/video-img-1-3.jpg" alt="Video Image" class="w-100">
                             </a>
-                            <a href="https://www.youtube-nocookie.com/embed/uoonAnmKQhI" class="play-btn popup-video overlay-center"><i class="fas fa-play"></i></a>
+                            <a href="https://www.youtube-nocookie.com/embed/uoonAnmKQhI"
+                                class="play-btn popup-video overlay-center"><i class="fas fa-play"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-4">
@@ -522,7 +575,8 @@ $objVaga = new Vaga();
                             <a href="https://www.youtube-nocookie.com/embed/uoonAnmKQhI" class="popup-video">
                                 <img src="assets/img/video/video-img-1-4.jpg" alt="Video Image" class="w-100">
                             </a>
-                            <a href="https://www.youtube-nocookie.com/embed/uoonAnmKQhI" class="play-btn popup-video overlay-center"><i class="fas fa-play"></i></a>
+                            <a href="https://www.youtube-nocookie.com/embed/uoonAnmKQhI"
+                                class="play-btn popup-video overlay-center"><i class="fas fa-play"></i></a>
                         </div>
                     </div>
                 </div>
@@ -531,7 +585,7 @@ $objVaga = new Vaga();
         <!--==============================
     Vagas
     ==============================-->
-        <section class="vs-match-wrapper vs-match-layout1 space-top space-bottom">
+    <section class="vs-match-wrapper vs-match-layout1 space-top space-bottom">
             <div class="container">
                 <div class="row align-items-center ">
                     <div class="col-md-5 col-xl-6">
@@ -551,38 +605,42 @@ $objVaga = new Vaga();
                     </div>
                 </div>
                 <div class="mb-15 filter-active row">
-                    <?php
-                    $vagas = $objVaga->listar();
-                    foreach ($vagas as $vaga) {
-                    ?>
-                        <div class="col-md-6 col-lg-12 grid-item pubg fortnite csgo ">
-                            <div class="vs-match">
-                                <div class="row align-items-center justify-content-center justify-content-lg-start">
-                                    <div class="col-lg-3">
-                                        <div class="match-logo">
-                                            <a href="vaga-details.php?id=<?php echo $vaga->id_vaga; ?>"><img src="assets/img/logos/logo-1-7.png" alt="vaga Logo" style="width:80px;"></a>
+                <?php
+        $vagas = $objVaga->listar();
+        foreach ($vagas as $vaga){
+    ?>
+                    <div class="col-md-6 col-lg-12 grid-item pubg fortnite csgo ">
+                        <div class="vs-match">
+                            <div class="row align-items-center justify-content-center justify-content-lg-start">
+                                <div class="col-lg-3">
+                                    <div class="match-logo">
+                                        <a href="vaga-details.php?id=<?php echo $vaga->id_vaga; ?>"><img src="assets/img/logos/logo-1-7.png"
+                                                alt="vaga Logo" style="width:80px;"></a>
                                         </div>
+                                </div>
+                                <div class="col-lg">
+                                    <div class="match-about pl-35">
+                                        <h3 class="team-name h5 text-white mb-1 mb-lg-2"><a
+                                                href="vaga-details.php?id=<?php echo $vaga->id_vaga; ?>"><?php echo $vaga->jogo; ?></a>
+                                        </h3>
+                                        <p class="match-date mb-0">Cargo: <?php echo $vaga->titulo_vaga; ?></p>
+                                        <p class="match-date mb-0">Salário: R$ <?php echo $vaga->salario; ?></p>
                                     </div>
-                                    <div class="col-lg">
-                                        <div class="match-about pl-35">
-                                            <h3 class="team-name h5 text-white mb-1 mb-lg-2"><a href="vaga-details.php?id=<?php echo $vaga->id_vaga; ?>"><?php echo $vaga->jogo; ?></a>
-                                            </h3>
-                                            <p class="match-date mb-0">Cargo: <?php echo $vaga->titulo_vaga; ?></p>
-                                            <p class="match-date mb-0">Salário: R$ <?php echo $vaga->salario; ?></p>
-                                        </div>
-                                    </div>
-                                    <div class="col-auto col-xl-2">
-                                        <div class="team-name h5 text-white mb-1 mb-lg-2">Nº de vagas: <?php echo $vaga->num_vagas; ?></div>
-                                    </div>
-                                    <div class="col-auto col-xl-2 text-end ">
-                                        <a href="#" class="icon-btn3"><i class="fad fa-paper-plane"></i></a>
-                                        <a href="#" class="icon-btn3"><i class="fab fa-linkedin"></i></a>
-                                    </div>
+                                </div>
+                                <div class="col-auto col-xl-2">
+                                    <div class="team-name h5 text-white mb-1 mb-lg-2">Nº de vagas: <?php echo $vaga->num_vagas; ?></div>
+                                </div>
+                                <div class="col-auto col-xl-2 text-end ">
+                                    <a href="#"
+                                        class="icon-btn3"><i class="fad fa-paper-plane"></i></a>
+                                    <a href="#"
+                                        class="icon-btn3"><i class="fab fa-linkedin"></i></a>
                                 </div>
                             </div>
                         </div>
-                    <?php
-                    }
+                    </div>
+                    <?php 
+                        }
                     ?>
                 </div>
             </div>
@@ -597,25 +655,27 @@ $objVaga = new Vaga();
                 <span class="sub-title1">Jogadores</span>
                 <h2 class="sec-title1 text-white">Gamers em Destaque</h2>
             </div>
-            <div class="row vs-carousel arrow-white" data-arrows="true" data-xl-arrows="true" data-lg-slide-show="4" data-md-slide-show="3" data-sm-slide-show="2" data-xs-slide-show="1" data-slide-show="4">
+            <div class="row vs-carousel arrow-white" data-arrows="true" data-xl-arrows="true" data-lg-slide-show="4"
+                data-md-slide-show="3" data-sm-slide-show="2" data-xs-slide-show="1" data-slide-show="4">
                 <?php
-                $candidatos = $objCandidato->listar();
-                foreach ($candidatos as $candidato) {
+                    $candidatos = $objCandidato->listar();
+                    foreach ($candidatos as $candidato){
                 ?>
-                    <div class="col-lg-3">
-                        <div class="vs-member">
-                            <div class="member-img">
-                                <a href="player-details.php?id=<?php echo $candidato->id_candidato; ?>"><img src="assets/img/member/member-1-1.png" class="w-100" alt="Member Image"></a>
-                            </div>
-                            <div class="member-content">
-                                <span class="degi">Tom Clancy's Rainbow Six Siege</span>
-                                <h3 class="member-name fs-20"><a href="player-details.php?id=<?php echo $candidato->id_candidato; ?>"><?php echo $candidato->nome; ?></a></h3>
-                            </div>
+                <div class="col-lg-3">
+                    <div class="vs-member">
+                        <div class="member-img">
+                            <a href="player-details.php?id=<?php echo $candidato->id_candidato; ?>"><img src="assets/img/member/member-1-1.png" class="w-100"
+                                    alt="Member Image"></a>
                         </div>
-
+                        <div class="member-content">
+                            <span class="degi">Tom Clancy's Rainbow Six Siege</span>
+                            <h3 class="member-name fs-20"><a href="player-details.php?id=<?php echo $candidato->id_candidato; ?>"><?php echo $candidato->nome; ?></a></h3>
+                        </div>
                     </div>
+                    
+                </div>
                 <?php
-                }
+                    }
                 ?>
             </div>
         </div>
@@ -629,7 +689,9 @@ $objVaga = new Vaga();
                 <span class="sub-title1">Times</span>
                 <h6 class="sec-title1 text-white">Times em Destaque</h6>
             </div>
-            <div class="row vs-carousel arrow-white" data-slide-show="5" data-lg-slide-show="4" data-md-slide-show="4" data-sm-slide-show="3" data-xs-slide-show="2" data-arrows="true" data-xl-arrows="true" data-ml-arrows="true" data-lg-arrows="true">
+            <div class="row vs-carousel arrow-white" data-slide-show="5" data-lg-slide-show="4" data-md-slide-show="4"
+                data-sm-slide-show="3" data-xs-slide-show="2" data-arrows="true" data-xl-arrows="true"
+                data-ml-arrows="true" data-lg-arrows="true">
                 <div class="col-xl-2 text-center">
                     <img src="assets/img/brand/brand-1.png" alt="Brand Image">
                 </div>
@@ -674,8 +736,8 @@ $objVaga = new Vaga();
                         <div class="widget footer-widget pt-0">
                             <h3 class="widget_title text-white">Sobre Nós</h3>
                             <div class="vs-widget-about">
-                                <p class="pe-xl-3">Nosso compromisso é simplificar a conexão entre jogadores e equipes,
-                                    facilitando a formação de times eficientes para desafios online. Junte-se a nós e eleve sua experiência de jogo!</p>
+                                <p class="pe-xl-3">Nosso compromisso é simplificar a conexão entre jogadores e equipes, 
+                                facilitando a formação de times eficientes para desafios online. Junte-se a nós e eleve sua experiência de jogo!</p>
                                 <div class="d-flex gap-2 text-white mt-25">
                                     <a class="icon-btn3 text-white" href="https://google.com"><i class="fab fa-facebook-f"></i></a>
                                     <a class="icon-btn3 text-white" href="https://google.com"><i class="fab fa-twitter"></i></a>
@@ -689,9 +751,9 @@ $objVaga = new Vaga();
                         <div class="widget footer-widget  ">
                             <h3 class="widget_title font-theme3">Precisa de Ajuda?</h3>
                             <ul class="custom-links">
-                                <li><a href="#">Companhia</a></li>
-                                <li><a href="#">Privacidade</a></li>
-                                <li><a href="#">Politica</a></li>
+                                    <li><a href="#">Companhia</a></li>
+                                    <li><a href="#">Privacidade</a></li>
+                                    <li><a href="#">Politica</a></li>
                             </ul>
                         </div>
                     </div>
@@ -701,15 +763,15 @@ $objVaga = new Vaga();
                             <div class="row no-gutters">
                                 <div class="col-sm-5">
                                     <ul class="custom-links">
-                                        <li><a href="#">Playstation 5</a></li>
-                                        <li><a href="#">XBOX One</a></li>
-                                        <li><a href="#">PC</a></li>
+                                    <li><a href="#">Playstation 5</a></li>
+                                <li><a href="#">XBOX One</a></li>
+                                <li><a href="#">PC</a></li>
                                     </ul>
                                 </div>
                                 <div class="col-sm-7">
                                     <ul class="custom-links">
-                                        <li><a href="#">Steam</a></li>
-                                        <li><a href="#">Mobile</a></li>
+                                    <li><a href="#">Steam</a></li>
+                                    <li><a href="#">Mobile</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -721,9 +783,12 @@ $objVaga = new Vaga();
                             <div class="vs-widget-about">
                                 <p class="contact-info"><i class="fal fa-map-marker-alt text-white"></i>R. Conceição,
                                     321 - Santo Antônio, São Caetano do Sul - SP, 09530-060</p>
-                                <p class="contact-info"><i class="fal fa-phone text-white"></i><a href="#">(11) 7070 - 7070</a></p>
-                                <p class="contact-info"><i class="fal fa-fax text-white"></i><a href="#">(11) 1234 - 5678</a></p>
-                                <p class="contact-info"><i class="fal fa-envelope text-white"></i><a href="#">Tseek@gmail.com</a></p>
+                                <p class="contact-info"><i class="fal fa-phone text-white"></i><a
+                                        href="#">(11) 7070 - 7070</a></p>
+                                <p class="contact-info"><i class="fal fa-fax text-white"></i><a
+                                        href="#">(11) 1234 - 5678</a></p>
+                                <p class="contact-info"><i class="fal fa-envelope text-white"></i><a
+                                        href="#">Tseek@gmail.com</a></p>
                             </div>
                         </div>
                     </div>
