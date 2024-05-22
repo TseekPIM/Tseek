@@ -10,8 +10,9 @@ require_once('class/Classes.php');
 
  
  $objVaga = new Vaga();
-//  $id_vaga = $_SESSION['id'];
-//  $Vaga = $objVaga->Mostrar($_SESSION['id']);
+ $objJogo = new Jogo();
+ $candidato = $_SESSION['id_candidato'];
+
 
  
 ?>
@@ -189,14 +190,14 @@ require_once('class/Classes.php');
 
             <nav id="sidebar">
                 <div class="img bg-wrap text-center py-4" style="background-color: transparent;">
-                    <div class="user-logo">
-                        <div class="img" style="background-image: url(assets/img/team/team-1-1.png);"></div>
-                        <h3><?php echo $_SESSION['nome']; ?></h3>
-                    </div>
-                </div>
+                <div class="user-logo">
+                        <div class="img"><?php echo Helper::fotoDoCandidato($candidato);?></div><br><br>
+                        <h3><?php echo Helper::nomeDoCandidato($candidato); ?></h3>
+                    </div> 
+                    </div>                  
                 <ul class="list-unstyled components mb-5">
                     <li class="active">
-                        <a href="index-att.php"><span class="fa fa-home mr-3"></span> Inicio</a>
+                        <a href="#"><span class="fa fa-home mr-3"></span> Inicio</a>
                     </li>
                     <li class="active">
                         <a href="player-details1.php?id=<?php echo $_SESSION['id']; ?>"><span class="fa fa-user mr-3"></span> Perfil</a>
@@ -208,7 +209,7 @@ require_once('class/Classes.php');
                         <a href="#"><span class="fa fa-cog mr-3"></span> Configurações</a>
                     </li>
                     <li>
-                        <a href="index.php"><span class="fa fa-sign-out mr-3"></span> Desconectar</a>
+                        <a href="logout.php"><span class="fa fa-sign-out mr-3"></span> Desconectar</a>
                     </li>
                 </ul>
 <!-- <?php //} ?> -->
@@ -336,13 +337,13 @@ Mobile Menu
                                     </ul> -->
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="planos.html">Planos</a>
+                                    <a href="planos.php">Planos</a>
                                 </li>
                             </ul>
                     </div>
                     <div class="col-md-4 col-lg-2 text-center d-none d-xl-block">
                         <div class="header-logo1">
-                            <a href="index.php"><img src="assets/img/logo1.png" alt="TSeeK"></a>
+                            <a href="index-att.php"><img src="assets/img/logo1.png" alt="TSeeK"></a>
                         </div>
                     </div>
                     <div class="col-md-4 col-lg-5 d-none d-xl-block">
@@ -451,14 +452,16 @@ Mobile Menu
                 <div class="mb-15 filter-active row">
                 <?php
         $vagas = $objVaga->listar();
+        $jogos = $objJogo->listar();
         foreach ($vagas as $vaga){
+        foreach ($jogos as $jogo){
     ?>
                     <div class="col-md-6 col-lg-12 grid-item pubg fortnite csgo ">
                         <div class="vs-match">
                             <div class="row align-items-center justify-content-center justify-content-lg-start">
                                 <div class="col-lg-3">
                                     <div class="match-logo">
-                                        <a href="vaga-details.php?id=<?php echo $vaga->id_vaga; ?>"><img src="assets/img/logos/logo-1-7.png"
+                                        <a href="vaga-details.php?id=<?php echo $vaga->id_vaga; ?>"><img src="imagens/jogos/<?php echo $jogo->foto;?>"
                                                 alt="vaga Logo" style="width:80px;"></a>
                                         </div>
                                 </div>
@@ -484,7 +487,7 @@ Mobile Menu
                         </div>
                     </div>
                     <?php 
-                        } //fecha foreach
+                        }} //fecha foreach
                     ?>
                 </div>
             </div>

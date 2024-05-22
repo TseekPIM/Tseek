@@ -4,7 +4,7 @@ include('class/Classes.php');
 // Helper::logado();
 $objCandidato = new Candidato();
 $objVaga = new Vaga();
- echo $_SESSION['id_candidato'];
+//  echo $_SESSION['id_candidato'];
 $candidato = $_SESSION['id_candidato'];
 ?>
 
@@ -227,10 +227,10 @@ $candidato = $_SESSION['id_candidato'];
             <nav id="sidebar">
                 <div class="img bg-wrap text-center py-4" style="background-color: transparent;">
                 <div class="user-logo">
-                        <div class="img"><?php echo Helper::fotoDoCandidato($candidato);?></div>
-                        <div></div>
-                        <div><h3><?php echo Helper::nomeDoCandidato($candidato); ?></h3></div>
-                    </div>                   
+                        <div class="img"><?php echo Helper::fotoDoCandidato($candidato);?></div><br><br>
+                        <h3><?php echo Helper::nomeDoCandidato($candidato); ?></h3>
+                    </div> 
+                    </div>                  
                 <ul class="list-unstyled components mb-5">
                     <li class="active">
                         <a href="#"><span class="fa fa-home mr-3"></span> Inicio</a>
@@ -685,12 +685,12 @@ $candidato = $_SESSION['id_candidato'];
                 <div class="col-lg-3">
                     <div class="vs-member">
                         <div class="member-img">
-                            <a href="player-details.php?id=<?php echo $candidato->id_candidato; ?>"><img src="assets/img/member/member-1-1.png" class="w-100"
+                            <a href="player-details.php?id=<?php echo $candidato->id_candidato; ?>"><img alt="Member Image" width="200" class="w-100" src="imagens/candidatos/<?php echo $candidato->foto;?>" 
                                     alt="Member Image"></a>
                         </div>
-                        <div class="member-content">
+                        <div class="member-content" style="text-shadow: 5px;">
                             <span class="degi">Tom Clancy's Rainbow Six Siege</span>
-                            <h3 class="member-name fs-20"><a href="player-details.php?id=<?php echo $candidato->id_candidato; ?>"><?php echo $candidato->nome; ?></a></h3>
+                            <h3  class="member-name fs-20"><a href="player-details.php?id=<?php echo $candidato->id_candidato; ?>"><?php echo $candidato->nome; ?></a></h3>
                         </div>
                     </div>
                     

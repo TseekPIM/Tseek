@@ -10,8 +10,7 @@ require_once('class/Classes.php');
 
  
  $objCandidato = new Candidato();
-//  $id_candidato = $_SESSION['id'];
-//  $candidato = $objCandidato->Mostrar($_SESSION['id']);
+
 
  
 ?>
@@ -172,7 +171,7 @@ require_once('class/Classes.php');
                             </ul> -->
                         </li>
                         <li class="menu-item-has-children">
-                            <a href="#">Planos</a>
+                            <a href="planos1.php">Planos</a>
                         </li>
                     </ul>
             </div>
@@ -336,7 +335,7 @@ Mobile Menu
                                     </ul> -->
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="planos.html">Planos</a>
+                                    <a href="planos1.html">Planos</a>
                                 </li>
                             </ul>
                     </div>

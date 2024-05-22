@@ -10,8 +10,8 @@ require_once('class/Classes.php');
 
  
  $objCandidato = new Candidato();
-//  $id_candidato = $_SESSION['id'];
-//  $candidato = $objCandidato->Mostrar($_SESSION['id']);
+ $candidato = $_SESSION['id_candidato'];
+
 
  
 ?>
@@ -192,14 +192,14 @@ require_once('class/Classes.php');
 
             <nav id="sidebar">
                 <div class="img bg-wrap text-center py-4" style="background-color: transparent;">
-                    <div class="user-logo">
-                        <div class="img" style="background-image: url(assets/img/team/team-1-1.png);"></div>
-                        <h3><?php echo $_SESSION['nome']; ?></h3>
-                    </div>
-                </div>
+                <div class="user-logo">
+                        <div class="img"><?php echo Helper::fotoDoCandidato($candidato);?></div><br><br>
+                        <h3><?php echo Helper::nomeDoCandidato($candidato); ?></h3>
+                    </div> 
+                    </div>                  
                 <ul class="list-unstyled components mb-5">
                     <li class="active">
-                        <a href="index-att.php"><span class="fa fa-home mr-3"></span> Inicio</a>
+                        <a href="#"><span class="fa fa-home mr-3"></span> Inicio</a>
                     </li>
                     <li class="active">
                         <a href="player-details1.php?id=<?php echo $_SESSION['id']; ?>"><span class="fa fa-user mr-3"></span> Perfil</a>
@@ -211,7 +211,7 @@ require_once('class/Classes.php');
                         <a href="#"><span class="fa fa-cog mr-3"></span> Configurações</a>
                     </li>
                     <li>
-                        <a href="index.php"><span class="fa fa-sign-out mr-3"></span> Desconectar</a>
+                        <a href="logout.php"><span class="fa fa-sign-out mr-3"></span> Desconectar</a>
                     </li>
                 </ul>
 <!-- <?php //} ?> -->
@@ -427,12 +427,11 @@ Mobile Menu
               <div class="pricing-row-title">
                 <div class="pricing_row_title">Básico</div>
               </div>
-              <figure class="pricing-row">Photo sharing school</figure>
-              <figure class="pricing-row"><span>Drop out ramen hustle</span></figure>
-              <figure class="pricing-row strike">Crush revenue traction</figure>
-              <figure class="pricing-row strike">Crush revenue traction</figure>
-              <figure class="pricing-row strike">User base minimum viable</figure>
-              <figure class="pricing-row strike">Lorem ipsum dolor</figure>
+              <figure class="pricing-row">Candidatar-se as vagas</figure>
+              <figure class="pricing-row"><span>Análise de Perfil limitada</span></figure>
+              <figure class="pricing-row strike">Destaque de Perfil</figure>
+              <figure class="pricing-row strike">Suporte 24hrs</figure>
+              <figure class="pricing-row strike">Quem te viu</figure>
               <div class="pricing-footer">
                 <div class="gem-button-container gem-button-position-center"><a href="#" class="gem-button gem-green">Assine já!</a></div>
               </div>
@@ -449,14 +448,13 @@ Mobile Menu
                 </div>
               </div>
               <div class="pricing-row-title">
-                <div class="pricing_row_title">Jogadores</div>
+                <div class="pricing_row_title">Jogadores Prime</div>
               </div>
-              <figure class="pricing-row">Photo sharing school</figure>
-              <figure class="pricing-row"><span style="color: #5f727f;">Drop out ramen hustle</span></figure>
-              <figure class="pricing-row"><span style="color: #5f727f;">Crush revenue traction</span></figure>
-              <figure class="pricing-row strike">Crush revenue traction</figure>
-              <figure class="pricing-row strike">User base minimum viable</figure>
-              <figure class="pricing-row strike">Lorem ipsum dolor</figure>
+              <figure class="pricing-row">Prioridade em vagas</figure>
+              <figure class="pricing-row"><span style="color: #5f727f;">Análise de Perfil ilimitada</span></figure>
+              <figure class="pricing-row"><span style="color: #5f727f;">Destaque de Perfil</span></figure>
+              <figure class="pricing-row"><span style="color: #5f727f;">Suporte 24hrs</span></figure>
+              <figure class="pricing-row"><span style="color: #5f727f;">Quem te viu</span></figure>
               <div class="pricing-footer">
                 <div class="gem-button-container gem-button-position-center"><a class="gem-button gem-purpel">Assine já!</a></div>
               </div>
@@ -475,12 +473,11 @@ Mobile Menu
               <div class="pricing-row-title">
                 <div class="pricing_row_title">Equipes</div>
               </div>
-              <figure class="pricing-row">Photo sharing school</figure>
-              <figure class="pricing-row"><span>Drop out ramen hustle</span></figure>
-              <figure class="pricing-row"><span style="color: #5f727f;">Crush revenue traction</span></figure>
-              <figure class="pricing-row">Crush revenue traction</figure>
-              <figure class="pricing-row strike">User base minimum viable</figure>
-              <figure class="pricing-row strike">Lorem ipsum dolor</figure>
+              <figure class="pricing-row">Criação de equipes</figure>
+              <figure class="pricing-row"><span>Divulgação de vagas</span></figure>
+              <figure class="pricing-row"><span style="color: #5f727f;">Suporte 24hrs</span></figure>
+              <figure class="pricing-row">Impulsionamento</figure>
+              <figure class="pricing-row"><span style="color: #5f727f;">Quem te viu</span></figure>
               <div class="pricing-footer">
                 <div class="gem-button-container gem-button-position-center">
                   <a class="gem-button gem-orange">Assine já!</a></div>

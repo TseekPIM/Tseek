@@ -10,8 +10,8 @@ require_once('class/Classes.php');
 
  
  $objCandidato = new Candidato();
-//  $id_candidato = $_SESSION['id'];
-//  $candidato = $objCandidato->Mostrar($_SESSION['id']);
+ $candidato = $_SESSION['id_candidato'];
+
 
  
 ?>
@@ -172,7 +172,7 @@ Icons ao lado superior direito (menu retrátil)
                             </ul> -->
                         </li>
                         <li class="menu-item-has-children">
-                            <a href="#">Planos</a>
+                            <a href="planos.php">Planos</a>
                         </li>
                     </ul>
             </div>
@@ -189,11 +189,11 @@ Icons ao lado superior direito (menu retrátil)
 
             <nav id="sidebar">
                 <div class="img bg-wrap text-center py-4" style="background-color: transparent;">
-                    <div class="user-logo">
-                        <div class="img" style="background-image: url(assets/img/team/team-1-1.png);"></div>
-                        <h3><?php echo $_SESSION['nome']; ?></h3>
-                    </div>
-                </div>
+                <div class="user-logo">
+                        <div class="img"><?php echo Helper::fotoDoCandidato($candidato);?></div><br><br>
+                        <h3><?php echo Helper::nomeDoCandidato($candidato); ?></h3>
+                    </div> 
+                    </div>                  
                 <ul class="list-unstyled components mb-5">
                     <li class="active">
                         <a href="#"><span class="fa fa-home mr-3"></span> Inicio</a>
@@ -208,7 +208,7 @@ Icons ao lado superior direito (menu retrátil)
                         <a href="#"><span class="fa fa-cog mr-3"></span> Configurações</a>
                     </li>
                     <li>
-                        <a href="index.php"><span class="fa fa-sign-out mr-3"></span> Desconectar</a>
+                        <a href="logout.php"><span class="fa fa-sign-out mr-3"></span> Desconectar</a>
                     </li>
                 </ul>
 <!-- <?php //} ?> -->
@@ -385,7 +385,7 @@ Mobile Menu
                 <h1 class="breadcumb-title h1 text-white my-0"><?php echo $candidato->nome;?></h1>
                 <h2 class="breadcumb-bg-title">Gamers</h2>
                 <ul class="breadcumb-menu-style1 text-white mx-auto fs-xs">
-                    <li><a href="index.php"><i class="fal fa-home"></i>Home</a></li>
+                    <li><a href="index-att.php"><i class="fal fa-home"></i>Home</a></li>
                     <li class="active">Perfil Jogador</li>
                 </ul>
             </div>
@@ -404,7 +404,7 @@ Mobile Menu
                             pro
                         </div> -->
                         <div class="inner-img1">
-                            <img src="assets/img/member/member-d-3" alt="Member Image" width="200px">
+                            <img src="imagens/candidatos/<?php echo $candidato->foto;?>" alt="Member Image" width="200px">
                         </div>
                         <div class="media-body ml-lg-30">
                             <h2 class="h4 mb-0"><?php echo $candidato->nome;?></h2>
@@ -577,7 +577,7 @@ Mobile Menu
                             </div>
                             <div class="col-md-5">
                                 <div class="author-box d-flex">
-                                    <img src="assets/img/member/member-d-3" alt="Author Image">
+                                    <img src="imagens/candidatos/<?php echo $candidato->foto;?>" alt="Author Image">
                                     <div class="media-body align-self-center">
                                         <h6 class="name mb-0 text-normal lh-base"><a href="#"><?php echo $candidato->nome;?></a></h6>
                                         <span class="fs-xs">250k views</span>

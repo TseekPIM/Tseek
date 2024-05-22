@@ -10,8 +10,8 @@ require_once('class/Classes.php');
 
  
  $objCandidato = new Candidato();
-//  $id_candidato = $_SESSION['id'];
-//  $candidato = $objCandidato->Mostrar($_SESSION['id']);
+ $candidato = $_SESSION['id_candidato'];
+
 
  
 ?>
@@ -189,14 +189,14 @@ require_once('class/Classes.php');
 
             <nav id="sidebar">
                 <div class="img bg-wrap text-center py-4" style="background-color: transparent;">
-                    <div class="user-logo">
-                        <div class="img" style="background-image: url(assets/img/team/team-1-1.png);"></div>
-                        <h3><?php echo $_SESSION['nome']; ?></h3>
-                    </div>
-                </div>
+                <div class="user-logo">
+                        <div class="img"><?php echo Helper::fotoDoCandidato($candidato);?></div><br><br>
+                        <h3><?php echo Helper::nomeDoCandidato($candidato); ?></h3>
+                    </div> 
+                    </div>                  
                 <ul class="list-unstyled components mb-5">
                     <li class="active">
-                        <a href="index-att.php"><span class="fa fa-home mr-3"></span> Inicio</a>
+                        <a href="#"><span class="fa fa-home mr-3"></span> Inicio</a>
                     </li>
                     <li class="active">
                         <a href="player-details1.php?id=<?php echo $_SESSION['id']; ?>"><span class="fa fa-user mr-3"></span> Perfil</a>
@@ -208,7 +208,7 @@ require_once('class/Classes.php');
                         <a href="#"><span class="fa fa-cog mr-3"></span> Configurações</a>
                     </li>
                     <li>
-                        <a href="index.php"><span class="fa fa-sign-out mr-3"></span> Desconectar</a>
+                        <a href="logout.php"><span class="fa fa-sign-out mr-3"></span> Desconectar</a>
                     </li>
                 </ul>
 <!-- <?php //} ?> -->
@@ -399,7 +399,7 @@ Mobile Menu
                 <div class="col-xl-3 col-lg-4 col-sm-6">
                     <div class="vs-member image-scale-hover">
                         <div class="member-img">
-                            <a href="player-details.php?id=<?php echo $candidato->id_candidato; ?>"><img src="assets/img/member/member-2-2.jpg" class="w-100" alt="Member Image"></a>
+                            <a href="player-details.php?id=<?php echo $candidato->id_candidato; ?>"><img src="imagens/candidatos/<?php echo $candidato->foto;?>" class="w-100" alt="Member Image"></a>
                         </div>
                         <div class="member-content">
                             <div class="links-wrap text-start position-relative mb-30">

@@ -10,8 +10,8 @@ require_once('class/Classes.php');
 
  
  $objCandidato = new Candidato();
-//  $id_candidato = $_SESSION['id'];
-//  $candidato = $objCandidato->Mostrar($_SESSION['id']);
+ $candidato = $_SESSION['id_candidato'];
+
 
  
 ?>

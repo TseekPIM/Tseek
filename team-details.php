@@ -11,8 +11,8 @@ require_once('class/Classes.php');
  
  $objCandidato = new Candidato();
  $objEquipe = new Equipe();
-//  $id_equipe = $_SESSION['id'];
-//  $Equipe = $objEquipe->Mostrar($_SESSION['id']);
+ $candidato = $_SESSION['id_candidato'];
+
 
  
 ?>
@@ -190,11 +190,11 @@ Icons ao lado superior direito (menu retrátil)
 
             <nav id="sidebar">
                 <div class="img bg-wrap text-center py-4" style="background-color: transparent;">
-                    <div class="user-logo">
-                        <div class="img" style="background-image: url(assets/img/team/team-1-1.png);"></div>
-                        <h3><?php echo $_SESSION['nome']; ?></h3>
-                    </div>
-                </div>
+                <div class="user-logo">
+                        <div class="img"><?php echo Helper::fotoDoCandidato($candidato);?></div><br><br>
+                        <h3><?php echo Helper::nomeDoCandidato($candidato); ?></h3>
+                    </div> 
+                    </div>                  
                 <ul class="list-unstyled components mb-5">
                     <li class="active">
                         <a href="#"><span class="fa fa-home mr-3"></span> Inicio</a>
@@ -209,7 +209,7 @@ Icons ao lado superior direito (menu retrátil)
                         <a href="#"><span class="fa fa-cog mr-3"></span> Configurações</a>
                     </li>
                     <li>
-                        <a href="index.php"><span class="fa fa-sign-out mr-3"></span> Desconectar</a>
+                        <a href="logout.php"><span class="fa fa-sign-out mr-3"></span> Desconectar</a>
                     </li>
                 </ul>
 <!-- <?php //} ?> -->
@@ -385,8 +385,8 @@ Busca
                 <h1 class="breadcumb-title h1 text-white my-0"><?php echo $equipe->nome;?></h1>
                 <h2 class="breadcumb-bg-title">Gamers</h2>
                 <ul class="breadcumb-menu-style1 text-white mx-auto fs-xs">
-                    <li><a href="index.php"><i class="fal fa-home"></i>Home</a></li>
-                    <li class="active">Perfil Jogador</li>
+                    <li><a href="index-att.php"><i class="fal fa-home"></i>Home</a></li>
+                    <li class="active">Perfil da Equipe</li>
                 </ul>
             </div>
         </div>
@@ -401,7 +401,7 @@ Busca
                 <div class="col-lg-8">
                     <div class="vs-box1 d-md-flex mb-20 info-box4 align-items-center">
                         <div class="inner-img1">
-                            <img src="assets/img/team/team-d-1.jpg" alt="Team Image">
+                            <img src="imagens/equipes/<?php echo $equipe->foto;?>" alt="Team Image" width="200px">
                         </div>
                         <div class="media-body ml-lg-30">
                             <table class="info-table mb-0">
@@ -448,7 +448,7 @@ Busca
                             
                                 <div class="vs-member mb-25">
                                     <div class="member-img image-scale-hover mb-15">
-                                        <a href="player-details.php?id=<?php echo $candidato->id_candidato; ?>"><img src="assets/img/member/member-3-1.jpg" alt="Member Image" class="w-100"></a>
+                                        <a href="player-details.php?id=<?php echo $candidato->id_candidato; ?>"><img src="imagens/candidatos/<?php echo $candidato->foto;?>" alt="Member Image" class="w-100"></a>
                                     </div>
                                     <h4 class="member-name font-theme mb-0 text-normal h5"><a href="player-details.php?id=<?php echo $candidato->id_candidato; ?>"><?php echo $candidato->nome;?></a></h4>
                                     <span class="degi fs-xs">Pro-Player</span>
@@ -604,7 +604,7 @@ Busca
                             </div>
                             <div class="col-md-5">
                                 <div class="author-box d-flex">
-                                    <img src="assets/img/member/member-d-3" alt="Author Image">
+                                    <img src="imagens/equipes/<?php echo $equipe->foto;?>" alt="Author Image">
                                     <div class="media-body align-self-center">
                                         <h6 class="name mb-0 text-normal lh-base"><a href="#"><?php echo $equipe->nome; ?></a></h6>
                                         <span class="fs-xs">250k views</span>
