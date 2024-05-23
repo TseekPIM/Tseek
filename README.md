@@ -1,4 +1,8 @@
 <h1>TseeK</h1>
+
+## Links Importantes
+- [Site Oficial](https://tseek.com.br)
+
 <h3>Por quê do Projeto?</h3>
 <ul>
     <li>O projeto foi concebido com o propósito de agilizar e simplificar o processo de contratação de jogadores no cenário dos jogos eletrônicos competitivos.</li>
@@ -11,23 +15,25 @@
 ```
 git clone https://github.com/TseekPIM/tseek.git
 ```
-<h3>Logo em seguida realize a instalação dos seguintes softwares:</h3>
-<p>Wampserver: https://wampserver.aviatechno.net </p>
-<p> MySQL: https://www.mysql.com </p>
-<p>Visual Studio Code: https://code.visualstudio.com </p>
+### Instalação de Softwares Necessários
+1. [Wampserver](https://wampserver.aviatechno.net)
+2. [MySQL](https://www.mysql.com)
+3. [Visual Studio Code](https://code.visualstudio.com)
 <hr>
-<h3>📂Banco de Dados</h3>
-<p>Para o funcionamento do banco de dados entre no link e baixe a modelagem e SCRIPT https://drive.google.com/drive/folders/1g10eh8hiK0ikSpfILUxuo4B5msneJCvO?usp=sharing</p>
-<br>
-<p>Com o Wampserver iniciado entre no mySQL e a abra a modelagem do banco</p>
+## 📂 Banco de Dados
+Para o funcionamento do banco de dados, siga os passos abaixo:
+
+1. Baixe a modelagem e o script do banco de dados [aqui](https://drive.google.com/drive/folders/1g10eh8hiK0ikSpfILUxuo4B5msneJCvO?usp=sharing).
+2. Inicie o Wampserver e abra o MySQL.
+3. Abra a modelagem do banco de dados:
 <img src="./assets/img/readme-img/dados-modelagem.png">
-<p>Após abrir a modelagem, faça a exportação do script conforme a imagem abaixo:</p>
+4. Exporte o script conforme a imagem abaixo:
 <img src="./assets/img/readme-img/exportacao.png">
-<p>Verifique se a conexão está estabelecida com o wampserver</p>
+5. Verifique se a conexão está estabelecida com o Wampserver:
 <img src="./assets/img/readme-img/testedeconexao.png">
-<p>Abra a pasta tseek com o VS code e encontre o arquivo conexao.php</p>
+6. Abra a pasta `tseek` no VS Code e encontre o arquivo `conexao.php`
 <img src="./assets/img/readme-img/conexao.png">
-<p>Precisa estar da seguinte forma:</p>
+7. Configure o arquivo `conexao.php` da seguinte forma:
 
 ```
         $db_host = 'localhost';// servidor
@@ -38,12 +44,14 @@ git clone https://github.com/TseekPIM/tseek.git
         $db_porta   = "3306";
 ```
 
-<p>Logo após entre no gerenciador de arquivos WIN + E e encontre a pasta do repositório onde fez o clone em sua máquina, copie a pasta tseek e cole no seguinte caminho:</p>
+8. No gerenciador de arquivos (WIN + E), encontre a pasta do repositório clonado, copie a pasta `tseek` e cole no seguinte caminho:
 
 ```
 C:\wamp64\www
 ```
-<h3>Abra o navegador e digite o comando <b>localhost/tseek</b></h3>
+### Iniciando o Projeto
+Abra o navegador e digite `localhost/tseek`:
+
 <img src="./assets/img/readme-img/navegador.png">
 <hr>
 <h2>🛠️ Tecnologias utilizadas</h2>
