@@ -7,4 +7,5 @@ require_once('class/Categoria.php');
 require_once('class/Helper.php');
 require_once('class/Equipe.php');
 require_once('class/Vagas.php');
+require_once('class/Jogo.php');
 ?>

@@ -427,12 +427,11 @@ Mobile Menu
               <div class="pricing-row-title">
                 <div class="pricing_row_title">Básico</div>
               </div>
-              <figure class="pricing-row">Photo sharing school</figure>
-              <figure class="pricing-row"><span>Drop out ramen hustle</span></figure>
-              <figure class="pricing-row strike">Crush revenue traction</figure>
-              <figure class="pricing-row strike">Crush revenue traction</figure>
-              <figure class="pricing-row strike">User base minimum viable</figure>
-              <figure class="pricing-row strike">Lorem ipsum dolor</figure>
+              <figure class="pricing-row">Candidatar-se as vagas</figure>
+              <figure class="pricing-row"><span>Análise de Perfil limitada</span></figure>
+              <figure class="pricing-row strike">Destaque de Perfil</figure>
+              <figure class="pricing-row strike">Suporte 24hrs</figure>
+              <figure class="pricing-row strike">Quem te viu</figure>
               <div class="pricing-footer">
                 <div class="gem-button-container gem-button-position-center"><a href="#" class="gem-button gem-green">Assine já!</a></div>
               </div>
@@ -449,14 +448,13 @@ Mobile Menu
                 </div>
               </div>
               <div class="pricing-row-title">
-                <div class="pricing_row_title">Jogadores</div>
+                <div class="pricing_row_title">Jogadores Prime</div>
               </div>
-              <figure class="pricing-row">Photo sharing school</figure>
-              <figure class="pricing-row"><span style="color: #5f727f;">Drop out ramen hustle</span></figure>
-              <figure class="pricing-row"><span style="color: #5f727f;">Crush revenue traction</span></figure>
-              <figure class="pricing-row strike">Crush revenue traction</figure>
-              <figure class="pricing-row strike">User base minimum viable</figure>
-              <figure class="pricing-row strike">Lorem ipsum dolor</figure>
+              <figure class="pricing-row">Prioridade em vagas</figure>
+              <figure class="pricing-row"><span style="color: #5f727f;">Análise de Perfil ilimitada</span></figure>
+              <figure class="pricing-row"><span style="color: #5f727f;">Destaque de Perfil</span></figure>
+              <figure class="pricing-row"><span style="color: #5f727f;">Suporte 24hrs</span></figure>
+              <figure class="pricing-row"><span style="color: #5f727f;">Quem te viu</span></figure>
               <div class="pricing-footer">
                 <div class="gem-button-container gem-button-position-center"><a class="gem-button gem-purpel">Assine já!</a></div>
               </div>
@@ -475,12 +473,11 @@ Mobile Menu
               <div class="pricing-row-title">
                 <div class="pricing_row_title">Equipes</div>
               </div>
-              <figure class="pricing-row">Photo sharing school</figure>
-              <figure class="pricing-row"><span>Drop out ramen hustle</span></figure>
-              <figure class="pricing-row"><span style="color: #5f727f;">Crush revenue traction</span></figure>
-              <figure class="pricing-row">Crush revenue traction</figure>
-              <figure class="pricing-row strike">User base minimum viable</figure>
-              <figure class="pricing-row strike">Lorem ipsum dolor</figure>
+              <figure class="pricing-row">Criação de equipes</figure>
+              <figure class="pricing-row"><span>Divulgação de vagas</span></figure>
+              <figure class="pricing-row"><span style="color: #5f727f;">Suporte 24hrs</span></figure>
+              <figure class="pricing-row">Impulsionamento</figure>
+              <figure class="pricing-row"><span style="color: #5f727f;">Quem te viu</span></figure>
               <div class="pricing-footer">
                 <div class="gem-button-container gem-button-position-center">
                   <a class="gem-button gem-orange">Assine já!</a></div>

@@ -392,7 +392,7 @@ $objVaga = new Vaga();
                                         </ul>
                                     </li> -->
                                     <li class="menu-item-has-children">
-                                        <a href="planos.php">Planos</a>
+                                        <a href="planos1.php">Planos</a>
                                     </li>
                                 </ul>
                         </div>
@@ -664,7 +664,7 @@ $objVaga = new Vaga();
                 <div class="col-lg-3">
                     <div class="vs-member">
                         <div class="member-img">
-                            <a href="player-details.php?id=<?php echo $candidato->id_candidato; ?>"><img src="assets/img/member/member-1-1.png" class="w-100"
+                            <a href="player-details.php?id=<?php echo $candidato->id_candidato; ?>"><img src="imagens/candidatos/<?php echo $candidato->foto;?>" class="w-100"
                                     alt="Member Image"></a>
                         </div>
                         <div class="member-content">

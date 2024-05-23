@@ -1,19 +1,12 @@
 <?php
 include('protect.php');
-//  echo $_SESSION['nome'];
-//  echo $_GET['id'];
-// print_r($_SESSION);
+
 require_once('class/Classes.php');
-//  $objHelper = new Helper();
-//  $objHelper->logado();
- 
 
  
  $objCandidato = new Candidato();
-//  $id_candidato = $_SESSION['id'];
-//  $candidato = $objCandidato->Mostrar($_SESSION['id']);
 
- 
+ $candidato = $_SESSION['id_candidato'];
 ?>
 <!doctype html>
 <html class="no-js" lang="pt-br">
@@ -393,12 +386,10 @@ Mobile Menu
             <div class="row">
                 <div class="col-lg-8">
                     <div class="vs-box1 d-md-flex mb-30 info-box4 align-items-center">
-                        <!-- <div class="pro-tag position-absolute end-0 top-0 bg-gradient text-white">
-                            <i class="fas fa-check-circle"></i>
-                            pro
-                        </div> -->
                         <div class="inner-img1">
-                            <img src="assets/img/member/member-d-3" alt="Member Image" width="200px">
+                            <!-- <img src="imagens/candidatos/<?php echo $candidato->foto;?>" alt="Member Image" width="200px"> -->
+                            <div class="img"><?php echo Helper::fotoDoCandidato($candidato);?></div><br><br>
+
                         </div>
                         <div class="media-body ml-lg-30">
                             <h2 class="h4 mb-0"><?php echo $_SESSION['nome']; ?></h2>
@@ -571,7 +562,9 @@ Mobile Menu
                             </div>
                             <div class="col-md-5">
                                 <div class="author-box d-flex">
-                                    <img src="assets/img/member/member-d-3" alt="Author Image">
+                                    <!-- <img src="assets/img/member/member-d-3" alt="Author Image"> -->
+                                    <div width="200px" class="img"><?php echo Helper::fotoDoCandidato($candidato);?></div><br><br>
+
                                     <div class="media-body align-self-center">
                                         <h6 class="name mb-0 text-normal lh-base"><a href="#"><?php echo $_SESSION['nome']; ?></a></h6>
                                         <span class="fs-xs">250k views</span>

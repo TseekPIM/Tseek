@@ -67,30 +67,40 @@ class Candidato
       * @return void
       */
       public function logar(string $email, string $senha)
-      {
-          $email = trim(strtolower($email));
+     {
+         $email =  trim(strtolower($email));
+
+
+         $sql = $this->pdo->prepare('SELECT * FROM candidato 
+                                    WHERE 
+                                    email = :email  AND senha = :senha');
+        $sql->bindParam(':email',$email);
+        $sql->bindParam(':senha',$senha);
+        $sql->execute();
+        @session_start();
+        // verificar se a consulta retornou alguma informação
+        if($sql->rowCount() == 1)
+        {
+            $candidato = $sql->fetch(PDO::FETCH_OBJ);
+            $_SESSION['nome'] = $candidato->nome;           
+            $_SESSION['id_candidato'] = $candidato->id_candidato;
+            $_SESSION['logado'] = true;            
+            header('location:index-att.php');
+
+        }
+        else
+        {
+            session_destroy();
+            header('location:index.php?e');
+        }
+
+     }
       
-          $sql = $this->pdo->prepare('SELECT * FROM candidato 
-                                      WHERE 
-                                      email = :email  AND senha = :senha');
-          $sql->bindParam(':email', $email);
-          $sql->bindParam(':senha', $senha);
-          $sql->execute();
-          @session_start();
-          // verificar se a consulta retornou alguma informação
-          if ($sql->rowCount() == 1) {
-              $candidato = $sql->fetch(PDO::FETCH_OBJ);
-              $_SESSION['nome'] = $candidato->nome;
-              $_SESSION['id_candidato'] = $candidato->id_candidato;
-              $_SESSION['id'] = $candidato->id_candidato; // Definindo o ID do candidato na sessão
-              $_SESSION['logado'] = true;
-              header('location:index-att.php');
-          } else {
-              session_destroy();
-              header('location:index.php?e');
-          }
-      }
-      
+      /**
+       * mostrar imagem
+       */
+
+
 /**
  * atualiza um determinado candidato
  *

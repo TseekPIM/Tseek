@@ -10,8 +10,8 @@ require_once('class/Classes.php');
 
  
  $objEquipe = new Equipe();
-//  $id_equipe = $_SESSION['id'];
-//  $Equipe = $objEquipe->Mostrar($_SESSION['id']);
+// $candidato = $_SESSION['id_candidato'];
+
 
  
 ?>
@@ -172,7 +172,7 @@ require_once('class/Classes.php');
                             </ul> -->
                         </li>
                         <li class="menu-item-has-children">
-                            <a href="#">Planos</a>
+                            <a href="planos1.php">Planos</a>
                         </li>
                     </ul>
             </div>

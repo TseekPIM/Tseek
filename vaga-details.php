@@ -10,11 +10,11 @@ require_once('class/Classes.php');
 
  
  $objEquipe = new Equipe();
- $objVaga = new Vaga();
-//  $id_vaga = $_SESSION['id'];
-//  $Vaga = $objVaga->Mostrar($_SESSION['id']);
+ $objVaga = new Vaga(); 
+ $objJogo = new Jogo(); 
 
- 
+$candidato = $_SESSION['id_candidato'];
+
 ?>
 
 <!doctype html>
@@ -190,14 +190,14 @@ require_once('class/Classes.php');
 
             <nav id="sidebar">
                 <div class="img bg-wrap text-center py-4" style="background-color: transparent;">
-                    <div class="user-logo">
-                        <div class="img" style="background-image: url(assets/img/team/team-1-1.png);"></div>
-                        <h3><?php echo $_SESSION['nome']; ?></h3>
-                    </div>
-                </div>
+                <div class="user-logo">
+                        <div class="img"><?php echo Helper::fotoDoCandidato($candidato);?></div><br><br>
+                        <h3><?php echo Helper::nomeDoCandidato($candidato); ?></h3>
+                    </div> 
+                    </div>                  
                 <ul class="list-unstyled components mb-5">
                     <li class="active">
-                        <a href="index-att.php"><span class="fa fa-home mr-3"></span> Inicio</a>
+                        <a href="#"><span class="fa fa-home mr-3"></span> Inicio</a>
                     </li>
                     <li class="active">
                         <a href="player-details1.php?id=<?php echo $_SESSION['id']; ?>"><span class="fa fa-user mr-3"></span> Perfil</a>
@@ -209,13 +209,12 @@ require_once('class/Classes.php');
                         <a href="#"><span class="fa fa-cog mr-3"></span> Configurações</a>
                     </li>
                     <li>
-                        <a href="index.php"><span class="fa fa-sign-out mr-3"></span> Desconectar</a>
+                        <a href="logout.php"><span class="fa fa-sign-out mr-3"></span> Desconectar</a>
                     </li>
                 </ul>
-
+<!-- <?php //} ?> -->
             </nav>
         </div>
-    </div>
     </div>
 <!--==============================
 Busca
@@ -376,6 +375,7 @@ Mobile Menu
     if(isset($_GET['id'])&& $_GET['id'] != ''){
         $vaga = $objVaga->mostrar($_GET['id']);
         $equipe = $objEquipe->mostrar($_GET['id']);
+        $jogo = $objJogo->mostrar($_GET['id']);
     // $id_vaga = $_SESSION['id_vaga'];
 ?>
     <!--==============================
@@ -387,7 +387,7 @@ Mobile Menu
                 <h1 class="breadcumb-title h1 text-white my-0"><?php echo $vaga->titulo_vaga;?></h1>
                 <h2 class="breadcumb-bg-title">Vagas</h2>
                 <ul class="breadcumb-menu-style1 text-white mx-auto fs-xs">
-                    <li><a href="index.php"><i class="fal fa-home"></i>Home</a></li>
+                    <li><a href="index-att.php"><i class="fal fa-home"></i>Home</a></li>
                     <li class="active">Vagas</li>
                 </ul>
             </div>
@@ -396,7 +396,7 @@ Mobile Menu
     
 
     <!--==============================
-        Blog Area
+        vaga Area
     ==============================-->
     <section class="vs-blog-wrapper blog-single-layout1 space-top  newsletter-pb">
         <div class="container">
@@ -417,7 +417,7 @@ Mobile Menu
                             <p>Jogo</p>
                             <div class="row my-25">
                                 <div class="col-md-6 mb-30 mb-md-0">
-                                    <img src="assets/img/team/mlbb.png" class="w-100" alt="Vaga Imagem">
+                                    <img src="imagens/jogos/<?php echo $jogo->foto;?>" class="w-100" alt="Vaga Imagem">
                                 </div>
                                 <div class="col-md-6">
                                     <img src="assets/img/logos/sup.jpg" class="w-100" alt="Vaga Imagem">

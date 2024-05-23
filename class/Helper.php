@@ -87,10 +87,10 @@ class Helper{
      * @param integer $id_candidato
      * @return string || 
      */
-    public static function fotoDocandidato(int $id_candidato = null)
+    public static function fotoDoCandidato(int $id_candidato = null)
     {
         $pdo = Conexao::conexao();
-        $sql = $pdo->prepare('SELECT * FROM candidato 
+        $sql = $pdo->prepare('SELECT foto FROM candidato 
                                     WHERE id_candidato = :id_candidato');
         $sql->bindParam(':id_candidato', $id_candidato);
         $sql->execute();
@@ -99,10 +99,35 @@ class Helper{
        if ($candidato->foto !='') {
         return '<img class= "img-thumbnail" width="150" src="imagens/candidatos/'.$candidato->foto.'">';
       } else {
-        return '';
+        return '<img class="img-thumbnail" width="150" src="path/to/default/image.jpg">';
       }
         
     }
+
+
+      /**
+     * mostra a foto da equipe
+     *
+     * @param integer $id_candidato
+     * @return string || 
+     */
+    public static function fotoDaEquipe(int $id_equipe = null)
+    {
+        $pdo = Conexao::conexao();
+        $sql = $pdo->prepare('SELECT foto FROM equipe 
+                                    WHERE id_equipe = :id_equipe');
+        $sql->bindParam(':id_equipe', $id_equipe);
+        $sql->execute();
+        $equipe = $sql->fetch(PDO::FETCH_OBJ);
+        //verificar se existe uma foto
+       if ($equipe->foto !='') {
+        return '<img class= "img-thumbnail" width="150" src="imagens/equipes/'.$equipe->foto.'">';
+      } else {
+        return '<img class="img-thumbnail" width="150" src="path/to/default/image.jpg">';
+      }
+        
+    }
+
 
     /**
      * retorna o nome do candidato

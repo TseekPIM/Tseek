@@ -11,7 +11,8 @@ require_once('class/Classes.php');
  
  $objEquipe = new Equipe();
  $objCandidato = new Candidato();
- 
+ $candidato = $_SESSION['id_candidato'];
+
 ?>
 <!doctype html>
 <html class="no-js" lang="zxx">

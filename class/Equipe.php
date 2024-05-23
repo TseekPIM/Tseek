@@ -20,32 +20,28 @@ class Equipe
     public function cadastrar(array $dados, $foto_enviada = null)
     {
         $sql = $this->pdo->prepare('INSERT INTO equipe 
-                                    (nome, apelido, email, senha)
+                                    (nome, descricao, foto)
                                     values
-                                    (:nome, :apelido, :email, :senha)'
+                                    (:nome, :descricao, :foto)'
                                     );
 
         //tratar os dados recebidos        
         $nome               = $dados['nome'];
-        $apelido            = $dados['apelido'];
-        $email              = strtolower(trim($dados['email']));
-        $senha              = crypt($dados['senha'],$this->salt);
-        // $foto = '';
+        $descricao          = $dados['descricao'];
+        $foto = '';
 
-        // if($foto_enviada){
-        //     $nome_da_foto = Helper::sobeArquivo($foto_enviada,'imagens/usuarios/');
-        //     //verificar se o upload deu certo
-        //     if($nome_da_foto){
-        //            $foto = $nome_da_foto;
-        //     }
-        // }
+        if($foto_enviada){
+            $nome_da_foto = Helper::sobeArquivo($foto_enviada,'imagens/equipes/');
+            //verificar se o upload deu certo
+            if($nome_da_foto){
+                   $foto = $nome_da_foto;
+            }
+        }
 
         //mesclar os dados com os parametros
         $sql->bindParam(':nome',$nome);
-        $sql->bindParam(':apelido',$apelido);
-        $sql->bindParam(':email',$email);
-        $sql->bindParam(':senha',$senha);     
-        // $sql->bindParam(':foto',$foto);  
+        $sql->bindParam(':descricao',$descricao);
+        $sql->bindParam(':foto',$foto);  
         // executar
         $sql->execute();
         return $this->pdo->lastInsertId();
