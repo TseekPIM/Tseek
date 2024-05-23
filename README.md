@@ -1,7 +1,3 @@
-Claro, aqui está uma versão aprimorada do seu README:
-
----
-
 # TseeK
 
 ## Links Importantes
