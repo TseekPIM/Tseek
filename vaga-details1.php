@@ -11,7 +11,7 @@ require_once('class/Classes.php');
  
  $objEquipe = new Equipe();
  $objVaga = new Vaga();
- $candidato = $_SESSION['id_candidato'];
+//  $candidato = $_SESSION['id_candidato'];
 
  
 ?>

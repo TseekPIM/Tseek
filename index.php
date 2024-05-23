@@ -2,6 +2,7 @@
 require_once('class/Classes.php');
 $objCandidato = new Candidato();
 $objVaga = new Vaga();
+$objJogo = new Jogo();
 
 ?>
 
@@ -607,21 +608,23 @@ $objVaga = new Vaga();
                 <div class="mb-15 filter-active row">
                 <?php
         $vagas = $objVaga->listar();
+        $jogos = $objJogo->listar();
         foreach ($vagas as $vaga){
+        foreach ($jogos as $jogo){
     ?>
                     <div class="col-md-6 col-lg-12 grid-item pubg fortnite csgo ">
                         <div class="vs-match">
                             <div class="row align-items-center justify-content-center justify-content-lg-start">
                                 <div class="col-lg-3">
                                     <div class="match-logo">
-                                        <a href="vaga-details.php?id=<?php echo $vaga->id_vaga; ?>"><img src="assets/img/logos/logo-1-7.png"
+                                        <a href="vaga-details1.php?id=<?php echo $vaga->id_vaga; ?>"><img src="imagens/jogos/<?php echo $jogo->foto;?>"
                                                 alt="vaga Logo" style="width:80px;"></a>
                                         </div>
                                 </div>
                                 <div class="col-lg">
                                     <div class="match-about pl-35">
                                         <h3 class="team-name h5 text-white mb-1 mb-lg-2"><a
-                                                href="vaga-details.php?id=<?php echo $vaga->id_vaga; ?>"><?php echo $vaga->jogo; ?></a>
+                                                href="vaga-details1.php?id=<?php echo $vaga->id_vaga; ?>"><?php echo $vaga->jogo; ?></a>
                                         </h3>
                                         <p class="match-date mb-0">Cargo: <?php echo $vaga->titulo_vaga; ?></p>
                                         <p class="match-date mb-0">Salário: R$ <?php echo $vaga->salario; ?></p>
@@ -640,7 +643,7 @@ $objVaga = new Vaga();
                         </div>
                     </div>
                     <?php 
-                        }
+        }}
                     ?>
                 </div>
             </div>
@@ -664,12 +667,12 @@ $objVaga = new Vaga();
                 <div class="col-lg-3">
                     <div class="vs-member">
                         <div class="member-img">
-                            <a href="player-details.php?id=<?php echo $candidato->id_candidato; ?>"><img src="imagens/candidatos/<?php echo $candidato->foto;?>" class="w-100"
+                            <a href="player-detaills.php?id=<?php echo $candidato->id_candidato; ?>"><img src="imagens/candidatos/<?php echo $candidato->foto;?>" class="w-100"
                                     alt="Member Image"></a>
                         </div>
                         <div class="member-content">
                             <span class="degi">Tom Clancy's Rainbow Six Siege</span>
-                            <h3 class="member-name fs-20"><a href="player-details.php?id=<?php echo $candidato->id_candidato; ?>"><?php echo $candidato->nome; ?></a></h3>
+                            <h3 class="member-name fs-20"><a href="player-detaills.php?id=<?php echo $candidato->id_candidato; ?>"><?php echo $candidato->nome; ?></a></h3>
                         </div>
                     </div>
                     

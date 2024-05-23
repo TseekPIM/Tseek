@@ -38,7 +38,6 @@
           position: relative;
 
           &:after {
-            content: '\10f106';
             position: relative;
             font-family: $icon-font;
             float: right;
@@ -86,7 +85,7 @@
 
           &.menu-item-has-children {
             >a:after {
-              content: "\f105";
+              // content: "\f105";
             }
           }
 

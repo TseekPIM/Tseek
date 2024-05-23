@@ -10,7 +10,7 @@ require_once('class/Classes.php');
 
  
  $objCandidato = new Candidato();
- $candidato = $_SESSION['id_candidato'];
+//  $candidato = $_SESSION['id_candidato'];
 
 
  
@@ -580,7 +580,7 @@ Mobile Menu
                             </div>
                             <div class="col-md-5">
                                 <div class="author-box d-flex">
-                                    <img src="assets/img/member/member-d-3" alt="Author Image">
+                                    <img src="imagens/candidatos/<?php echo $candidato->foto;?>" alt="Author Image">
                                     <div class="media-body align-self-center">
                                         <h6 class="name mb-0 text-normal lh-base"><a href="#"><?php echo $candidato->nome;?></a></h6>
                                         <span class="fs-xs">250k views</span>
