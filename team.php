@@ -1,8 +1,8 @@
 <?php
 include('protect.php');
- echo $_SESSION['nome'];
+//  echo $_SESSION['nome'];
 //  echo $_GET['id'];
-print_r($_SESSION);
+// print_r($_SESSION);
 require_once('class/Classes.php');
 //  $objHelper = new Helper();
 //  $objHelper->logado();
@@ -380,7 +380,7 @@ Mobile Menu
                 <h1 class="breadcumb-title h1 text-white my-0">Times</h1>
                 <h2 class="breadcumb-bg-title">Gamers</h2>
                 <ul class="breadcumb-menu-style1 text-white mx-auto fs-xs">
-                    <li><a href="index.php"><i class="fal fa-home"></i>Home</a></li>
+                    <li><a href="index-att.php"><i class="fal fa-home"></i>Home</a></li>
                     <li class="active">Times</li>
                 </ul>
             </div>
@@ -399,7 +399,7 @@ Mobile Menu
                 <div class="col-xl-3 col-lg-4 col-sm-6">
                     <div class="vs-team bg-fluid" data-bg-src="assets/img/shape/member-bg-1.png">
                         <div class="team-img mb-35">
-                        <a href="team-details.php?id=<?php echo $equipe->id_equipe; ?>"><img src="assets/img/logos/logo-1-3.png" class="w-100" alt="Member Image"></a>
+                        <a href="team-details.php?id=<?php echo $equipe->id_equipe; ?>"><img src="imagens/equipes/<?php echo $equipe->foto;?>" class="w-100" alt="Member Image"></a>
                         </div>
                         <h3 class="member-name h5 mb-0 text-white"><a href="team-details.php?id=<?php echo $equipe->id_equipe; ?>"><?php echo $equipe->nome; ?></a></h3>
                         <!-- <span class="team-degi text-light-white fs-xs">14 Player</span> -->

@@ -407,11 +407,11 @@ Busca
                             <table class="info-table mb-0">
                                 <tr>
                                     <td>Criado:</td>
-                                    <td>2021</td>
+                                    <td><?php echo Helper::dataBrasil($equipe->data_criacao_time);?></td>
                                 </tr>
                                 <tr>
-                                    <td>Perfil:</td>
-                                    <td>Publico</td>
+                                    <td>Status:</td>
+                                    <td><?php echo $equipe->status; ?></td>
                                 </tr>
                                 <tr>
                                     <td>Website:</td>

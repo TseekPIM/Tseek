@@ -403,23 +403,27 @@ Mobile Menu
                             pro
                         </div> -->
                         <div class="inner-img1">
-                            <img src="assets/img/member/member-d-3" alt="Member Image" width="200px">
+                            <img src="imagens/candidatos/<?php echo $candidato->foto;?>" alt="Member Image" width="200px">
                         </div>
                         <div class="media-body ml-lg-30">
-                            <h2 class="h4 mb-0"><?php echo $candidato->nome;?></h2>
+                            <h2 class="h4 mb-0"><?php echo $candidato->apelido;?></h2>
                             <span class="text-theme2">Pro-Player</span>
                             <table class="info-table mt-2 mb-0">
                                 <tr>
-                                    <td>Entrou:</td>
-                                    <td>2023</td>
+                                    <td>Nome:</td>
+                                    <td><?php echo $candidato->nome;?></td>
                                 </tr>
                                 <tr>
-                                    <td>Perfil:</td>
-                                    <td>Público</td>
+                                    <td>Gênero:</td>
+                                    <td><?php echo $candidato->genero;?></td>
                                 </tr>
                                 <tr>
-                                    <td>Cidade, País:</td>
-                                    <td>Santo André, Brasil</td>
+                                    <td>Idade:</td>
+                                    <td><?php echo $candidato->idade;?></td>
+                                </tr>
+                                <tr>
+                                    <td>Estado:</td>
+                                    <td><?php echo $candidato->estado;?></td>
                                 </tr>
                             </table>
                               

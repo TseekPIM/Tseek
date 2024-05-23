@@ -1,8 +1,8 @@
 <?php
 include('protect.php');
- echo $_SESSION['nome'];
+//  echo $_SESSION['nome'];
 //  echo $_GET['id'];
-print_r($_SESSION);
+// print_r($_SESSION);
 require_once('class/Classes.php');
 //  $objHelper = new Helper();
 //  $objHelper->logado();
@@ -390,46 +390,6 @@ Mobile Menu
     <!--==============================
     vagas Area
     ============================== -->
-    <!-- <section class="vs-member-area vs-member-layout2 space-top newsletter-pb">
-    <div class="container">
-            <div class="row justify-content-center">
-            <?php
-        $vagas = $objVaga->listar();
-        foreach ($vagas as $vaga){
-    ?>
-                <div class="col-xl-3 col-lg-4 col-sm-6">
-                    <div class="vs-member image-scale-hover">
-                        <div class="member-img">
-                            <a href="player-details.php?id=<?php echo $vaga->id_vaga; ?>"><img src="assets/img/member/member-2-2.jpg" class="w-100" alt="Member Image"></a>
-                        </div>
-                        <div class="member-content">
-                            <div class="links-wrap text-start position-relative mb-30">
-                                <span class="icon-btn3 style-white plus-icon"><i class="far fa-plus text-white"></i></span>
-                                <div class="member-links">
-                                    <a href="https://web.facebook.com/?locale=pt_BR&_rdc=1&_rdr" class="icon-btn3"><i class="fab fa-facebook"></i></a>
-                                    <a href="https://www.twitch.tv/directory" class="icon-btn3"><i class="fab fa-twitch"></i></a>
-                                    <a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoicHQifQ%3D%3D%22%7D" class="icon-btn3"><i class="fab fa-twitter"></i></a>
-                                </div>
-                            </div>
-                            <h3 class="member-name h5 mb-0 text-white"><a href="player-details.php?id=<?php echo $vaga->id_vaga; ?>"><?php echo $vaga->nome; ?></a></h3>
-                            <span class="degi text-white">Mobile Legends</span>
-                        </div>
-                    </div>
-                </div>
-                <?php
-                    }
-               ?>
-            </div>
-            <div class="pagination-wrapper pagination-layout1 mt-lg-30 mb-30">
-                <ul>
-                    <li><a href="#" class="active"><span class="text">1</span></a></li>
-                    <li><a href="#"><span class='text'>2</span></a></li>
-                    <li><a href="#"><span class='text'>3</span></a></li>
-                    <li><a href="#"><span class='text'>4</span></a></li>
-                </ul>
-            </div>
-        </div>
-    </section> -->
     <section class="vs-match-wrapper vs-match-layout1 space-top space-bottom">
             <div class="container">
                 <div class="row align-items-center ">

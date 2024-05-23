@@ -86,7 +86,7 @@ if(isset($_POST['btnCadastrar'])){
 
       <div>
         <label class="fw-bolder" for="foto">Foto</label>
-        <input class="form-control" type="file" name="foto" id="foto">
+        <input class="form-control" type="file" name="foto" id="foto" required>
       </div>
 
       <div class="links"> <p style="color: white;">Já tem cadastro? 

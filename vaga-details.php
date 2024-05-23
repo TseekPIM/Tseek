@@ -336,7 +336,7 @@ Mobile Menu
                                     </ul> -->
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="planos.html">Planos</a>
+                                    <a href="planos.php">Planos</a>
                                 </li>
                             </ul>
                     </div>
@@ -417,10 +417,10 @@ Mobile Menu
                             <p>Jogo</p>
                             <div class="row my-25">
                                 <div class="col-md-6 mb-30 mb-md-0">
-                                    <img src="imagens/jogos/<?php echo $jogo->foto;?>" class="w-100" alt="Vaga Imagem">
+                                    <img src="assets/img/logos/sup.jpg" class="w-100" alt="Vaga Imagem">
                                 </div>
                                 <div class="col-md-6">
-                                    <img src="assets/img/logos/sup.jpg" class="w-100" alt="Vaga Imagem">
+                                    <img src="imagens/jogos/mlbb.png" class="w-100" alt="Vaga Imagem">
                                 </div>
                             </div>
                             <h3 class="h4">Descrição da vaga</h3>
@@ -492,7 +492,7 @@ Mobile Menu
                                 <div class="post-thumb-style1 vs-sidebox-v2 pb-1">
                                     <div class="vs-blog d-flex gap-3">
                                         <div class="media-img">
-                                            <a href="vaga-details.php?id=<?php echo $vaga->id_vaga; ?>"><img src="assets/img/team/mlbb.png" width="100px;" alt="foto do jogo"></a>
+                                            <a href="vaga-details.php?id=<?php echo $vaga->id_vaga; ?>"><img src="imagens/jogos/mlbb.png" width="100px;" alt="foto do jogo"></a>
                                         </div>
                                         <div class="media-body align-self-center">
                                             <h4 class="h5 blog-title font-theme lh-base mb-0"><a href="vaga-details.php?id=<?php echo $vaga->id_vaga; ?>"><?php echo $vaga->titulo_vaga; ?></a></h4>
@@ -513,7 +513,7 @@ Mobile Menu
                                 <div class="post-thumb-style1 vs-sidebox-v2 pb-1">
                                     <div class="vs-blog d-flex gap-3">
                                         <div class="media-img">
-                                            <a href="vaga-details.php?id=<?php echo $vaga->id_vaga; ?>"><img src="assets/img/team/mlbb.png" width="100px;" alt="foto do jogo"></a>
+                                            <a href="vaga-details.php?id=<?php echo $vaga->id_vaga; ?>"><img src="imagens/jogos/mlbb.png" width="100px;" alt="foto do jogo"></a>
                                         </div>
                                         <div class="media-body align-self-center">
                                             <h4 class="h5 blog-title font-theme lh-base mb-0"><a href="vaga-details.php?id=<?php echo $vaga->id_vaga; ?>"><?php echo $vaga->titulo_vaga; ?></a></h4>

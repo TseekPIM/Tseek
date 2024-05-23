@@ -635,7 +635,7 @@ $candidato = $_SESSION['id_candidato'];
                             <div class="row align-items-center justify-content-center justify-content-lg-start">
                                 <div class="col-lg-3">
                                     <div class="match-logo">
-                                        <a href="vaga-details.php?id=<?php echo $vaga->id_vaga; ?>"><img src="assets/img/logos/logo-1-7.png"
+                                        <a href="vaga-details.php?id=<?php echo $vaga->id_vaga; ?>"><img src="imagens/jogos/mlbb.png"
                                                 alt="vaga Logo" style="width:80px;"></a>
                                         </div>
                                 </div>

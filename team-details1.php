@@ -11,7 +11,7 @@ require_once('class/Classes.php');
  
  $objEquipe = new Equipe();
  $objCandidato = new Candidato();
- $candidato = $_SESSION['id_candidato'];
+//  $candidato = $_SESSION['id_candidato'];
 
 ?>
 <!doctype html>
@@ -171,7 +171,7 @@ Icons ao lado superior direito (menu retrátil)
                             </ul> -->
                         </li>
                         <li class="menu-item-has-children">
-                            <a href="#">Planos</a>
+                            <a href="planos1.php">Planos</a>
                         </li>
                     </ul>
             </div>
@@ -334,7 +334,7 @@ Busca
                                     </ul> -->
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="planos.html">Planos</a>
+                                    <a href="planos1.php">Planos</a>
                                 </li>
                             </ul>
                     </div>
@@ -399,17 +399,17 @@ Busca
                 <div class="col-lg-8">
                     <div class="vs-box1 d-md-flex mb-20 info-box4 align-items-center">
                         <div class="inner-img1">
-                            <img src="assets/img/team/team-d-1.jpg" alt="Team Image">
+                            <img src="imagens/equipes/<?php echo $equipe->foto;?>" alt="Team Image" width="200px">
                         </div>
                         <div class="media-body ml-lg-30">
                         <table class="info-table mb-0">
                                 <tr>
                                     <td>Criado:</td>
-                                    <td>2021</td>
+                                    <td><?php echo Helper::dataBrasil($equipe->data_criacao_time);?></td>
                                 </tr>
                                 <tr>
-                                    <td>Perfil:</td>
-                                    <td>Publico</td>
+                                    <td>Status:</td>
+                                    <td><?php echo $equipe->status; ?></td>
                                 </tr>
                                 <tr>
                                     <td>Website:</td>
@@ -446,7 +446,7 @@ Busca
                             
                                 <div class="vs-member mb-25">
                                     <div class="member-img image-scale-hover mb-15">
-                                        <a href="player-details.php?id=<?php echo $candidato->id_candidato; ?>"><img src="assets/img/member/member-3-1.jpg" alt="Member Image" class="w-100"></a>
+                                        <a href="player-details.php?id=<?php echo $candidato->id_candidato; ?>"><img src="imagens/candidatos/<?php echo $candidato->foto;?>" alt="Member Image" class="w-100"></a>
                                     </div>
                                     <h4 class="member-name font-theme mb-0 text-normal h5"><a href="player-details.php?id=<?php echo $candidato->id_candidato; ?>"><?php echo $candidato->nome;?></a></h4>
                                     <span class="degi fs-xs">Pro-Player</span>
@@ -601,7 +601,7 @@ Busca
                             </div>
                             <div class="col-md-5">
                                 <div class="author-box d-flex">
-                                    <img src="assets/img/member/member-d-3" alt="Author Image">
+                                    <img src="imagens/equipes/<?php echo $equipe->foto;?>" alt="Author Image">
                                     <div class="media-body align-self-center">
                                         <h6 class="name mb-0 text-normal lh-base"><a href="#"><?php echo $equipe->nome; ?></a></h6>
                                         <span class="fs-xs">250k views</span>

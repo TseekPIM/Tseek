@@ -1,8 +1,8 @@
 <?php
 include('protect.php');
- echo $_SESSION['nome'];
+//  echo $_SESSION['nome'];
 //  echo $_GET['id'];
-print_r($_SESSION);
+// print_r($_SESSION);
 require_once('class/Classes.php');
 //  $objHelper = new Helper();
 //  $objHelper->logado();
@@ -336,7 +336,7 @@ Mobile Menu
                                     </ul> -->
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="planos.html">Planos</a>
+                                    <a href="planos.php">Planos</a>
                                 </li>
                             </ul>
                     </div>
@@ -407,20 +407,24 @@ Mobile Menu
                             <img src="imagens/candidatos/<?php echo $candidato->foto;?>" alt="Member Image" width="200px">
                         </div>
                         <div class="media-body ml-lg-30">
-                            <h2 class="h4 mb-0"><?php echo $candidato->nome;?></h2>
+                            <h2 class="h4 mb-0"><?php echo $candidato->apelido;?></h2>
                             <span class="text-theme2">Pro-Player</span>
                             <table class="info-table mt-2 mb-0">
                                 <tr>
-                                    <td>Entrou:</td>
-                                    <td>2023</td>
+                                    <td>Nome:</td>
+                                    <td><?php echo $candidato->nome;?></td>
                                 </tr>
                                 <tr>
-                                    <td>Perfil:</td>
-                                    <td>Público</td>
+                                    <td>Gênero:</td>
+                                    <td><?php echo $candidato->genero;?></td>
                                 </tr>
                                 <tr>
-                                    <td>Cidade, País:</td>
-                                    <td>Santo André, Brasil</td>
+                                    <td>Idade:</td>
+                                    <td><?php echo $candidato->idade;?></td>
+                                </tr>
+                                <tr>
+                                    <td>Estado:</td>
+                                    <td><?php echo $candidato->estado;?></td>
                                 </tr>
                             </table>
                               
@@ -577,7 +581,7 @@ Mobile Menu
                             </div>
                             <div class="col-md-5">
                                 <div class="author-box d-flex">
-                                    <img src="imagens/candidatos/<?php echo $candidato->foto;?>" alt="Author Image">
+                                    <img src="assets/img/member/member-d-3" alt="Author Image">
                                     <div class="media-body align-self-center">
                                         <h6 class="name mb-0 text-normal lh-base"><a href="#"><?php echo $candidato->nome;?></a></h6>
                                         <span class="fs-xs">250k views</span>

@@ -182,14 +182,14 @@ Icons ao lado superior direito (menu retrátil)
 
             <nav id="sidebar">
                 <div class="img bg-wrap text-center py-4" style="background-color: transparent;">
-                    <div class="user-logo">
-                        <div class="img" style="background-image: url(assets/img/team/team-1-1.png);"></div>
-                        <h3><?php echo $_SESSION['nome']; ?></h3>
-                    </div>
-                </div>
+                <div class="user-logo">
+                        <div class="img"><?php echo Helper::fotoDoCandidato($candidato);?></div><br><br>
+                        <h3><?php echo Helper::nomeDoCandidato($candidato); ?></h3>
+                    </div> 
+                    </div>                  
                 <ul class="list-unstyled components mb-5">
                     <li class="active">
-                        <a href="index-att.php"><span class="fa fa-home mr-3"></span> Inicio</a>
+                        <a href="#"><span class="fa fa-home mr-3"></span> Inicio</a>
                     </li>
                     <li class="active">
                         <a href="player-details1.php?id=<?php echo $_SESSION['id']; ?>"><span class="fa fa-user mr-3"></span> Perfil</a>
@@ -201,7 +201,7 @@ Icons ao lado superior direito (menu retrátil)
                         <a href="#"><span class="fa fa-cog mr-3"></span> Configurações</a>
                     </li>
                     <li>
-                        <a href="index.php"><span class="fa fa-sign-out mr-3"></span> Desconectar</a>
+                        <a href="logout.php"><span class="fa fa-sign-out mr-3"></span> Desconectar</a>
                     </li>
                 </ul>
 <!-- <?php //} ?> -->

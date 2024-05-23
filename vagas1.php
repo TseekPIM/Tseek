@@ -336,7 +336,7 @@ Mobile Menu
                                     </ul> -->
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="planos.html">Planos</a>
+                                    <a href="planos1.php">Planos</a>
                                 </li>
                             </ul>
                     </div>
@@ -418,7 +418,7 @@ Mobile Menu
                             <div class="row align-items-center justify-content-center justify-content-lg-start">
                                 <div class="col-lg-3">
                                     <div class="match-logo">
-                                        <a href="vaga-details1.php?id=<?php echo $vaga->id_vaga; ?>"><img src="assets/img/logos/logo-1-7.png"
+                                        <a href="vaga-details1.php?id=<?php echo $vaga->id_vaga; ?>"><img src="imagens/jogos/mlbb.png"
                                                 alt="vaga Logo" style="width:80px;"></a>
                                         </div>
                                 </div>

@@ -336,7 +336,7 @@ Mobile Menu
                                     </ul> -->
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="planos.html">Planos</a>
+                                    <a href="planos1.php">Planos</a>
                                 </li>
                             </ul>
                     </div>
@@ -395,7 +395,7 @@ Mobile Menu
     
 
     <!--==============================
-        Blog Area
+        vaga Area
     ==============================-->
     <section class="vs-blog-wrapper blog-single-layout1 space-top  newsletter-pb">
         <div class="container">
@@ -416,10 +416,10 @@ Mobile Menu
                             <p>Jogo</p>
                             <div class="row my-25">
                                 <div class="col-md-6 mb-30 mb-md-0">
-                                    <img src="assets/img/team/mlbb.png" class="w-100" alt="Vaga Imagem">
+                                    <img src="assets/img/logos/sup.jpg" class="w-100" alt="Vaga Imagem">
                                 </div>
                                 <div class="col-md-6">
-                                    <img src="assets/img/logos/sup.jpg" class="w-100" alt="Vaga Imagem">
+                                    <img src="assets/img/team/mlbb.png" class="w-100" alt="Vaga Imagem">
                                 </div>
                             </div>
                             <h3 class="h4">Descrição da vaga</h3>

@@ -398,7 +398,7 @@ Mobile Menu
                 <div class="col-xl-3 col-lg-4 col-sm-6">
                     <div class="vs-member image-scale-hover">
                         <div class="member-img">
-                            <a href="player-details.php?id=<?php echo $candidato->id_candidato; ?>"><img src="assets/img/member/member-2-2.jpg" class="w-100" alt="Member Image"></a>
+                            <a href="player-details.php?id=<?php echo $candidato->id_candidato; ?>"><img src="imagens/candidatos/<?php echo $candidato->foto;?>" class="w-100" alt="Member Image"></a>
                         </div>
                         <div class="member-content">
                             <div class="links-wrap text-start position-relative mb-30">
