@@ -103,15 +103,15 @@ $candidato = $_SESSION['id_candidato'];
             <div class="row align-items-center">
                 <div class="col-5 col-md-3">
                     <div class="logo">
-                        <a href="index.php"><img src="assets/img/logo-2.png" alt="TSeeK"></a>
+                        <a href="index-att.php"><img src="assets/img/logo1.png" alt="TSeeK"></a>
                     </div>
                 </div>
                 <div class="col-7 col-md-9 text-end position-static">
                     <nav class="main-menu menu-sticky1 d-none d-lg-block link-inherit">
-                        <ul>
-                            <li class="menu-item-has-children">
-                                <a href="vagas.php">Vagas</a>
-                                <ul class="sub-menu">
+                        <ul style="font-size: 90px;">
+                            <li class="main-menu">
+                                <a href="vagas.php" style="font-size: 16px;">Vagas</a>
+                                <!-- <ul class="sub-menu">
                                     <li><a href="#">Ação</a></li>
                                     <li><a href="#">Aventura</a></li>
                                     <li><a href="#">Battle Royale</a></li>
@@ -122,10 +122,10 @@ $candidato = $_SESSION['id_candidato'];
                                     <li><a href="#">MOBA</a></li>
                                     <li><a href="#">RPG</a></li>
                                     <li><a href="#">Tiro</a></li>
-                                </ul>
+                                </ul> -->
                             </li>
-                            <li class="mega-menu-wrap menu-item-has-children">
-                                <a href="player.php">Jogadores</a>
+                            <li class="main-menu">
+                                <a href="player.php" style="font-size: 16px;">Jogadores</a>
                                 <!-- <ul class="mega-menu">
                                     <li><a href="#">RANK</a>
                                         <ul>
@@ -165,8 +165,8 @@ $candidato = $_SESSION['id_candidato'];
                                     </li>
                                 </ul> -->
                             </li>
-                            <li class="mega-menu-wrap menu-item-has-children">
-                                <a href="team.php">Times</a>
+                            <li class="main-menu">
+                                <a href="team.php" style="font-size: 16px;">Times</a>
                                 <!-- <ul class="mega-menu">
                                     <li><a href="#">RANK</a>
                                         <ul>
@@ -206,8 +206,8 @@ $candidato = $_SESSION['id_candidato'];
                                     </li>
                                 </ul> -->
                             </li>
-                            <li class="menu-item-has-children">
-                                <a href="#">Planos</a>
+                            <li class="main-menu">
+                                <a href="planos.php" style="font-size: 16px;">Planos</a>
                             </li>
                         </ul>
                         <button class="vs-menu-toggle text-theme border-theme d-inline-block d-lg-none"><i
@@ -309,9 +309,9 @@ $candidato = $_SESSION['id_candidato'];
                         </div>
                         <div class="col-6 col-lg-8 col-xl-5 text-end text-xl-start">
                             <nav class="main-menu menu-style1 mobile-menu-active" data-expand="992">
-                                <ul>
-                                    <li class="">
-                                        <a href="vagas.php">Vagas</a>
+                                <ul style="font-size: 90px;">
+                                    <li class="main-menu">
+                                        <a href="vagas.php" style="font-size: 16px;">Vagas</a>
                                         <!-- <ul class="sub-menu">
                                             <li><a href="#">Ação</a></li>
                                             <li><a href="#">Aventura</a></li>
@@ -325,8 +325,8 @@ $candidato = $_SESSION['id_candidato'];
                                             <li><a href="#">Tiro</a></li>
                                         </ul> -->
                                     </li>
-                                    <li class="">
-                                        <a href="player.php">Jogadores</a>
+                                    <li class="main-menu">
+                                        <a href="player.php" style="font-size: 16px;">Jogadores</a>
                                         <!-- <ul class="mega-menu">
                                             <li><a href="player.html">RANK</a>
                                                 <ul>
@@ -366,8 +366,8 @@ $candidato = $_SESSION['id_candidato'];
                                             </li>
                                         </ul> -->
                                     </li>
-                                    <li class="">
-                                        <a href="team.php">Times</a>
+                                    <li class="main-menu">
+                                        <a href="team.php" style="font-size: 16px;">Times</a>
                                         <!-- <ul class="mega-menu">
                                             <li><a href="player.html">RANK</a>
                                                 <ul>
@@ -407,8 +407,8 @@ $candidato = $_SESSION['id_candidato'];
                                             </li>
                                         </ul> -->
                                     </li>
-                                    <li class="">
-                                        <a href="planos.php">Planos</a>
+                                    <li class="main-menu">
+                                        <a href="planos.php" style="font-size: 16px;">Planos</a>
                                     </li>
                                 </ul>
                         </div>

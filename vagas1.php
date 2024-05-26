@@ -98,87 +98,121 @@ require_once('class/Classes.php');
     Icons ao lado superior direito
 ========================-->
 <div class="sticky-header-wrap sticky-header bg-light-dark py-1 py-sm-2 py-lg-1">
-    <div class="container position-relative">
-        <div class="row align-items-center">
-            <div class="col-5 col-md-3">
-                <div class="logo">
-                    <a href="index.php"><img src="assets/img/logo-2.png" alt="TSeeK"></a>
+        <div class="container position-relative">
+            <div class="row align-items-center">
+                <div class="col-5 col-md-3">
+                    <div class="logo">
+                        <a href="index.php"><img src="assets/img/logo1.png" alt="TSeeK"></a>
+                    </div>
                 </div>
-            </div>
-            <div class="col-7 col-md-9 text-end position-static">
-                <nav class="main-menu menu-sticky1 d-none d-lg-block link-inherit">
-                    <ul>
-                        <li class="menu-item-has-children">
-                            <a href="vagas1.php">Vagas</a>
-                            <!-- <ul class="sub-menu">
-                                <li><a href="#">Ação</a></li>
-                                <li><a href="#">Aventura</a></li>
-                                <li><a href="#">Battle Royale</a></li>
-                                <li><a href="#">Esportes</a></li>
-                                <li><a href="#">Estratégias</a></li>
-                                <li><a href="#">FPS</a></li>
-                                <li><a href="#">Luta</a></li>
-                                <li><a href="#">MOBA</a></li>
-                                <li><a href="#">RPG</a></li>
-                                <li><a href="#">Tiro</a></li>
-                            </ul> -->
-                        </li>
-                        <li class="mega-menu-wrap menu-item-has-children">
-                            <a href="player1.php">Jogadores</a>
-                            <!-- <ul class="mega-menu">
-                                <li><a href="#">RANK</a>
-                                    <ul>
-                                        <li><a href="#"></a>
-                                        <li><a href="#"></a>
-                                        <li><a href="#"></a>
-                                        <li><a href="#"></a>
-                                        <li><a href="#"></a>
-                                        <li><a href="#"></a>
-                                        <li><a href="#"></a>
-                                        <li><a href="#"></a>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Modalidade</a>
-                                    <ul>
-                                        <li><a href="#"></a>
-                                        <li><a href="#"></a>
-                                        <li><a href="#"></a>
-                                        <li><a href="#"></a>
-                                    </ul>
-                            </ul> -->
-                        </li>
-                        <li class="mega-menu-wrap menu-item-has-children">
-                            <a href="team1.php">Times</a>
-                            <!-- <ul class="mega-menu">
-                                <li><a href="#">RANK</a>
-                                    <ul>
-                                        <li><a href="#"></a>
-                                        <li><a href="#"></a>
-                                        <li><a href="#"></a>
-                                        <li><a href="#"></a>
-                                        <li><a href="#"></a>
-                                        <li><a href="#"></a>
-                                        <li><a href="#"></a>
-                                        <li><a href="#"></a>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Modalidade</a>
-                                    <ul>
-                                        <li><a href="#"></a>
-                                        <li><a href="#"></a>
-                                        <li><a href="#"></a>
-                                        <li><a href="#"></a>
-                                    </ul>
-                            </ul> -->
-                        </li>
-                        <li class="menu-item-has-children">
-                            <a href="planos1.php">Planos</a>
-                        </li>
-                    </ul>
+                <div class="col-7 col-md-9 text-end position-static">
+                    <nav class="main-menu menu-sticky1 d-none d-lg-block link-inherit">
+                    <ul style="font-size: 90px;">
+                                    <li class="main-menu" >
+                                        <a href="vagas1.php"  style="font-size: 16px;">Vagas</a>
+                                        <!-- <ul class="sub-menu">
+                                            <li><a href="#">Ação</a></li>
+                                            <li><a href="#">Aventura</a></li>
+                                            <li><a href="#">Battle Royale</a></li>
+                                            <li><a href="#">Esportes</a></li>
+                                            <li><a href="#">Estratégias</a></li>
+                                            <li><a href="#">FPS</a></li>
+                                            <li><a href="#">Luta</a></li>
+                                            <li><a href="#">MOBA</a></li>
+                                            <li><a href="#">RPG</a></li>
+                                            <li><a href="#">Tiro</a></li>
+                                        </ul> -->
+                                    </li>
+                                    <li class="main-menu">
+                                        <a href="player1.php"style="font-size: 16px;">Jogadores</a>
+                                        <!-- <ul class="mega-menu">
+                                            <li><a href="player.html">RANK</a>
+                                                <ul>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Modalidade</a>
+                                                <ul>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">..</a>
+                                                <ul>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">..</a>
+                                                <ul>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                </ul>
+                                            </li>
+                                        </ul> -->
+                                    </li>
+                                    <li class="main-menu">
+                                        <a href="team1.php" style="font-size: 16px;">Times</a>
+                                        <!-- <ul class="mega-menu">
+                                            <li><a href="player.html">RANK</a>
+                                                <ul>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Modalidade</a>
+                                                <ul>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">..</a>
+                                                <ul>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">..</a>
+                                                <ul>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                </ul>
+                                            </li>
+                                        </ul> -->
+                                    </li>
+                                    <li class="main-menu" >
+                                        <a href="planos1.php" style="font-size: 16px;">Planos</a>
+                                    </li>
+                                </ul>
+                </div>
             </div>
         </div>
     </div>
-</div>
 <!--==============================
     Sidemenu
 ============================== -->
@@ -242,135 +276,171 @@ Mobile Menu
   (menu principal)
 ==============================-->
 <header class="header-wrapper header-layout1 position-absolute top-0 start-0 w-100 z-index-step1">
-    <div class="header-top">
-        <div class="container">
-            <div class="row py-md-2">
-                <div class="col-sm-6 d-none d-md-block">
-                    <!-- <p class="mb-0 fs-xs text-white">Bem vindo a sua <a class="text-inherit" href="team.html"><u class=" fw-bold">Esports team</u></a></p> -->
-                </div>
-                <div class="col-sm-6 text-end d-none d-md-block">
-                    <ul class="social-links fs-xs text-white">
-                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitch"></i></a></li>
-                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                    </ul>
+        <div class="header-top">
+            <div class="container">
+                <div class="row py-md-2">
+                    <div class="col-sm-6 d-none d-md-block">
+                    </div>
+                    <div class="col-sm-6 text-end d-none d-md-block">
+                        <ul class="social-links fs-xs text-white">
+                            <li><a href="https://web.facebook.com/?locale=pt_BR&_rdc=1&_rdr"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoicHQifQ%3D%3D%22%7D"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="https://www.twitch.tv/directory"><i class="fab fa-twitch"></i></a></li>
+                            <li><a href="https://br.linkedin.com/"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a></li>
+                        </ul>
+                        </ul>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="header-main">
-        <div class="container position-relative">
-            <div class="bg-dark px-50">
-                <div class="row align-items-center">
-                    <div class="col-6 col-lg-4 d-block d-xl-none py-3 py-xl-0">
-                        <div class="header-logo">
-                            <a href="index-att.php"><img src="assets/img/logo1.png" alt="TSeeK"></a>
+        <div class="header-main">
+            <div class="container position-relative">
+                <div class="bg-dark px-50">
+                    <div class="row align-items-center">
+                        <div class="col-6 col-lg-4 d-block d-xl-none py-3 py-xl-0">
+                            <div class="header-logo">
+                                <a href="index.php"><img src="assets/img/logo1.png" alt="TSeeK"></a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-6 col-lg-8 col-xl-5 text-end text-xl-start">
-                        <nav class="main-menu menu-style1 mobile-menu-active" data-expand="992">
-                            <ul>
-                                <li class="menu-item-has-children">
-                                    <a href="vagas1.php">Vagas</a>
-                                    <!-- <ul class="sub-menu">
-                                        <li><a href="#">Ação</a></li>
-                                        <li><a href="#">Aventura</a></li>
-                                        <li><a href="#">Battle Royale</a></li>
-                                        <li><a href="#">Esportes</a></li>
-                                        <li><a href="#">Estratégias</a></li>
-                                        <li><a href="#">FPS</a></li>
-                                        <li><a href="#">Luta</a></li>
-                                        <li><a href="#">MOBA</a></li>
-                                        <li><a href="#">RPG</a></li>
-                                        <li><a href="#">Tiro</a></li>
-                                    </ul> -->
-                                </li>
-                                <li class="mega-menu-wrap menu-item-has-children">
-                                    <a href="player1.php">Jogadores</a>
-                                    <!-- <ul class="mega-menu">
-                                        <li><a href="#">RANK</a>
-                                            <ul>
-                                                <li><a href="#"></a>
-                                                <li><a href="#"></a>
-                                                <li><a href="#"></a>
-                                                <li><a href="#"></a>
-                                                <li><a href="#"></a>
-                                                <li><a href="#"></a>
-                                                <li><a href="#"></a>
-                                                <li><a href="#"></a>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">Modalidade</a>
-                                            <ul>
-                                                <li><a href="#"></a>
-                                                <li><a href="#"></a>
-                                                <li><a href="#"></a>
-                                                <li><a href="#"></a>
-                                            </ul>
-                                    </ul> -->
-                                </li>
-                                <li class="mega-menu-wrap menu-item-has-children">
-                                    <a href="team1.php">Times</a>
-                                    <!-- <ul class="mega-menu">
-                                        <li><a href="#">RANK</a>
-                                            <ul>
-                                                <li><a href="#"></a>
-                                                <li><a href="#"></a>
-                                                <li><a href="#"></a>
-                                                <li><a href="#"></a>
-                                                <li><a href="#"></a>
-                                                <li><a href="#"></a>
-                                                <li><a href="#"></a>
-                                                <li><a href="#"></a>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">Modalidade</a>
-                                            <ul>
-                                                <li><a href="#"></a>
-                                                <li><a href="#"></a>
-                                                <li><a href="#"></a>
-                                                <li><a href="#"></a>
-                                            </ul>
-                                    </ul> -->
-                                </li>
-                                <li class="menu-item-has-children">
-                                    <a href="planos1.php">Planos</a>
-                                </li>
-                            </ul>
-                    </div>
-                    <div class="col-md-4 col-lg-2 text-center d-none d-xl-block">
-                        <div class="header-logo1">
-                            <a href="index.php"><img src="assets/img/logo1.png" alt="TSeeK"></a>
+                        <div class="col-6 col-lg-8 col-xl-5 text-end text-xl-start">
+                            <nav class="main-menu menu-style1 mobile-menu-active" data-expand="992" >
+                                <ul style="font-size: 90px;">
+                                    <li class="main-menu" >
+                                        <a href="vagas1.php"  style="font-size: 16px;">Vagas</a>
+                                        <!-- <ul class="sub-menu">
+                                            <li><a href="#">Ação</a></li>
+                                            <li><a href="#">Aventura</a></li>
+                                            <li><a href="#">Battle Royale</a></li>
+                                            <li><a href="#">Esportes</a></li>
+                                            <li><a href="#">Estratégias</a></li>
+                                            <li><a href="#">FPS</a></li>
+                                            <li><a href="#">Luta</a></li>
+                                            <li><a href="#">MOBA</a></li>
+                                            <li><a href="#">RPG</a></li>
+                                            <li><a href="#">Tiro</a></li>
+                                        </ul> -->
+                                    </li>
+                                    <li class="main-menu">
+                                        <a href="player1.php"style="font-size: 16px;">Jogadores</a>
+                                        <!-- <ul class="mega-menu">
+                                            <li><a href="player.html">RANK</a>
+                                                <ul>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Modalidade</a>
+                                                <ul>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">..</a>
+                                                <ul>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">..</a>
+                                                <ul>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                </ul>
+                                            </li>
+                                        </ul> -->
+                                    </li>
+                                    <li class="main-menu">
+                                        <a href="team1.php" style="font-size: 16px;">Times</a>
+                                        <!-- <ul class="mega-menu">
+                                            <li><a href="player.html">RANK</a>
+                                                <ul>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Modalidade</a>
+                                                <ul>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">..</a>
+                                                <ul>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">..</a>
+                                                <ul>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                    <li><a href="#"></a>
+                                                </ul>
+                                            </li>
+                                        </ul> -->
+                                    </li>
+                                    <li class="main-menu" >
+                                        <a href="planos1.php" style="font-size: 16px;">Planos</a>
+                                    </li>
+                                </ul>
                         </div>
-                    </div>
-                    <div class="col-md-4 col-lg-5 d-none d-xl-block">
-                        <div class="header-right d-flex align-items-center justify-content-end">
-                            <a href="https://www.twitch.tv/directory" class="vs-btn outline1 d-none d-xl-inline-block"><i
-                                    class="fab fa-twitch"></i><strong>Live Streaming</strong></a>
-                            <ul class="header-list1 list-style-none ml-30">
-                                <li>
-                                    <button class="dropdown-toggle" type="button" title="Login">
-                                        <a href="login2.php"><img src="assets/img/flag/flag-1.png"
-                                                alt="Country Flag" class="flag radius-circle"> </a>
-                                    </button>
-                                </li>
-                                <li>
+                        <div class="col-md-4 col-lg-2 text-center d-none d-xl-block">
+                            <div class="header-logo1">
+                                <a href="index.php"><img src="assets/img/logo1.png" alt="TSeeK"></a>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-lg-5 d-none d-xl-block">
+                            <div class="header-right d-flex align-items-center justify-content-end">
+                                <a href="https://www.twitch.tv/directory" class="vs-btn outline1 d-none d-xl-inline-block"><i
+                                        class="fab fa-twitch"></i><strong>Live Streaming</strong></a>
+                                <ul class="header-list1 list-style-none ml-30">
+                                    <li>
+                                        <button class="dropdown-toggle" type="button" title="Login">
+                                             <a href="login2.php"><img src="assets/img/flag/flag-1.png"
+                                                    alt="Country Flag" class="flag radius-circle"> </a>
+                                                    
+                                        </button>
+                                    </li>
+                                    <li>
                                         <button class="searchBoxTggler"><i class="far fa-search"></i></button>
-                                </li>
-                                <!-- <li>
-                                <button class="sideMenuToggler"><i
+                                    </li>
+                                    <!-- <li>
+                                        <button class="sideMenuToggler"><i
                                                 class="fal fa-grip-horizontal fs-2"></i></button>
-                                </li> -->
-                            </ul>
+                                    </li> -->
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</header>
+    </header>
     <!--==============================
     Fundo titulo
 ============================== -->
