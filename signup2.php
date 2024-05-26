@@ -76,13 +76,13 @@ if(isset($_POST['btnCadastrar'])){
        </div> 
 
 
-      <!-- <div style="color: #fff;">
+      <div style="color: #fff;">
         <label for="jogador">Jogador :</label>
         <input style="margin-right: 50px;"  type="radio" id="jogador" name="jogador" value="jogador">
   
         <label for="recrutador">Recrutador :</label>
         <input type="radio" id="recrutador" name="recrutador" value="recrutador">
-      </div> -->
+      </div>
 
       <div>
         <label class="fw-bolder" for="foto">Foto</label>

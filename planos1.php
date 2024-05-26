@@ -269,7 +269,7 @@ Mobile Menu
                 <div class="row align-items-center">
                     <div class="col-6 col-lg-4 d-block d-xl-none py-3 py-xl-0">
                         <div class="header-logo">
-                            <a href="index-att.php"><img src="assets/img/logo1.png" alt="TSeeK"></a>
+                            <a href="index.php"><img src="assets/img/logo1.png" alt="TSeeK"></a>
                         </div>
                     </div>
                     <div class="col-6 col-lg-8 col-xl-5 text-end text-xl-start">

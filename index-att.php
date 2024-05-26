@@ -310,7 +310,7 @@ $candidato = $_SESSION['id_candidato'];
                         <div class="col-6 col-lg-8 col-xl-5 text-end text-xl-start">
                             <nav class="main-menu menu-style1 mobile-menu-active" data-expand="992">
                                 <ul>
-                                    <li class="menu-item-has-children ">
+                                    <li class="">
                                         <a href="vagas.php">Vagas</a>
                                         <!-- <ul class="sub-menu">
                                             <li><a href="#">Ação</a></li>
@@ -325,7 +325,7 @@ $candidato = $_SESSION['id_candidato'];
                                             <li><a href="#">Tiro</a></li>
                                         </ul> -->
                                     </li>
-                                    <li class="mega-menu-wrap menu-item-has-children">
+                                    <li class="">
                                         <a href="player.php">Jogadores</a>
                                         <!-- <ul class="mega-menu">
                                             <li><a href="player.html">RANK</a>
@@ -366,7 +366,7 @@ $candidato = $_SESSION['id_candidato'];
                                             </li>
                                         </ul> -->
                                     </li>
-                                    <li class="mega-menu-wrap menu-item-has-children">
+                                    <li class="">
                                         <a href="team.php">Times</a>
                                         <!-- <ul class="mega-menu">
                                             <li><a href="player.html">RANK</a>
@@ -407,14 +407,14 @@ $candidato = $_SESSION['id_candidato'];
                                             </li>
                                         </ul> -->
                                     </li>
-                                    <li class="menu-item-has-children">
-                                        <a href="planos.html">Planos</a>
+                                    <li class="">
+                                        <a href="planos.php">Planos</a>
                                     </li>
                                 </ul>
                         </div>
                         <div class="col-md-4 col-lg-2 text-center d-none d-xl-block">
                             <div class="header-logo1">
-                                <a href="index.php"><img src="assets/img/logo1.png" alt="TSeeK"></a>
+                                <a href="index-att.php"><img src="assets/img/logo1.png" alt="TSeeK"></a>
                             </div>
                         </div>
                         <div class="col-md-4 col-lg-5 d-none d-xl-block">
@@ -449,10 +449,10 @@ $candidato = $_SESSION['id_candidato'];
     ==============================-->
     <section class="vs-hero-wrapper  ">
         <div class="vs-hero-carousel" data-height="900" data-container="1170" data-slidertype="fullwidth">
-            <a href="#" class="ls-arrow text-white d-none d-xl-inline-block" data-ls-go="next">Next<i
+            <a href="#" class="ls-arrow text-white d-none d-xl-inline-block" data-ls-go="next">Próx<i
                     class="fal fa-arrow-right"></i></a>
             <a href="#" class="ls-arrow text-white d-none d-xl-inline-block" data-ls-go="prev"><i
-                    class="fal fa-arrow-left"></i>Prev</a>
+                    class="fal fa-arrow-left"></i>Ant</a>
             <div class="ls-slide" data-ls="duration: 8000; transition2d: 5;">
                 <img src="assets/img/hero/mobile.jpg" alt="Hero Bg Image" class="ls-bg">
                 <p class="ls-l mb-2 mb-md-0 ls-hide-phone"

@@ -266,7 +266,7 @@ Mobile Menu
                 <div class="row align-items-center">
                     <div class="col-6 col-lg-4 d-block d-xl-none py-3 py-xl-0">
                         <div class="header-logo">
-                            <a href="index-att.php"><img src="assets/img/logo1.png" alt="TSeeK"></a>
+                            <a href="index.php"><img src="assets/img/logo1.png" alt="TSeeK"></a>
                         </div>
                     </div>
                     <div class="col-6 col-lg-8 col-xl-5 text-end text-xl-start">
@@ -347,8 +347,8 @@ Mobile Menu
                     </div>
                     <div class="col-md-4 col-lg-5 d-none d-xl-block">
                         <div class="header-right d-flex align-items-center justify-content-end">
-                            <a href="https://www.twitch.tv/directory" class="vs-btn outline1 d-none d-xl-inline-block"><i
-                                    class="fab fa-twitch"></i><strong>Live Streaming</strong></a>
+                            <a href="team-cadastro.php" class="vs-btn outline1 d-none d-xl-inline-block">
+                                <strong>Cadastre sua equipe</strong></a>
                             <ul class="header-list1 list-style-none ml-30">
                                 <li>
                                     <button class="dropdown-toggle" type="button" title="Login">

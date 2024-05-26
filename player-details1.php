@@ -189,7 +189,7 @@ Icons ao lado superior direito (menu retrátil)
                     </div>                  
                 <ul class="list-unstyled components mb-5">
                     <li class="active">
-                        <a href="#"><span class="fa fa-home mr-3"></span> Inicio</a>
+                        <a href="index-att.php"><span class="fa fa-home mr-3"></span> Inicio</a>
                     </li>
                     <li class="active">
                         <a href="player-details1.php?id=<?php echo $_SESSION['id']; ?>"><span class="fa fa-user mr-3"></span> Perfil</a>
@@ -372,7 +372,7 @@ Mobile Menu
                 <h1 class="breadcumb-title h1 text-white my-0"><?php echo $_SESSION['nome'];?></h1>
                 <h2 class="breadcumb-bg-title">Gamers</h2>
                 <ul class="breadcumb-menu-style1 text-white mx-auto fs-xs">
-                    <li><a href="index.php"><i class="fal fa-home"></i>Home</a></li>
+                    <li><a href="index-att.php"><i class="fal fa-home"></i>Home</a></li>
                     <li class="active">Perfil Jogador</li>
                 </ul>
             </div>

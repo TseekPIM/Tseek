@@ -154,6 +154,16 @@ public function editar(array $dados, $foto_atual = null)
 
 }
 
+public function enviarLinkPerfil(int $id_candidato) {
+    // Substitua estas informações com as suas
+    $recrutador_email = 'recrutador@empresa.com';
+    $assunto = 'Perfil do candidato para a vaga';
+    $link_perfil = 'http://seusite.com/perfil_candidato.php?id=' . $candidato_id;
+    $mensagem = "Perfil do candidato: $link_perfil";
+    // Enviar o email
+    mail($recrutador_email, $assunto, $mensagem);
+}
+
 /**
      * atualiza o candidato
      *

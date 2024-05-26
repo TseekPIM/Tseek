@@ -20,14 +20,16 @@ class Equipe
     public function cadastrar(array $dados, $foto_enviada = null)
     {
         $sql = $this->pdo->prepare('INSERT INTO equipe 
-                                    (nome, descricao, foto)
+                                    (nome, descricao, status, data_criacao_time, foto)
                                     values
-                                    (:nome, :descricao, :foto)'
+                                    (:nome, :descricao, :status, :data_criacao_time, :foto)'
                                     );
 
         //tratar os dados recebidos        
         $nome               = $dados['nome'];
         $descricao          = $dados['descricao'];
+        $status             = $dados['status'];
+        $data_criacao_time          = date('Y-m-d H:i:s');
         $foto = '';
 
         if($foto_enviada){
@@ -41,6 +43,8 @@ class Equipe
         //mesclar os dados com os parametros
         $sql->bindParam(':nome',$nome);
         $sql->bindParam(':descricao',$descricao);
+        $sql->bindParam(':status',$status);
+        $sql->bindParam(':data_criacao_time',$data_criacao_time);
         $sql->bindParam(':foto',$foto);  
         // executar
         $sql->execute();
@@ -64,48 +68,6 @@ class Equipe
     }
 
 
-    /**
-     * ===============================
-     *  FUNÇÕES DE LOGIN 
-     * ===============================
-     */
-
-     /**
-      * realiza o login no sistema
-      *
-      * @param string $email
-      * @param string $senha
-      * @return void
-      */
-      public function logar(string $email, string $senha)
-      {
-          $email =  trim(strtolower($email));
-          $senha =  crypt($senha,$this->salt);
- 
-          $sql = $this->pdo->prepare('SELECT * FROM equipe 
-                                     WHERE 
-                                     email = :email  AND senha = :senha');
-         $sql->bindParam(':email',$email);
-         $sql->bindParam(':senha',$senha);
-         $sql->execute();
-         @session_start();
-         // verificar se a consulta retornou alguma informação
-         if($sql->rowCount() == 1)
-         {
-             $equipe = $sql->fetch(PDO::FETCH_OBJ);
-             $_SESSION['nome'] = $equipe->nome;           
-             $_SESSION['id_equipe'] = $equipe->id_equipe;
-             $_SESSION['logado'] = true;            
-             header('location:index-att.php');
- 
-         }
-         else
-         {
-             session_destroy();
-             header('location:index.php?e');
-         }
- 
-      }
 
 
    /**

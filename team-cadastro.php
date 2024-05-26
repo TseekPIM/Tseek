@@ -1,16 +1,18 @@
 <?php
-// include('protect.php');
+include('protect.php');
 //  echo $_SESSION['nome'];
 //  echo $_GET['id'];
 // print_r($_SESSION);
 require_once('class/Classes.php');
-//  $objHelper = new Helper();
-//  $objHelper->logado();
- 
+if(isset($_POST['btnCadastrar'])){
+    $Equipe = new Equipe();
+    $id = $Equipe->cadastrar($_POST,$_FILES['foto']);  
+    header('location:index-att.php');
+  }
 
  
  $objCandidato = new Candidato();
-//  $candidato = $_SESSION['id_candidato'];
+ $candidato = $_SESSION['id_candidato'];
 
 
  
@@ -24,6 +26,7 @@ require_once('class/Classes.php');
     <meta name="description" content="TSeeK - eSports">
     <meta name="keywords" content="TSeeK - eSports " />
 
+
     <!-- Mobile Specific Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -33,7 +36,7 @@ require_once('class/Classes.php');
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-    <!-- logo aba  -->
+    <!-- logo aba -->
     <link rel="apple-touch-icon" sizes="57x57" href="assets/img/logo1.png">
     <link rel="apple-touch-icon" sizes="60x60" href="assets/img/logo1.png">
     <link rel="apple-touch-icon" sizes="72x72" href="assets/img/logo1.png">
@@ -52,6 +55,7 @@ require_once('class/Classes.php');
     <!--==============================
 	    All CSS File
 	============================== -->
+    <link rel="stylesheet" href="form.css">
     <!-- menu lateral -->
     <link rel="stylesheet" href="sidebar/css/style.css">
     <!-- Bootstrap -->
@@ -68,7 +72,11 @@ require_once('class/Classes.php');
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Theme Color CSS -->
     <link rel="stylesheet" href="assets/css/theme-color1.css">
+    <!-- planos -->
+    <link rel="stylesheet" href="planos.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
    
+
 
 </head>
 
@@ -80,9 +88,9 @@ require_once('class/Classes.php');
 
 
     <!--==============================
-     Pre-carregamento
+     Preloader
   ==============================-->
-  <div class="preloader ">
+  <div class="preloader  ">
     <!-- <button class="vs-btn preloaderCls">Cancel Preloader </button> -->
     <div class="preloader-inner">
         <div class="loader-logo">
@@ -93,23 +101,22 @@ require_once('class/Classes.php');
         </div>
     </div>
 </div>
-
-<!--========================
-Icons ao lado superior direito (menu retrátil)
+    <!--========================
+    Icons ao lado superior direito
 ========================-->
 <div class="sticky-header-wrap sticky-header bg-light-dark py-1 py-sm-2 py-lg-1">
     <div class="container position-relative">
         <div class="row align-items-center">
             <div class="col-5 col-md-3">
                 <div class="logo">
-                    <a href="index.php"><img src="assets/img/logo-2.png" alt="TSeeK"></a>
+                    <a href="index-att.php"><img src="assets/img/logo-2.png" alt="TSeeK"></a>
                 </div>
             </div>
             <div class="col-7 col-md-9 text-end position-static">
                 <nav class="main-menu menu-sticky1 d-none d-lg-block link-inherit">
                     <ul>
                         <li class="menu-item-has-children">
-                            <a href="vagas1.php">Vagas</a>
+                            <a href="vagas.php">Vagas</a>
                             <!-- <ul class="sub-menu">
                                 <li><a href="#">Ação</a></li>
                                 <li><a href="#">Aventura</a></li>
@@ -124,7 +131,7 @@ Icons ao lado superior direito (menu retrátil)
                             </ul> -->
                         </li>
                         <li class="mega-menu-wrap menu-item-has-children">
-                            <a href="player1.php">Jogadores</a>
+                            <a href="player.php">Jogadores</a>
                             <!-- <ul class="mega-menu">
                                 <li><a href="#">RANK</a>
                                     <ul>
@@ -148,7 +155,7 @@ Icons ao lado superior direito (menu retrátil)
                             </ul> -->
                         </li>
                         <li class="mega-menu-wrap menu-item-has-children">
-                            <a href="team1.php">Times</a>
+                            <a href="team.php">Times</a>
                             <!-- <ul class="mega-menu">
                                 <li><a href="#">RANK</a>
                                     <ul>
@@ -172,7 +179,7 @@ Icons ao lado superior direito (menu retrátil)
                             </ul> -->
                         </li>
                         <li class="menu-item-has-children">
-                            <a href="planos1.php">Planos</a>
+                            <a href="planos.php">Planos</a>
                         </li>
                     </ul>
             </div>
@@ -189,11 +196,11 @@ Icons ao lado superior direito (menu retrátil)
 
             <nav id="sidebar">
                 <div class="img bg-wrap text-center py-4" style="background-color: transparent;">
-                    <div class="user-logo">
-                        <div class="img" style="background-image: url(assets/img/team/team-1-1.png);"></div>
-                        <h3><?php echo $_SESSION['nome']; ?></h3>
-                    </div>
-                </div>
+                <div class="user-logo">
+                        <div class="img"><?php echo Helper::fotoDoCandidato($candidato);?></div><br><br>
+                        <h3><?php echo Helper::nomeDoCandidato($candidato); ?></h3>
+                    </div> 
+                    </div>                  
                 <ul class="list-unstyled components mb-5">
                     <li class="active">
                         <a href="#"><span class="fa fa-home mr-3"></span> Inicio</a>
@@ -208,7 +215,7 @@ Icons ao lado superior direito (menu retrátil)
                         <a href="#"><span class="fa fa-cog mr-3"></span> Configurações</a>
                     </li>
                     <li>
-                        <a href="index.php"><span class="fa fa-sign-out mr-3"></span> Desconectar</a>
+                        <a href="logout.php"><span class="fa fa-sign-out mr-3"></span> Desconectar</a>
                     </li>
                 </ul>
 <!-- <?php //} ?> -->
@@ -246,6 +253,7 @@ Mobile Menu
         <div class="container">
             <div class="row py-md-2">
                 <div class="col-sm-6 d-none d-md-block">
+                    <!-- <p class="mb-0 fs-xs text-white">Bem vindo a sua <a class="text-inherit" href="team.html"><u class=" fw-bold">Esports team</u></a></p> -->
                 </div>
                 <div class="col-sm-6 text-end d-none d-md-block">
                     <ul class="social-links fs-xs text-white">
@@ -265,14 +273,14 @@ Mobile Menu
                 <div class="row align-items-center">
                     <div class="col-6 col-lg-4 d-block d-xl-none py-3 py-xl-0">
                         <div class="header-logo">
-                            <a href="index.php"><img src="assets/img/logo1.png" alt="TSeeK"></a>
+                            <a href="index-att.php"><img src="assets/img/logo1.png" alt="TSeeK"></a>
                         </div>
                     </div>
                     <div class="col-6 col-lg-8 col-xl-5 text-end text-xl-start">
                         <nav class="main-menu menu-style1 mobile-menu-active" data-expand="992">
                             <ul>
                                 <li class="menu-item-has-children">
-                                    <a href="vagas1.php">Vagas</a>
+                                    <a href="vagas.php">Vagas</a>
                                     <!-- <ul class="sub-menu">
                                         <li><a href="#">Ação</a></li>
                                         <li><a href="#">Aventura</a></li>
@@ -287,7 +295,7 @@ Mobile Menu
                                     </ul> -->
                                 </li>
                                 <li class="mega-menu-wrap menu-item-has-children">
-                                    <a href="player1.php">Jogadores</a>
+                                    <a href="player.php">Jogadores</a>
                                     <!-- <ul class="mega-menu">
                                         <li><a href="#">RANK</a>
                                             <ul>
@@ -311,7 +319,7 @@ Mobile Menu
                                     </ul> -->
                                 </li>
                                 <li class="mega-menu-wrap menu-item-has-children">
-                                    <a href="team1.php">Times</a>
+                                    <a href="team.php">Times</a>
                                     <!-- <ul class="mega-menu">
                                         <li><a href="#">RANK</a>
                                             <ul>
@@ -335,33 +343,33 @@ Mobile Menu
                                     </ul> -->
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="planos1.php">Planos</a>
+                                    <a href="planos.php">Planos</a>
                                 </li>
                             </ul>
                     </div>
                     <div class="col-md-4 col-lg-2 text-center d-none d-xl-block">
                         <div class="header-logo1">
-                            <a href="index.php"><img src="assets/img/logo1.png" alt="TSeeK"></a>
+                            <a href="index-att.php"><img src="assets/img/logo1.png" alt="TSeeK"></a>
                         </div>
                     </div>
                     <div class="col-md-4 col-lg-5 d-none d-xl-block">
                         <div class="header-right d-flex align-items-center justify-content-end">
-                            <a href="#" class="vs-btn outline1 d-none d-xl-inline-block"><i
+                            <a href="https://www.twitch.tv/directory" class="vs-btn outline1 d-none d-xl-inline-block"><i
                                     class="fab fa-twitch"></i><strong>Live Streaming</strong></a>
                             <ul class="header-list1 list-style-none ml-30">
-                                <li>
+                                <!-- <li>
                                     <button class="dropdown-toggle" type="button" title="Login">
                                         <a href="login2.php"><img src="assets/img/flag/flag-1.png"
                                                 alt="Country Flag" class="flag radius-circle"> </a>
                                     </button>
-                                </li>
+                                </li> -->
                                 <li>
                                         <button class="searchBoxTggler"><i class="far fa-search"></i></button>
-                                    </li>
-                                <!-- <li>
+                                </li>
+                                <li>
                                 <button class="sideMenuToggler"><i
                                                 class="fal fa-grip-horizontal fs-2"></i></button>
-                                </li> -->
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -370,265 +378,82 @@ Mobile Menu
         </div>
     </div>
 </header>
-<?php
-    if(isset($_GET['id'])&& $_GET['id'] != ''){
-        $candidato = $objCandidato->mostrar($_GET['id']);
-    // $id_candidato = $_SESSION['id_candidato'];
-?>
     <!--==============================
-    Breadcumb
+    Fundo titulo
 ============================== -->
     <div class="breadcumb-wrapper breadcumb-layout1 pt-200 pb-50" data-bg-src="assets/img/breadcumb/breadcumb-1.jpg" data-overlay>
         <div class="container z-index-common">
             <div class="breadcumb-content text-center">
-                <h1 class="breadcumb-title h1 text-white my-0"><?php echo $candidato->nome;?></h1>
+                <h1 class="breadcumb-title h1 text-white my-0">Cadastro da Equipe</h1>
                 <h2 class="breadcumb-bg-title">Gamers</h2>
                 <ul class="breadcumb-menu-style1 text-white mx-auto fs-xs">
-                    <li><a href="index.php"><i class="fal fa-home"></i>Home</a></li>
-                    <li class="active">Perfil Jogador</li>
+                    <li><a href="index-att.php"><i class="fal fa-home"></i>Home</a></li>
+                    <li class="active">Cadastro da Equipe</li>
                 </ul>
             </div>
         </div>
     </div>
     <!--==============================
-  Player Details
-    ==============================-->
-    <section class="vs-player-wrapper space-top newsletter-pb">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8">
-                    <div class="vs-box1 d-md-flex mb-30 info-box4 align-items-center">
-                        <!-- <div class="pro-tag position-absolute end-0 top-0 bg-gradient text-white">
-                            <i class="fas fa-check-circle"></i>
-                            pro
-                        </div> -->
-                        <div class="inner-img1">
-                            <img src="imagens/candidatos/<?php echo $candidato->foto;?>" alt="Member Image" width="200px">
-                        </div>
-                        <div class="media-body ml-lg-30">
-                            <h2 class="h4 mb-0"><?php echo $candidato->apelido;?></h2>
-                            <span class="text-theme2">Pro-Player</span>
-                            <table class="info-table mt-2 mb-0">
-                                <tr>
-                                    <td>Nome:</td>
-                                    <td><?php echo $candidato->nome;?></td>
-                                </tr>
-                                <tr>
-                                    <td>Gênero:</td>
-                                    <td><?php echo $candidato->genero;?></td>
-                                </tr>
-                                <tr>
-                                    <td>Idade:</td>
-                                    <td><?php echo $candidato->idade;?></td>
-                                </tr>
-                                <tr>
-                                    <td>Estado:</td>
-                                    <td><?php echo $candidato->estado;?></td>
-                                </tr>
-                            </table>
-                              
-                        </div>
-                    </div>
-                    <?php
-                     // }
-                     }
-                    ?>
-                    <!-- Skill Area -->
-                    <div class="vs-box1 p-0 mb-30">
-                        <div class="nav  tab-menu1 tab-indicator justify-content-center justify-content-sm-start"
-                            role="tablist">
-                            <a class="nav-link active" id="skill1-tab" data-bs-toggle="tab" href="#skill1" role="tab"
-                                aria-controls="skill1" aria-selected="true">Jogos Favoritos</a>
-                            <a class="nav-link" id="skill3-tab" data-bs-toggle="tab" href="#skill3" role="tab"
-                                aria-controls="skill3" aria-selected="false">Views de Partidas</a>
-                        </div>
-                        <div class="tab-content mt-30">
-                            <div class="tab-pane show active" id="skill1" role="tabpanel" aria-labelledby="skill1-tab">
-                                <div class="skill-box1 d-sm-flex px-30 pb-30 text-center text-sm-start">
-                                    <div class="media-img position-relative">
-                                        <img src="assets/img/team/team-d-2.jpg" alt="Team Image" width="150px">
-                                    </div>
-                                    <div class="media-body align-self-center ml-lg-30">
-                                        <h5 class="fs-20 mb-0 font-theme">Mobile Legends</h5>
-                                    </div>
-                                </div>
-                                <div class="skill-box1 d-sm-flex px-30 pb-30 text-center text-sm-start">
-                                    <div class="media-img position-relative">
-                                        <img src="assets/img/team/team-d-3-1.jpg" alt="Team Image" width="150px">
-                                    </div>
-                                    <div class="media-body align-self-center ml-lg-30">
-                                        <h5 class="fs-20 mb-0 font-theme">Phasmophobia</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane" id="skill3" role="tabpanel" aria-labelledby="skill3-tab">
-                                <!-- Team Video Area -->
-                                <div class="team-video-area px-30">
-                                    <div class="row">
-                                        <div class="col-sm-6 col-xl-4">
-                                            <div class="team-video-thumb">
-                                                <div class="thumb-img">
-                                                    <img src="assets/img/team/team-d-video-1-1.jpg"
-                                                        alt="Video Thumb Image">
-                                                    <div class="tag">Mobile Legends</div>
-                                                    <a href="#" class="play-btn popup-video"><i
-                                                            class="fas fa-play"></i></a>
-                                                </div>
-                                                <div class="thumb-content">
-                                                    <h5 class="thumb-title"><a href="#">Selena Gameplay</a></h5>
-                                                    <span class="total-views">12.542 views</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6 col-xl-4">
-                                            <div class="team-video-thumb">
-                                                <div class="thumb-img">
-                                                    <img src="assets/img/team/team-d-video-2-1.jpg"
-                                                        alt="Video Thumb Image">
-                                                    <div class="tag">Mobile Legends</div>
-                                                    <a href="#" class="play-btn popup-video"><i
-                                                            class="fas fa-play"></i></a>
-                                                </div>
-                                                <div class="thumb-content">
-                                                    <h5 class="thumb-title"><a href="#">Brody Gameplay</a></h5>
-                                                    <span class="total-views">3.256 views</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6 col-xl-4">
-                                            <div class="team-video-thumb">
-                                                <div class="thumb-img">
-                                                    <img src="assets/img/team/team-d-video-3-1.jpg"
-                                                        alt="Video Thumb Image">
-                                                    <div class="tag">Mobile Legends</div>
-                                                    <a href="#" class="play-btn popup-video"><i
-                                                            class="fas fa-play"></i></a>
-                                                </div>
-                                                <div class="thumb-content">
-                                                    <h5 class="thumb-title"><a href="#">Luo Yi Gameplay</a></h5>
-                                                    <span class="total-views">23.529 views</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6 col-xl-4">
-                                            <div class="team-video-thumb">
-                                                <div class="thumb-img">
-                                                    <img src="assets/img/team/team-d-video-4-1.jpg"
-                                                        alt="Video Thumb Image">
-                                                    <div class="tag">Phasmophobia</div>
-                                                    <a href="#" class="play-btn popup-video"><i
-                                                            class="fas fa-play"></i></a>
-                                                </div>
-                                                <div class="thumb-content">
-                                                    <h5 class="thumb-title"><a href="#">Esse jogo é só por Deus</a></h5>
-                                                    <span class="total-views">15.200 views</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6 col-xl-4">
-                                            <div class="team-video-thumb">
-                                                <div class="thumb-img">
-                                                    <img src="assets/img/team/team-d-video-5-1.jpg"
-                                                        alt="Video Thumb Image">
-                                                    <div class="tag">Phasmophobia</div>
-                                                    <a href="#" class="play-btn popup-video"><i
-                                                            class="fas fa-play"></i></a>
-                                                </div>
-                                                <div class="thumb-content">
-                                                    <h5 class="thumb-title"><a href="#">Fui o primeiro a morre kkk</a></h5>
-                                                    <span class="total-views">5.235 views</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6 col-xl-4">
-                                            <div class="team-video-thumb">
-                                                <div class="thumb-img">
-                                                    <img src="assets/img/team/team-d-video-6-1.jpg"
-                                                        alt="Video Thumb Image">
-                                                    <div class="tag">Phasmophobia</div>
-                                                    <a href="#" class="play-btn popup-video"><i
-                                                            class="fas fa-play"></i></a>
-                                                </div>
-                                                <div class="thumb-content">
-                                                    <h5 class="thumb-title"><a href="#">Vou ter que compra um cel novo</a></h5>
-                                                    <span class="total-views">26.485 views</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> 
-                    <!-- Video Area -->
-                    <div class="vs-box1 mb-30">
-                        <h4 class="h5 mb-25 mt-n1">Live Stream</h4>
-                        <div class="hover-shape position-relative">
-                            <span class="bg-gradient  text-white post-time d-none d-sm-inline-block">12 Horas atras</span>
-                            <img src="assets/img/video/video-img-3-2.jpg" alt="Video Image" class="w-100">
-                            <a href="https://www.youtube-nocookie.com/embed/uoonAnmKQhI" class="play-btn overlay-center popup-video"><i class="fas fa-play"></i></a>
-                        </div>
-                        <div class="row mt-20 mt-lg-30 flex-row-reverse">
-                            <div class="col-md-7 mb-15 mb-md-0 text-md-end">
-                                <strong class="text-title fs-18 mb-2 mb-md-0 me-md-2 d-md-inline-block d-block">Outras Redes:</strong>
-                                <div class="d-inline-flex gap-2">
-                                    <a class="icon-btn3 size-40" href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a class="icon-btn3 size-40" href="#"><i class="fab fa-twitter"></i></a>
-                                    <a class="icon-btn3 size-40" href="#"><i class="fab fa-linkedin-in"></i></a>
-                                    <a class="icon-btn3 size-40" href="#"><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                            <div class="col-md-5">
-                                <div class="author-box d-flex">
-                                    <img src="imagens/candidatos/<?php echo $candidato->foto;?>" alt="Author Image">
-                                    <div class="media-body align-self-center">
-                                        <h6 class="name mb-0 text-normal lh-base"><a href="#"><?php echo $candidato->nome;?></a></h6>
-                                        <span class="fs-xs">250k views</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <aside class="sidebar-area sticky-top overflow-hidden">
-                        <div class="widget widget_search   ">
-                            <form class="search-form">
-                                <input type="text" placeholder="buscar">
-                                <button type="submit"><i class="far fa-search"></i></button>
-                            </form>
-                        </div>
-                        <h3 class="sidebox-title-v2 h5">Categorias</h3>
-                        <div class="vs-sidebox-v2 ">
-                            <ul class="vs-cat-list1">
-                                <li><a href="#">Ação <span class="cat-number">10</span></a></li>
-                                <li><a href="#">Aventura <span class="cat-number">07</span></a></li>
-                                <li><a href="#">Battle - Royale <span class="cat-number">05</span></a></li>
-                                <li><a href="#">E-sports <span class="cat-number">02</span></a></li>
-                            </ul>
-                        </div>
-                        <h3 class="sidebox-title-v2 h5">Top Games</h3>
-                        <div class="vs-sidebox bg-smoke">
-                            <div class="row no-gutters g-2">
-                                <div class="col-6">
-                                    <div class="image-scale-hover"><a href="#"><img src="assets/img/widget/sidebbox-img-1.jpg" class="w-100" alt="Sidebox Image"></a></div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="image-scale-hover"><a href="#"><img src="assets/img/widget/sidebbox-img-2.jpg" class="w-100" alt="Sidebox Image"></a></div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="image-scale-hover"><a href="#"><img src="assets/img/widget/sidebbox-img-3.jpg" class="w-100" alt="Sidebox Image"></a></div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="image-scale-hover"><a href="#"><img src="assets/img/widget/sidebbox-img-4.jpg" class="w-100" alt="Sidebox Image"></a></div>
-                                </div>
-                            </div>
-                        </div>
-                    </aside>
-                </div>
-            </div>
+    cadatro Area
+    ============================== -->
+    <div class="container_form">
+
+
+<form class="form" action="#" method="multipart/form-data">
+    
+    <div class="form_grupo">
+        <label for="nome" class="form_label">Nome da Equipe</label>
+        <input type="text" name="nome" class="form_input" id="nome" placeholder="Nome" required>
+    </div>
+    
+    <div class="form_grupo">
+        <label for="descricao" class="form_label">Descrição da Equipe</label>
+        <input type="descricao" name="descricao" class="form_input" id="descricao" placeholder="descrição" required>
+    </div>
+    
+    <div class="form_grupo">
+        <label for="dataformacao" class="form_label">Data de Formação</label>
+        <input type="date" name="data_criacao_time" class="form_input" id="dataformacao" placeholder="Data de Formação" required>
+    </div>        
+
+
+    <div class="form_grupo">
+
+        <span class="legenda">Status:</span>
+        
+        <div class="radio-btn">
+            <input type="radio" class="form_new_input" id="ativo" name="status" value="Ativo" required="required">
+            <label for="ativo" class="radio_label form_label"> <span class="radio_new_btn"></span> Ativo</label>
         </div>
-    </section>
+        <div class="radio-btn"><span></span><span></span><span></span><span></span><br><br><br><br></div>
+
+        <div class="radio-btn">
+            <input type="radio" class="form_new_input" id="inativo" name="status" value="Inativo" required="required">
+            <label for="inativo" class="radio_label form_label"> <span class="radio_new_btn"></span> Inativo</label>
+        </div>
+
+    </div>
+  
+
+    <div class="form_grupo">
+
+        <span class="legenda"></span>
+
+        <div>
+        <label class="fw-bolder" for="foto">Foto</label>
+        <input class="form-control" type="file" name="foto" id="foto" required>
+      </div>
+
+        <div class="submit">
+
+          <input type="hidden" name="btnCadastrar" value="enviar">
+          <button type="submit" name="btnCadastrar" class="submit_btn" >Cadastrar</button>
+        
+        </div>
+</form>
+
+</div><!--container_form-->
+</div>
     <!--==============================
 			Footer Area
 	==============================-->
@@ -714,6 +539,8 @@ Mobile Menu
 
 
 
+
+
     <!--********************************
 			Codigo termina aqui
 	******************************** -->
@@ -756,13 +583,11 @@ Mobile Menu
     <script src="assets/js/vs-cursor.min.js"></script>
     <!-- Mobile Menu -->
     <script src="assets/js/vsmenu.min.js"></script>
-    <!-- Map Js -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC3Ip9iVC0nIxC6V14CKLQ1HZNF_65qEQ "></script>
-    <script src="assets/js/map.js"></script>
     <!-- Form Js -->
     <script src="assets/js/ajax-mail.js"></script>
     <!-- Main Js File -->
     <script src="assets/js/main.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js	"></script>
 
 </body>
 
