@@ -419,8 +419,8 @@ Busca
                         </div>
                         <div class="col-md-4 col-lg-5 d-none d-xl-block">
                             <div class="header-right d-flex align-items-center justify-content-end">
-                                <a href="https://www.twitch.tv/directory" class="vs-btn outline1 d-none d-xl-inline-block"><i
-                                        class="fab fa-twitch"></i><strong>Live Streaming</strong></a>
+                            <a href="team-cadastro.php" class="vs-btn outline1 d-none d-xl-inline-block"><i
+                                        class=""></i><strong>Cadastre seu time!</strong></a>
                                 <ul class="header-list1 list-style-none ml-30">
                                     <li>
                                         <button class="dropdown-toggle" type="button" title="Login">
